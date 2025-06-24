@@ -1,0 +1,314 @@
+tf2onnx1.16.1 15c810:úÑ
+ 
+serving_default_encoder_input:0
+	scale__24
+zero_point__25'serving_default_encoder_input:0_dequant'serving_default_encoder_input:0_dequant"DequantizeLinear
+ç
+‹AutoEncoderClassifier/quant_reconstruction_out/MatMul;AutoEncoderClassifier/quant_reconstruction_out/LastValueQuant/FakeQuantWithMinMaxVars
+	scale__26
+zero_point__33“AutoEncoderClassifier/quant_reconstruction_out/MatMul;AutoEncoderClassifier/quant_reconstruction_out/LastValueQuant/FakeQuantWithMinMaxVars_dequant“AutoEncoderClassifier/quant_reconstruction_out/MatMul;AutoEncoderClassifier/quant_reconstruction_out/LastValueQuant/FakeQuantWithMinMaxVars_dequant"DequantizeLinear
+’
+EAutoEncoderClassifier/quant_reconstruction_out/BiasAdd/ReadVariableOp
+	scale__28
+zero_point__43MAutoEncoderClassifier/quant_reconstruction_out/BiasAdd/ReadVariableOp_dequantMAutoEncoderClassifier/quant_reconstruction_out/BiasAdd/ReadVariableOp_dequant"DequantizeLinear
+Â
+AutoEncoderClassifier/quant_latent_dense/MatMul;AutoEncoderClassifier/quant_latent_dense/LastValueQuant/FakeQuantWithMinMaxVars
+	scale__30
+zero_point__33‡AutoEncoderClassifier/quant_latent_dense/MatMul;AutoEncoderClassifier/quant_latent_dense/LastValueQuant/FakeQuantWithMinMaxVars_dequant‡AutoEncoderClassifier/quant_latent_dense/MatMul;AutoEncoderClassifier/quant_latent_dense/LastValueQuant/FakeQuantWithMinMaxVars_dequant"DequantizeLinear
+Õ
+…AutoEncoderClassifier/quant_encoder_dense_0/MatMul;AutoEncoderClassifier/quant_encoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars
+	scale__32
+zero_point__33AutoEncoderClassifier/quant_encoder_dense_0/MatMul;AutoEncoderClassifier/quant_encoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequantAutoEncoderClassifier/quant_encoder_dense_0/MatMul;AutoEncoderClassifier/quant_encoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequant"DequantizeLinear
+½
+'serving_default_encoder_input:0_dequant
+AutoEncoderClassifier/quant_encoder_dense_0/MatMul;AutoEncoderClassifier/quant_encoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequant<AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_prequant<AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_prequant"MatMul
+Ü
+<AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_prequant
+	scale__34
+zero_point__353AutoEncoderClassifier/quant_encoder_dense_0/MatMul1<AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_quantize"QuantizeLinear
+Ü
+3AutoEncoderClassifier/quant_encoder_dense_0/MatMul1
+	scale__34
+zero_point__35;AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_dequant;AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_dequant"DequantizeLinear
+Õ
+…AutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars
+	scale__38
+zero_point__33AutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequantAutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequant"DequantizeLinear
+ç
+‹AutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/LastValueQuant/FakeQuantWithMinMaxVars
+	scale__40
+zero_point__33“AutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/LastValueQuant/FakeQuantWithMinMaxVars_dequant“AutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/LastValueQuant/FakeQuantWithMinMaxVars_dequant"DequantizeLinear
+’
+EAutoEncoderClassifier/quant_classification_out/BiasAdd/ReadVariableOp
+	scale__42
+zero_point__43MAutoEncoderClassifier/quant_classification_out/BiasAdd/ReadVariableOp_dequantMAutoEncoderClassifier/quant_classification_out/BiasAdd/ReadVariableOp_dequant"DequantizeLinear
+ß
+4AutoEncoderClassifier/latent_batchnorm/batchnorm/sub
+	scale__44
+zero_point__45<AutoEncoderClassifier/latent_batchnorm/batchnorm/sub_dequant<AutoEncoderClassifier/latent_batchnorm/batchnorm/sub_dequant"DequantizeLinear
+ß
+4AutoEncoderClassifier/latent_batchnorm/batchnorm/mul
+	scale__46
+zero_point__71<AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_dequant<AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_dequant"DequantizeLinear
+è
+7AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/sub
+	scale__48
+zero_point__49?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/sub_dequant?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/sub_dequant"DequantizeLinear
+è
+7AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul
+	scale__50
+zero_point__71?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_dequant?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_dequant"DequantizeLinear
+‹
+;AutoEncoderClassifier/quant_encoder_dense_0/MatMul1_dequant
+?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_dequantBAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_prequantBAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_prequant"Mul
+î
+BAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_prequant
+	scale__52
+zero_point__539AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1BAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_quantize"QuantizeLinear
+î
+9AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1
+	scale__52
+zero_point__53AAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_dequantAAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_dequant"DequantizeLinear
+å
+AAutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mul_1_dequant
+?AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/sub_dequantlAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_prequantlAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_prequant"Add
+ˆ
+lAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_prequant	Relu__8:0Relu__8"Relu
+‰
+	Relu__8:0
+	scale__58
+zero_point__71cAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1lAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_quantize"QuantizeLinear
+ì
+cAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1
+	scale__58
+zero_point__71kAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_dequantkAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_dequant"DequantizeLinear
+ó
+kAutoEncoderClassifier/encoder_relu_0/Relu;AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/add_1_dequant
+‡AutoEncoderClassifier/quant_latent_dense/MatMul;AutoEncoderClassifier/quant_latent_dense/LastValueQuant/FakeQuantWithMinMaxVars_dequant8AutoEncoderClassifier/quant_latent_dense/MatMul_prequant8AutoEncoderClassifier/quant_latent_dense/MatMul_prequant"MatMul
+Ğ
+8AutoEncoderClassifier/quant_latent_dense/MatMul_prequant
+	scale__60
+zero_point__63/AutoEncoderClassifier/quant_latent_dense/MatMul8AutoEncoderClassifier/quant_latent_dense/MatMul_quantize"QuantizeLinear
+Ğ
+/AutoEncoderClassifier/quant_latent_dense/MatMul
+	scale__60
+zero_point__637AutoEncoderClassifier/quant_latent_dense/MatMul_dequant7AutoEncoderClassifier/quant_latent_dense/MatMul_dequant"DequantizeLinear
+ş
+7AutoEncoderClassifier/quant_latent_dense/MatMul_dequant
+<AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_dequant?AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_prequant?AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_prequant"Mul
+å
+?AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_prequant
+	scale__64
+zero_point__656AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1?AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_quantize"QuantizeLinear
+å
+6AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1
+	scale__64
+zero_point__65>AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_dequant>AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_dequant"DequantizeLinear
+ß
+>AutoEncoderClassifier/latent_batchnorm/batchnorm/mul_1_dequant
+<AutoEncoderClassifier/latent_batchnorm/batchnorm/sub_dequantlAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_prequantlAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_prequant"Add
+Š
+lAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_prequant
+Relu__11:0Relu__11"Relu
+Š
+
+Relu__11:0
+	scale__68
+zero_point__71cAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1lAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_quantize"QuantizeLinear
+ì
+cAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1
+	scale__68
+zero_point__71kAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_dequantkAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_dequant"DequantizeLinear
+ÿ
+kAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_dequant
+AutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVars_dequant;AutoEncoderClassifier/quant_decoder_dense_0/MatMul_prequant;AutoEncoderClassifier/quant_decoder_dense_0/MatMul_prequant"MatMul
+Ù
+;AutoEncoderClassifier/quant_decoder_dense_0/MatMul_prequant
+	scale__72
+zero_point__732AutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/MatMul_quantize"QuantizeLinear
+Ù
+2AutoEncoderClassifier/quant_decoder_dense_0/MatMul
+	scale__72
+zero_point__73:AutoEncoderClassifier/quant_decoder_dense_0/MatMul_dequant:AutoEncoderClassifier/quant_decoder_dense_0/MatMul_dequant"DequantizeLinear
+ù
+kAutoEncoderClassifier/quant_latent_relu/Relu;AutoEncoderClassifier/latent_batchnorm/batchnorm/add_1_dequant
+“AutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/LastValueQuant/FakeQuantWithMinMaxVars_dequantuAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_prequantuAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_prequant"MatMul
+è
+7AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/sub
+	scale__76
+zero_point__77?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/sub_dequant?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/sub_dequant"DequantizeLinear
+è
+7AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul
+	scale__78
+zero_point__71?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_dequant?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_dequant"DequantizeLinear
+Š
+:AutoEncoderClassifier/quant_decoder_dense_0/MatMul_dequant
+?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_dequantBAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_prequantBAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_prequant"Mul
+î
+BAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_prequant
+	scale__82
+zero_point__819AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1BAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_quantize"QuantizeLinear
+î
+9AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1
+	scale__82
+zero_point__81AAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_dequantAAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_dequant"DequantizeLinear
+å
+AAutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mul_1_dequant
+?AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/sub_dequantlAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_prequantlAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_prequant"Add
+Š
+lAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_prequant
+Relu__17:0Relu__17"Relu
+Š
+
+Relu__17:0
+	scale__84
+zero_point__71cAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1lAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_quantize"QuantizeLinear
+ì
+cAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1
+	scale__84
+zero_point__71kAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_dequantkAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_dequant"DequantizeLinear
+Ó
+kAutoEncoderClassifier/decoder_relu_0/Relu;AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/add_1_dequant
+“AutoEncoderClassifier/quant_reconstruction_out/MatMul;AutoEncoderClassifier/quant_reconstruction_out/LastValueQuant/FakeQuantWithMinMaxVars_dequant"StatefulPartitionedCall:1_prequant"StatefulPartitionedCall:1_prequant"MatMul
+Œ
+"StatefulPartitionedCall:1_prequant
+MAutoEncoderClassifier/quant_reconstruction_out/BiasAdd/ReadVariableOp_dequant	Add__22:0Add__22"Add
+'
+	Add__22:0
+Relu__19:0Relu__19"Relu
+x
+
+Relu__19:0
+	scale__88
+zero_point__71StatefulPartitionedCall:1"StatefulPartitionedCall:1_quantize"QuantizeLinear: 
+ß
+uAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_prequant
+MAutoEncoderClassifier/quant_classification_out/BiasAdd/ReadVariableOp_dequant	Add__14:0Add__14"Add
+›
+	Add__14:0
+	scale__90
+zero_point__91lAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdduAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_quantize"QuantizeLinear
+‡
+lAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd
+	scale__90
+zero_point__91tAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_dequanttAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_dequant"DequantizeLinear
+Ç
+tAutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/BiasAdd_dequant"StatefulPartitionedCall:0_prequant"StatefulPartitionedCall:0_prequant"Softmax
+
+"StatefulPartitionedCall:0_prequant
+	scale__94
+zero_point__71StatefulPartitionedCall:0"StatefulPartitionedCall:0_quantize"QuantizeLinear: tf2onnx*Bzero_point__91J+*Bzero_point__81Jÿ*Bzero_point__77JÈ*Bzero_point__73J*Bzero_point__71J€*Bzero_point__65J	*Bzero_point__63J'*Bzero_point__53J*Bzero_point__49J*Bzero_point__45J™*Bzero_point__43J    *Bzero_point__35J*Bzero_point__33J *Bzero_point__25Jƒ*B	scale__94J  €;*B	scale__90Jş–>*B	scale__88Jÿ¥‰=*B	scale__84JG¥>*B	scale__82JP&?*B	scale__78J æî>*B	scale__76Jéú˜=*B	scale__72J˜dÖ;*B	scale__68JçD=*B	scale__64JBT>*B	scale__60JU}<*B	scale__58JÎ|v=*B	scale__52J7¬>*B	scale__50JÊ,q<*B	scale__48JÁJ<*B	scale__46Jnv„=*B	scale__44Jò=<*B	scale__42Jod";*B	scale__40JÈ!S=*B	scale__38JD—;*B	scale__34J&·=*B	scale__32J ß„;*B	scale__30JGü;*B	scale__28J”sŸ:*B	scale__26JÉùv;*B	scale__24JšÏ¢?*é'^B‹AutoEncoderClassifier/quant_reconstruction_out/MatMul;AutoEncoderClassifier/quant_reconstruction_out/LastValueQuant/FakeQuantWithMinMaxVarsJÒü-	ıŞŞŞ ùøşşıE ô á )şúş üşüø /Ş ŞüşıøÿøûCÆÃøıá	õ	ù ö     ıÿæâéİåâßÿÿıèá   şàæÖßÖÛÇÒÿÖİÊÓÿóéøûô ÛÖàÎŞÑäÏÚ´îñûïõÿı 
+       òÊ ÿÿıÿÿ¿ÿ ÿı É Ğ   ş   ıùü§ÿıûıü æ ó ÿşû!û#ığ´ÿÿ ÿÿ/şö õğ  ôõ    úûûçëêíåååÿæçÿ ÷éæ  ê ıæà¿Ûúæı şûçğùÿ÷ûşùêùşıö û÷äááÒÜİÔéÔàäåëøçüó÷ûõüÿÿ  ı   şşÿèåíâéåâòÿÿíä Ã ô  ãêæèÜáÔŞÿÚâÓİú  Ëó×Îó İØãÕã×èÕÙ¾ññúğúÿâû          ò ıúÿşıÿ  Ç şûşÏù9 *Ù ûØI–øıÌÕ÷	îş  ıñ ı   
+ÿ ÜÜÜÿïæÊÅËäÌ  Ú Ò ñÿÿş ÿÿ  ş ÿÿéìÿİóÿ áëÜÿ ÿ ÿÚëÿ ÿ ÿÿ(üĞıÿ ú ø   îâñåéåèÒÒÒéüì	ãá ® M áÿù		æø ãøàñáÚàËîÔãÊá İİÒèîıë ãíââæöäñáâğáâı©öüò   ü   øÅááá	õş©  È ì âüî÷û5"	"&  á
+ı ê—òüÅ	û2ÿñı ó ê    ğè º  Ù ä  ÿÓÿü÷¬ÿÿşû ïèóßÔò &()(#åõ	ÿì÷øïş ôğ    ı   åååÕÊáÓú¿ø  á ê ÿÿü ÿşÿş şÿÿîéè êóÿ èèäşşşÿÿâáÿÿÿÿàÕÏÿ ş   ı ú   æ éïîïõ ññîó  ß şø
+ø ô õÜéäØÛğØÜÜ Ú×îğúõûóåõ×ø÷ıøñŞÜêİÆÿøø÷ÿÿ ı  õ   î2şõı* ıÿî Ç  şöî×éàFööË	:şıç`-Aç ,Ûaêaî^İòîúğöú_ô¾ù óÿ ú   òîûüûããã ûÍ üóÿú ¹ ì ş şÌ ÿ µ şşùîäÙùúıàå÷ù İÙãÿü ñïøıó ûúîûëÿæ õ÷  êö ø    ÿ ìåí×ïíõ èùşü
+ìÉ  Û üøÕ÷Øìñêáù ç(1×  õÓÔøÓÂNâíùäø õûùğøÿ ø ı   Öñ ÿ şÛÛÛÿ óÿú  ü ş Ğ ß  Ç  ÿ É  ùæòëãìøôŞİİæ æäÙÿü ÚèåñçÊşÿùõş ğÿ ÿ    ×ï  ÿßßß ı ÿÈ÷»ÿ Ô å á  şşü Ç  úşïéßü ÿçóåş âáß ÿş
+     ÿşğşËóóøì îî ø   şíéòâğéäüıùıñİ   C ı
+Şğıâı æöæ0çõç ûêáÜÿÒÔğÑ.Eñ÷ÿóúåææÚè ÷şÿ ş      ïÙÙÙşÜúî0 ¼ I òúñìù
+ %şşùıãïè ÙíïñÓÏìúÛü@
+üó÷ ì     ûÜöö÷õÚÚÚ÷ ö		û÷É Ğ ¾ ùõùö±ş+ıù ÷.óç ÿÚïîì÷ôşô÷G&ËôüÙ 
+÷õï  ìş ú   øí"×××ı÷îş ( å ıı÷øşÿ2ö÷ş(ü
+ëºÒÀë 
+Ö!øTüTéPI÷ôñûòøÖşÇ÷ ı ê      áğìÿ ÿë Â   ãáÀÕ şış øàñçßÏòÖäÖá ãáÒ#Ü#è"Ó àåöâ÷áâğáÙü½ ş  ş ı      õëêîè   íêŞİèãßışíå 
+ à  íìàìãèàæşæèŞæúäõğçäŞöêéää ëç åãäâìäğáÛÌëïúìøääõäçÙğÏÿ  ú û   ûóÚÿîëóåòëş èÿ ÿşòî × D úôôöŞıßò úâïö	 óÖúÜÖM	 âİòÑúÒóÔİ>ş ù
+	 	ÓÅòûÿ ş     üûş÷ßßß 	óúêÿ÷ Ã Í üùøù¯
+üşüıÿÛñùôóáı ùıß&""ûü	öÿ÷ıûèÛıûòqö  ı ù   ÿğêæíí   ıçË âäü ìŞ 	 ü ışåşÿÿãúÚğæÚâÖğââæÚ ßÚ äáÿßÕğÕ	ÓçíùéõÜÛğÛãûèÏ ÿ  ÿş ÷    ¬ùüı . î üúÿìô½ ²ûóùôêü äó íéïú  ×3#.øûóøöÕ$!	ôöû õ       õÿÿÿÿÚÚÚ ÿ ı ÿãğÄ ı Á İ ó  şş ÿşş  ışûõìæşÿê÷û çæÙÿÿş   èÊ ÿ  ıûûõûÓòÀşı ÿ  í ø   ı èõÿ   ×Ñã×Éÿÿ Ñ û ÿÿÔ ÿş   ÿşúşõèßë  âğäş áß ÿşÿèæ    şşõşíÔÏÿ÷ö õû ù   ìşùøõúò  óøø÷ÿÿû ùî æ ç şùüğîåèû÷öòØúëßßİñèæØ ãß áüÜüå%ÉööüõÜÙØúÙâŞÍò ÿ î ø   ùşñùı   ÿĞÆßÒÅÿ ú Ì ë  şıúÿÿÿııßøëàæ÷ëíà çá ûûú÷úüîé	ÏİİøİùÌÕúûÿ  û ù   í óìëîèíëÖàèŞÊùÿ íæ  à  ìëßëâèßæ ãèİãşàóíãóÛõæäıà çãåáæáëäğàÚËèïúëúáàôàåáØÌÿ  ÿ ú   ôşôğÚÚÚ	øö® ïş Ú ä àëŞÛü+İü# úØôäŞßÂôßäç× ŞßÚÓ>ä<î9éôìùğıáØóÜÇş)ô  ÷ û    ïûÖÖÖşÿ ÿùşø  É ı ıÿı üøıÅ şúüİğèİàúïççúİ âİÖúùû( ÖŞÛğİÊûö øü ø ÷   şÂÿøÛÛÛ ı
+ùşúø' ( õ  ûı% ş	ûşö-û Úõúòÿû.
+'êöù÷ğPÿéşÿ  ÷ ï   ÿåßîØÛàÛüşíá  ¼ ÿéäÒãÏôÒç÷·öÕÜìú
+ÿè ß
+ ÖËßÁÙÄåÃŞìîúìö
+ÿ
+øı  õ    şşÖçâñÔíäÿáÿıñÏ À  îóûîèÑÑàêÖäåø	 Ù	 	Ü×çÇåÉæÈÛºãõüèı			şı¼û û     ø Ğ òğóğÓÓÓùóÿó óÍ ¾ Ï ö üÍùş¬øû í ó Ôøö ÷ùşô		éôüë÷ üîöñ÷ î ÿ   ×âäàãÏÏÏîáÿä Ş× ¬ A Ø õÜö÷àùîÌ 
+ÎÙÔ ÄÿÄêÅÊàæøâí!©çú
+Ï   ÿ   *Æ^BEAutoEncoderClassifier/quant_reconstruction_out/BiasAdd/ReadVariableOpJø^  ¨üÿÿ7  À  ú  ù  V  ’  “  ‘  Ó   ~  %  v  =    ı  ú  Ü  §    6  ÿÿÿŒ  ‰ÿÿÿ»õÿÿ‚ÿÿÿ€  Ì  o  –  ¤  `    {  /  ˜  è  R  A    Í  Şıÿÿp  0  …  «  ÷öÿÿz  ~     Ş   W÷ÿÿo  ‰ÿÿÿ_  ¡  ¢  |  ¤  Ú  x   Î  ½   I  \  şüÿÿ{ûÿÿ&  w  =  ·  m  €  i  9  r  úÿÿO  ‹  ¤  ı   P  '  .  Šÿÿÿs  ‰   ÿÿÿ¡  qÿÿÿÿÿÿšÿÿÿo  *È'BAutoEncoderClassifier/quant_latent_dense/MatMul;AutoEncoderClassifier/quant_latent_dense/LastValueQuant/FakeQuantWithMinMaxVarsJ¾ü
+ı ğ üüã äãÎ ìî  şÒêäûÿ Íû	×ñÏìúõÿûõı  ùõşûûüİùøşõÖ Õè Üşæûøæ òıüÿüù Ôÿı	şêéşèö ü
+ ÿùå Ş ùıô Àô ùÿüÿÓÚç	ôñêüìûõÀÑÿåÚÿó
+ äøå÷úÈ  úñşáııÛÿÿ úúıúıãÿûêÿííøû üå ùñÿ ò÷şüïşıÿ)öó 	ñÿäê¶
+
+Ó÷Óÿş1ÜüÿóÛ	"ôîïøÚâíúóéÚ&ñôëíı êõ çö	ş  ûËŞ¹üüÿıüŞúşÍ	íŞ  ïÏêçøò˜üêäÛ
+éÄô¾íşãıúÏûáûõÚòêõïşÿíåÖì û Ìş	şôì
+ İûã	ñ÷ëışğ ï
+ßóğô÷í øÔ
+ûø şÿ÷åÿè üõÜÿğõûÿÿ üçú åôõ	ó
+Ôìıê(,Âñ#şöüû ò û² øûãÿı ö	Öşò ø ÷ø øÅéòüğ
+æ	ìãıä»ùü óşü *ã^'B…AutoEncoderClassifier/quant_encoder_dense_0/MatMul;AutoEncoderClassifier/quant_encoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVarsJÒıÿ#êııÑşüÿ	şÿ ıÜÿÿş óıú ÷Òúışò
+ö ìáöıîş 	ıû ùûûøÿ ùüşÿüùş şÿüş÷ûşÿ úÿş ÿûûÿÿøñ
+÷
+	øïõû şõü÷ş ÿüúèüúı ş şôùşëü 	öùùııÜùüıûõ ûğüê ô
+ éıüáüûùÿ)ùøâúüëø ûı öúÿúÚ	ûóûş?ëõ áÿîùûü÷  	ıôíõõÿóõìöâ
+şşûşıô úùúÿñöâùı ğş	ıùıôğııûõú
+öâşÿùşíö ôùõğı	 óİÿöøô ôşôûü ÿù÷ùü
+ÿüÿı úööüüÿğò ÿ (êóıéïó%ïñÿãîıæüüıÛõüüú$£òûúûöëÕ Çı ÿåÓş ûüàöÜûû şù şÿ	üûüúø	öùüûü	ùööşù	ù÷úŞüóı÷$õ'÷2 ÿùé ÷ÿùíøôôù÷ìçíÊŞëõÿ÷3şóôøÆèíõ ûİıîşìŞğĞßİóğèæûÑ	ï÷şõ"óïşıÑÿşù÷ø÷÷ìşØ#÷øş ó	ø áıõö÷ğèÿğôŞ÷ü
+úÛ 
+üú#ïõûúÿ ü
+ÿıëıëÿúú÷ ş ÿı	ü' úøüòùúõûóıóú  ôşú Ôşúı%øúÿşò	é÷óü%ÿøşøÙøøíÖß                                       ÿúõüıÿıúÿúıúôııööüúÿûû	úùúşù şşıúùÿÿ ııÿ ûüÿü÷ ü  'âıàöòîàäÒñ&.ïç§ìEŞ À0ÛûèÊùàøşõôúãúêåï	÷ìğå"óô÷ãïöù9çğìùõî	şÿñöøöşÿñú ÿ æÿşûüıóıùêıçûúü!ùúş
+ìûìéôış
+ÿúëùùú ııúü	 õü	õóïşüõü ô%şïêÓñÚÁğòàï Ûşı ãü+ôöÜÛôÌåúøÕÿõû#õûüõı÷ÿ÷øãñöıñ $ ñ2çõÿ  ğøùòøøüñı÷úÚòúü÷ûÿ
+úöğ÷óêşõòöü÷ÿ÷üóşõèÙô2 ÷'õî
+êß/ã$ñ÷şÕş>éíøü[ùİóÆìÜÿ	÷òğëşó ıÛğ ë	ìêóåÈüßªùïıŞÿüúóûùéêïÖ
+ğ*üù"ùåÙùü>ÚìûôêèÍâ÷ïığşø
+ıûøùñúüúúú÷ş
+ëîóúùøåæÿüú÷óùşáãşïóòéîûûğïÛùüõû
+  ùâşøú»ûüìÿ ùîşıüşâıòüùø’õ üû  ÿùüñöûùÿÿúìòôşşşø ı ôıëõıÿûÿôşûøõùışÿüôùúıüûÿ
+ışøş ñÜşû	íûööëìúÿìùòûşïõà ıöõ÷ôùúıùğôııùöûù
+ııúüúıışü÷ ø	ÿúáğ ÷÷îÿúùøôåöúæúıİüûúéÿ ôıóşøéñşö
+
+ üóóùüøôşûşôûÿ úııùïüşó÷üùıú		 ßçÿÿòÿÿşçûóö
+üü ëıáôôúåõşñúìõøîÿşğö
+ş
+òñşİşûş
+'ÿ ëëôó	÷Òüøßşóúùéôô÷ûòóğ$Ûñùéóé 		 üø÷ÿü ÿÿù÷ûÿ	ÿüúïùíùøğ ÿÿòşõıû úûûø ùúşÿû÷ıûşüşøüşÿ úşş ñıõîòıóõûşúñíğóêû# ûíú
+şøÿúóåÿùşÿùïşñ ıú îóéışóåøöÖÛóôòôüıõ&áûù	Ööÿ õõäÍäã ü
+üø  úúùöûçø
+
+ùşıêıøêÿş
+õ	şøûşü ıİ 
+ûö
+Ôşÿûşö	ı÷íòø #ğøÿÉúı÷ùõıü üó	ş ó ôûş	âùûúöıÿûà÷Úı  ñşùõüşõúş øÿ 
+ûú ıüıÿüüõ÷üõû ÿıæöå õ
+ôà ÿ ığõöüı ışô ÿÿ÷ÿûûúù şûşùú÷û÷ùóîıèæîşıùÿ şéüüğîûşõ úü	î	 íùöÿ
+ôüïôûúş
+
+öõş üşııóıõô   ıô	ûö	ôÿûùòõ ñúşóı	üùõ	
+úù ïü ìûï  ışöîş
+ùÿ	üõÿú øñûş õ õîüôàúÛî÷ ş üüñôêÿîùóıü ÿøû şôğïìÿÿÿóûíüşüÿıñıõ÷ûÿñòıï ÿ õ øù ÷	ışşşÿıüÿôıüúû úşışüõüşşıÿşû
+ şúş ÿıüüÿúïú
+üûøûüñğûûş
+ı	íıÿõû  úøöêı÷ıøØü  ñôıüÿ æ÷şúè ûıçÑùí*ãõÕC58ô¿æí)×%.ïïÔÛ ññçìíòÿÿöÿï"ôôş	ôÜöéıçêöèûõâùöö	 ğõá	úıóøó
+ıùìùşÿ ÿñ
+î:üòEÿşüû ó 0 êüè ó÷âú.ú
+Üâ÷½şèòâøÑñğ/ÙÿÂú#şÓşßùéï#ùê 	!÷İşÑ'ãöûşê&óó#áäàø8àìş%6àìõà	ô0õñ°	
+"ã-êÃç$ÿÃñê øä ÿÿÿışğşş  ûî  ä ÷ ñòùÄñä'ıà7üÜÛèÚñöüø'êÚóâáø-0òø÷ïôüö÷ïşşù*İ7öİì>ÿûúø2şÿıÿ   øö ôã  ÿÿ÷  ñıñÿ ò 
+(şôıúûÿıı	íúğ0 Ûè'íü;ëıı@#¿Øş *
+ æùí íäÿÿÿè Aá âûéúë÷ ı!     ÿü          ı   ş    ÿ ş  ÿ        â  á ôÿ \ ÿ   ë        :ıï0ğ
+ıÊäöşÿìßüğ#ò
+éê÷õõì*Ï'B…AutoEncoderClassifier/quant_decoder_dense_0/MatMul;AutoEncoderClassifier/quant_decoder_dense_0/LastValueQuant/FakeQuantWithMinMaxVarsJ¾ü"ú#ø÷@øæøòùÉ!3Iá
+ü!ü÷õşø  éÿ÷ø
+òşıú	ûğßï  úïòÿıûı ú÷öõüÿ ÷æöÿü ô
+ôşÿğü÷øóîô6§¡É²Ä'·
+Ê=ĞŞÛ$Ø¼Æ³ 9âÔÅNÁ¾3íçğéÔø
+ìş)ğåğÙÛşÕ­/ğôîÎÇ ı÷óû
+úıûòıú	óıùäàúùøÿÿıØõı	 üû	şõ öùõ ÿÿøúüó÷éØÔè¶Ù=²íù7èÀŞÔ	ß»òµ³Ğ'òÖ !ò,äİÚÍôç.÷E%í%¾ÛÒ³ÏòğïÍ+úöõıß ÿùññòá  ıûğüşışõÿúûú
+ åÀ?Ù, öúì°ıÿÍ,öğ¿öêÓåáÏçş#Çøşúşÿû
+ úÿü 	ûÿ÷û÷ÿúÿÿöüåêı)ëú ù&ñà
+Óüí öõûöıÿóø
+ßöÓâç Òóóî)éô	+â+6'#!éæ!ğûòóôòÛıã	ûô1	şúõ*	
+ ıéüôõù  íóïõ÷òüŞûıÿıüşüôÿıı 	ıøê	÷şı	 ûğõöÿü ÿÿ	ñ  ùÿû
+ öı*B‹AutoEncoderClassifier/quant_classification_out/MatMul;AutoEncoderClassifier/quant_classification_out/LastValueQuant/FakeQuantWithMinMaxVarsJêñî+1ÒàâàãÿÂçÁÌé<Ìşèã
+ôîúãîÓ&&!ÜÅ¸ùÜ¿æßää¿ ßòÛäîÈÑé¹á<.±Õíçé¸ßœßıêåçîïÑÛÿîüëúÓ áòİçâêö“ß §ùÙüîæşíØ÷ÍÎá× ñêhĞÜãèÛÖÕËé÷ÚêäÉáôñ	ñş¬ãïöùÍúş>ÁğÀğëÚÖïéùÒCÕğìØÕÌñ  ôÕÿÙÒŞ	Å¾5×ĞúÖÒÆÙÿÓÓğ°ù/×Íï*BEAutoEncoderClassifier/quant_classification_out/BiasAdd/ReadVariableOpJ4H   8ÿÿÿfşÿÿmÿÿÿ   XÿÿÿÄşÿÿü  øÿÿÿjÿÿÿ‰ÿÿÿ  ùşÿÿ*NB4AutoEncoderClassifier/latent_batchnorm/batchnorm/subJï´¿ÊqÊ±×€ÂçÚéí>*NB4AutoEncoderClassifier/latent_batchnorm/batchnorm/mulJİÁ š¾ÀÂóÕ,Ú×ïÑ*f'B7AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/subJ'şıô €”eßµ$@Í.¬À1âÉË±øûğğïúXWş¶ä7*f'B7AutoEncoderClassifier/encoder_batchnorm_0/batchnorm/mulJ'Zñ%şõùÅãğ_65îÉà	ûÆæğ¿Ê9|áğ0'*f'B7AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/subJ'«"ëÏ´ü¦ÅĞ®æÌöö
+É¡ùX€©çû›òÛ'à@¨¬ÌÀ*f'B7AutoEncoderClassifier/decoder_batchnorm_0/batchnorm/mulJ'ãşç Å¿³°/ĞèÇéäë·ÍÌû6ÛÒu¹%ü>æö-ÇÜæËÂR'converted from best_AE_QAT_model.tfliteZ8
+serving_default_encoder_input:0
+
+	unk__96
+^b2
+StatefulPartitionedCall:1
+
+	unk__97
+^b2
+StatefulPartitionedCall:0
+
+	unk__98
+B
+ B
+
+ai.onnx.ml
