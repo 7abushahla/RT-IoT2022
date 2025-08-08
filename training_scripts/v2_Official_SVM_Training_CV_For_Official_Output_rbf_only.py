@@ -71,7 +71,9 @@ CLASSES = 13
 # INPUT_SIZE = 83  # Not used in Random Forest, but retained for consistency
 
 FIG_SIZE = (12, 12)
-CHECKPOINT_DIR = "./checkpoints"
+num_iters = "_100"
+model_type = "_svm_rbf_only"
+CHECKPOINT_DIR = f"./checkpoints{model_type}{num_iters}"
 
 
 # In[9]:
@@ -86,13 +88,18 @@ if not os.path.exists(CHECKPOINT_DIR):
 
 # Best SVM hyperparameters
 BEST_SVM_PARAMS = {
-    "C": 211.58249628458552,       # Replace with your tuned value
-    "gamma": 0.2582617058402775, # Replace with your tuned value
+    "C": 1.8735204023106204,       # Replace with your tuned value
+    "gamma": 0.05739522831237907, # Replace with your tuned value
+    "degree": 3,
     "kernel": "rbf",
     'random_state': SEED,
     "verbose": True,
-    "max_iter" : 1_500,
+    "max_iter" : 100,
     "probability": True  # Enable probability estimates
+    # previously, probability had the default value of false
+    # because it would slow down hyperparameter tuning
+    # and we tuned based on macro f1 anyway,
+    # which is not probability based
 }
 
 
@@ -212,10 +219,12 @@ preprocessor = ColumnTransformer(
     ]
 )
 
-model_pipeline = Pipeline(steps=[
-    ('preprocessor', preprocessor),
-    ('classifier', SVC(**BEST_SVM_PARAMS))
-])
+svm_classifier = SVC(**BEST_SVM_PARAMS)
+
+# model_pipeline = Pipeline(steps=[
+#     ('preprocessor', preprocessor),
+#     ('classifier', SVC(**BEST_SVM_PARAMS))
+# ])
 
 
 # In[28]:
@@ -244,7 +253,8 @@ rskf = RepeatedStratifiedKFold(n_splits=N_FOLDS, n_repeats=N_REPEATS, random_sta
 
 # Variables to track the best model
 best_macro_f1 = -float('inf')
-best_model_path = os.path.join(CHECKPOINT_DIR, "best_svm_model.joblib")
+best_model_path = os.path.join(CHECKPOINT_DIR, f"best{model_type}_model{num_iters}.joblib")
+best_model_with_prep_path = os.path.join(CHECKPOINT_DIR, f"best{model_type}_model_with_preproc_{num_iters}.joblib")
 
 # Lists to collect test metrics from each fold
 test_precisions = []
@@ -258,7 +268,7 @@ test_accuracies = []
 for fold, (train_idx, val_idx) in enumerate(rskf.split(X_train, Y_train), 1):
     print(f"\nFold {fold}/{N_FOLDS * N_REPEATS}")
     
-# Split the data
+    # Split the data
     X_train_fold = X_train.iloc[train_idx].copy()
     Y_train_fold = Y_train[train_idx].copy()
     X_valid_fold = X_train.iloc[val_idx].copy()
@@ -268,24 +278,23 @@ for fold, (train_idx, val_idx) in enumerate(rskf.split(X_train, Y_train), 1):
     print(f"Before preprocessing: X_train_fold shape: {X_train_fold.shape}, X_valid_fold shape: {X_valid_fold.shape}")
     
     # Fit the pipeline on the training fold
-    model_pipeline.fit(X_train_fold, Y_train_fold)
+    preprocessor.fit(X_train_fold, Y_train_fold)
     
-    # Access the preprocessor from the pipeline
-    preprocessor = model_pipeline.named_steps['preprocessor']
-    
-    # Transform the data to get the shapes after preprocessing
+   # Transform the data to get the shapes after preprocessing
     X_train_transformed = preprocessor.transform(X_train_fold)
     X_valid_transformed = preprocessor.transform(X_valid_fold)
     
     # Print shapes after preprocessing
     print(f"After preprocessing: X_train_fold shape: {X_train_transformed.shape}, X_valid_fold shape: {X_valid_transformed.shape}")
     
+    svm_classifier.fit(X_train_transformed, Y_train_fold)
+
     # Predict on training and validation folds
-    Y_train_pred = model_pipeline.predict(X_train_fold)
-    Y_train_pred_proba = model_pipeline.predict_proba(X_train_fold)
+    Y_train_pred = svm_classifier.predict(X_train_transformed)
+    Y_train_pred_proba = svm_classifier.predict_proba(X_train_transformed)
     
-    Y_valid_pred = model_pipeline.predict(X_valid_fold)
-    Y_valid_pred_proba = model_pipeline.predict_proba(X_valid_fold)
+    Y_valid_pred = svm_classifier.predict(X_valid_transformed)
+    Y_valid_pred_proba = svm_classifier.predict_proba(X_valid_transformed)
     
     # Compute training metrics
     train_bal_acc = balanced_accuracy_score(Y_train_fold, Y_train_pred)
@@ -313,60 +322,79 @@ for fold, (train_idx, val_idx) in enumerate(rskf.split(X_train, Y_train), 1):
         multi_class='ovo'
     )
     
-    # ------------------- Test Set Evaluation for this Fold -------------------
-    # Evaluate the current fold's model on the test set
-    Y_test_pred = model_pipeline.predict(X_test)
-    Y_test_pred_proba = model_pipeline.predict_proba(X_test)
+    # # ------------------- Test Set Evaluation for this Fold -------------------
+    # # Evaluate the current fold's model on the test set
+    # Y_test_pred = model_pipeline.predict(X_test)
+    # Y_test_pred_proba = model_pipeline.predict_proba(X_test)
     
-    # Compute test metrics
-    test_bal_acc = balanced_accuracy_score(Y_test, Y_test_pred)
-    test_accuracy = accuracy_score(Y_test, Y_test_pred)
-    test_macro_f1 = f1_score(Y_test, Y_test_pred, average='macro')
-    test_precision = precision_score(Y_test, Y_test_pred, average='macro', zero_division=0)
-    test_recall = recall_score(Y_test, Y_test_pred, average='macro', zero_division=0)
-    Y_test_bin = label_binarize(Y_test, classes=np.arange(CLASSES))
-    test_auc = roc_auc_score(Y_test_bin, Y_test_pred_proba, average='macro', multi_class='ovo')
+    # # Compute test metrics
+    # test_bal_acc = balanced_accuracy_score(Y_test, Y_test_pred)
+    # test_accuracy = accuracy_score(Y_test, Y_test_pred)
+    # test_macro_f1 = f1_score(Y_test, Y_test_pred, average='macro')
+    # test_precision = precision_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+    # test_recall = recall_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+    # Y_test_bin = label_binarize(Y_test, classes=np.arange(CLASSES))
+    # test_auc = roc_auc_score(Y_test_bin, Y_test_pred_proba, average='macro', multi_class='ovo')
     
-    # Collect test metrics for aggregation
-    test_precisions.append(test_precision)
-    test_recalls.append(test_recall)
-    test_f1_scores.append(test_macro_f1)
-    test_accuracies.append(test_accuracy)
-    test_bal_accuracies.append(test_bal_acc)
-    test_aucs.append(test_auc)
+    # # Collect test metrics for aggregation
+    # test_precisions.append(test_precision)
+    # test_recalls.append(test_recall)
+    # test_f1_scores.append(test_macro_f1)
+    # test_accuracies.append(test_accuracy)
+    # test_bal_accuracies.append(test_bal_acc)
+    # test_aucs.append(test_auc)
     
     print(f"Training Balanced Accuracy: {train_bal_acc:.4f}")
     print(f"Validation Balanced Accuracy: {val_bal_acc:.4f}")
-    print(f"Test Balanced Accuracy: {test_bal_acc:.4f}")
+    # print(f"Test Balanced Accuracy: {test_bal_acc:.4f}")
     print(f"Training Accuracy: {train_accuracy:.4f}")
     print(f"Validation Accuracy: {val_accuracy:.4f}")
-    print(f"Test Accuracy: {test_accuracy:.4f}")
+    # print(f"Test Accuracy: {test_accuracy:.4f}")
     print(f"Training Macro F1 Score: {train_macro_f1:.4f}")
     print(f"Validation Macro F1 Score: {val_macro_f1:.4f}")
-    print(f"Test Macro F1 Score: {test_macro_f1:.4f}")
+    # print(f"Test Macro F1 Score: {test_macro_f1:.4f}")
     print(f"Training Precision (Macro): {train_precision:.4f}")
     print(f"Validation Precision (Macro): {val_precision:.4f}")
-    print(f"Test Precision (Macro): {test_precision:.4f}")
+    # print(f"Test Precision (Macro): {test_precision:.4f}")
     print(f"Training Recall (Macro): {train_recall:.4f}")
     print(f"Validation Recall (Macro): {val_recall:.4f}")
-    print(f"Test Recall (Macro): {test_recall:.4f}")
+    # print(f"Test Recall (Macro): {test_recall:.4f}")
     print(f"Training ROC AUC Score: {train_auc:.4f}")
     print(f"Validation ROC AUC Score: {val_auc:.4f}")
-    print(f"Test ROC AUC Score: {test_auc:.4f}")
-    
-    # Save metrics for this fold - ONLY TEST METRICS
+    # print(f"Test ROC AUC Score: {test_auc:.4f}")
+
+    # Save metrics for this fold, including predictions
     metrics = {
-        "test_balanced_accuracy": test_bal_acc,
-        "test_accuracy": test_accuracy,
-        "test_macro_f1": test_macro_f1,
-        "test_precision_macro": test_precision,
-        "test_recall_macro": test_recall,
-        "test_auc": test_auc,
-        "test_y_true": Y_test.tolist(),
-        "test_y_pred": Y_test_pred.tolist(),
-        "test_y_score": Y_test_pred_proba.tolist()
+        "train_balanced_accuracy": train_bal_acc,
+        "train_accuracy": train_accuracy,
+        "train_macro_f1": train_macro_f1,
+        "train_precision_macro": train_precision,
+        "train_recall_macro": train_recall,
+        "train_auc": train_auc,
+        "validation_balanced_accuracy": val_bal_acc,
+        "validation_accuracy": val_accuracy,
+        "validation_macro_f1": val_macro_f1,
+        "validation_precision_macro": val_precision,
+        "validation_recall_macro": val_recall,
+        "validation_auc": val_auc,
+        "val_y_true": Y_valid_fold.tolist(),
+        "val_y_pred": Y_valid_pred.tolist(),
+        "val_y_score": Y_valid_pred_proba.tolist()
     }
-    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold}.json")
+
+    # # Save metrics for this fold - ONLY TEST METRICS
+    # metrics = {
+    #     "test_balanced_accuracy": test_bal_acc,
+    #     "test_accuracy": test_accuracy,
+    #     "test_macro_f1": test_macro_f1,
+    #     "test_precision_macro": test_precision,
+    #     "test_recall_macro": test_recall,
+    #     "test_auc": test_auc,
+    #     "test_y_true": Y_test.tolist(),
+    #     "test_y_pred": Y_test_pred.tolist(),
+    #     "test_y_score": Y_test_pred_proba.tolist()
+    # }
+    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold}{num_iters}.json")
     with open(metrics_file, 'w') as f:
         json.dump(metrics, f, indent=4)
     print(f"Metrics saved to {metrics_file}")
@@ -374,18 +402,23 @@ for fold, (train_idx, val_idx) in enumerate(rskf.split(X_train, Y_train), 1):
     # Check if this fold's model is the best so far
     if val_macro_f1 > best_macro_f1:
         best_macro_f1 = val_macro_f1
+
+        # Save the model with preprocessing
+        joblib.dump((preprocessor, svm_classifier), best_model_with_prep_path)
+
         # Save the model
-        joblib.dump(model_pipeline, best_model_path)
+        joblib.dump(svm_classifier, best_model_path)
+
         print(f"Best model updated and saved to {best_model_path} with Macro F1: {best_macro_f1:.4f}")
-    
     # Optional: Save the model for each fold
-    # model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold}.joblib")
-    # joblib.dump(model_pipeline, model_path)
-    # print(f"Model for fold {fold} saved to {model_path}")
+    # Optional: Save the model for each fold (as a tuple: (preprocessor, booster)) with joblib
+    model_path = os.path.join(CHECKPOINT_DIR, f"model_fold_with_preproc{fold}{num_iters}.joblib")
+    # model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold}{num_iters}.joblib")
+    joblib.dump((preprocessor, svm_classifier), model_path)
+    print(f"Model for fold {fold} saved to {model_path}")
     
     # Clean up
     del X_train_fold, Y_train_fold, X_valid_fold, Y_valid_fold, Y_train_pred, Y_train_pred_proba, Y_valid_pred, Y_valid_pred_proba
-    del Y_test_pred, Y_test_pred_proba
     gc.collect()
     
 print("Cross-validation completed successfully.")
@@ -393,79 +426,78 @@ print("Cross-validation completed successfully.")
 # ---------------------------
 # Aggregate Test Metrics Across All Folds
 # ---------------------------
-aggregated_test_metrics = {
-    "precision": {
-        "mean": float(np.mean(test_precisions)) if test_precisions else None,
-        "std": float(np.std(test_precisions)) if test_precisions else None
-    },
-    "recall": {
-        "mean": float(np.mean(test_recalls)) if test_recalls else None,
-        "std": float(np.std(test_recalls)) if test_recalls else None
-    },
-    "macro_f1": {
-        "mean": float(np.mean(test_f1_scores)) if test_f1_scores else None,
-        "std": float(np.std(test_f1_scores)) if test_f1_scores else None
-    },
-    "accuracy": {
-        "mean": float(np.mean(test_accuracies)) if test_accuracies else None,
-        "std": float(np.std(test_accuracies)) if test_accuracies else None
-    },
-    "balanced_accuracy": {
-        "mean": float(np.mean(test_bal_accuracies)) if test_bal_accuracies else None,
-        "std": float(np.std(test_bal_accuracies)) if test_bal_accuracies else None
-    },
-    "auc": {
-        "mean": float(np.mean(test_aucs)) if test_aucs else None,
-        "std": float(np.std(test_aucs)) if test_aucs else None
-    }
-}
+# aggregated_test_metrics = {
+#     "precision": {
+#         "mean": float(np.mean(test_precisions)) if test_precisions else None,
+#         "std": float(np.std(test_precisions)) if test_precisions else None
+#     },
+#     "recall": {
+#         "mean": float(np.mean(test_recalls)) if test_recalls else None,
+#         "std": float(np.std(test_recalls)) if test_recalls else None
+#     },
+#     "macro_f1": {
+#         "mean": float(np.mean(test_f1_scores)) if test_f1_scores else None,
+#         "std": float(np.std(test_f1_scores)) if test_f1_scores else None
+#     },
+#     "accuracy": {
+#         "mean": float(np.mean(test_accuracies)) if test_accuracies else None,
+#         "std": float(np.std(test_accuracies)) if test_accuracies else None
+#     },
+#     "balanced_accuracy": {
+#         "mean": float(np.mean(test_bal_accuracies)) if test_bal_accuracies else None,
+#         "std": float(np.std(test_bal_accuracies)) if test_bal_accuracies else None
+#     },
+#     "auc": {
+#         "mean": float(np.mean(test_aucs)) if test_aucs else None,
+#         "std": float(np.std(test_aucs)) if test_aucs else None
+#     }
+# }
 
-# Save aggregated test metrics
-agg_test_metrics_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.json")
-with open(agg_test_metrics_file, 'w') as f:
-    json.dump(aggregated_test_metrics, f, indent=4)
-print(f"\nAggregated test metrics across all folds saved to {agg_test_metrics_file}")
+# # Save aggregated test metrics
+# agg_test_metrics_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.json")
+# with open(agg_test_metrics_file, 'w') as f:
+#     json.dump(aggregated_test_metrics, f, indent=4)
+# print(f"\nAggregated test metrics across all folds saved to {agg_test_metrics_file}")
 
-# Print aggregated test metrics
-print("\n----- Aggregated Test Metrics Across All Folds -----")
-for metric, stats in aggregated_test_metrics.items():
-    mean_val = stats.get('mean')
-    std_val = stats.get('std')
-    if mean_val is None or std_val is None:
-        print(f"Test {metric.capitalize().replace('_', ' ')}: Not available")
-    else:
-        display_metric = metric.capitalize().replace('_', ' ')
-        if metric == 'macro_f1':
-            display_metric = 'Macro F1'
-        elif metric == 'balanced_accuracy':
-            display_metric = 'Balanced Accuracy'
-        print(f"Test {display_metric}: {mean_val:.5f} ± {std_val:.5f}")
-print("----------------------------------------------------\n")
+# # Print aggregated test metrics
+# print("\n----- Aggregated Test Metrics Across All Folds -----")
+# for metric, stats in aggregated_test_metrics.items():
+#     mean_val = stats.get('mean')
+#     std_val = stats.get('std')
+#     if mean_val is None or std_val is None:
+#         print(f"Test {metric.capitalize().replace('_', ' ')}: Not available")
+#     else:
+#         display_metric = metric.capitalize().replace('_', ' ')
+#         if metric == 'macro_f1':
+#             display_metric = 'Macro F1'
+#         elif metric == 'balanced_accuracy':
+#             display_metric = 'Balanced Accuracy'
+#         print(f"Test {display_metric}: {mean_val:.5f} ± {std_val:.5f}")
+# print("----------------------------------------------------\n")
 
-# Save formatted output to a text file
-output_lines = ["Aggregated Test Metrics Across All Folds:"]
-for metric, stats in aggregated_test_metrics.items():
-    mean_val = stats.get('mean')
-    std_val = stats.get('std')
-    if mean_val is None or std_val is None:
-        output_lines.append(f"Test {metric}: Not available")
-    else:
-        display_metric = metric.capitalize().replace('_', ' ')
-        if metric == 'macro_f1':
-            display_metric = 'Macro F1'
-        elif metric == 'balanced_accuracy':
-            display_metric = 'Balanced Accuracy'
-        output_lines.append(f"Test {display_metric}: {mean_val:.5f} ± {std_val:.5f}")
+# # Save formatted output to a text file
+# output_lines = ["Aggregated Test Metrics Across All Folds:"]
+# for metric, stats in aggregated_test_metrics.items():
+#     mean_val = stats.get('mean')
+#     std_val = stats.get('std')
+#     if mean_val is None or std_val is None:
+#         output_lines.append(f"Test {metric}: Not available")
+#     else:
+#         display_metric = metric.capitalize().replace('_', ' ')
+#         if metric == 'macro_f1':
+#             display_metric = 'Macro F1'
+#         elif metric == 'balanced_accuracy':
+#             display_metric = 'Balanced Accuracy'
+#         output_lines.append(f"Test {display_metric}: {mean_val:.5f} ± {std_val:.5f}")
 
-output_text = "\n".join(output_lines)
-output_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.txt")
-with open(output_file, "w") as f:
-    f.write(output_text)
-print(f"Formatted aggregated test metrics saved to {output_file}")
+# output_text = "\n".join(output_lines)
+# output_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.txt")
+# with open(output_file, "w") as f:
+#     f.write(output_text)
+# print(f"Formatted aggregated test metrics saved to {output_file}")
 
 
 # In[30]:
-
 
 # Function to load all fold metrics
 def load_all_fold_metrics(n_folds, metrics_per_fold_path):
@@ -477,7 +509,8 @@ def load_all_fold_metrics(n_folds, metrics_per_fold_path):
     all_y_score = []
 
     for fold in range(n_folds):
-        metrics_file = os.path.join(metrics_per_fold_path, f"metrics_fold{fold + 1}.json")
+        fold = fold + 1
+        metrics_file = os.path.join(metrics_per_fold_path, f"metrics_fold{fold}{num_iters}.json")
         if os.path.exists(metrics_file):
             with open(metrics_file, 'r') as f:
                 metrics = json.load(f)
@@ -516,7 +549,7 @@ def load_all_fold_metrics(n_folds, metrics_per_fold_path):
                 all_y_pred.extend(metrics.get('val_y_pred', []))
                 all_y_score.extend(metrics.get('val_y_score', []))
         else:
-            print(f"Metrics file for fold {fold + 1} not found.")
+            print(f"Metrics file for fold {fold} not found.")
 
     return all_train_metrics, all_val_metrics, all_test_metrics, all_y_true, all_y_pred, all_y_score
 
@@ -595,7 +628,7 @@ def compute_and_print_average_metrics(n_folds, metrics_per_fold_path, class_labe
     if all_y_true and all_y_pred:
         final_classification_report = classification_report(all_y_true, all_y_pred, target_names=class_labels, output_dict=True)
         report_df = pd.DataFrame(final_classification_report).transpose()
-        report_file = os.path.join(metrics_per_fold_path, "average_classification_report.csv")
+        report_file = os.path.join(metrics_per_fold_path, f"average_classification_report{num_iters}.csv")
         report_df.to_csv(report_file, index=True)
         print("Average Classification Report:")
         print(report_df)
@@ -608,7 +641,7 @@ def compute_and_print_average_metrics(n_folds, metrics_per_fold_path, class_labe
         plt.xlabel('Predicted')
         plt.ylabel('Actual')
         plt.title('Average Cross-Validation Confusion Matrix')
-        cm_file = os.path.join(metrics_per_fold_path, 'average_confusion_matrix.png')
+        cm_file = os.path.join(metrics_per_fold_path, f'average_confusion_matrix{num_iters}.png')
         plt.savefig(cm_file)
         plt.show()
         plt.close()
@@ -695,7 +728,7 @@ def plot_roc_curves(Y_true, Y_score, class_labels, fig_size=(12, 12), save_path=
     plt.ylabel('True Positive Rate')
     plt.title('Test Set ROC Curves')
     plt.legend(loc="lower right", fontsize='small')
-    roc_curve_file = os.path.join(save_path, 'test_roc_curves.png')
+    roc_curve_file = os.path.join(save_path, f'test_roc_curves{num_iters}png')
     plt.savefig(roc_curve_file)
     plt.show()
     plt.close()
@@ -730,101 +763,198 @@ from sklearn.preprocessing import label_binarize
 # 3. Load the Best Model and Evaluate on the Test Set (COMMENTED OUT - Now done per fold)
 # ---------------------------
 
-# # Path to the best model
-# best_model_path = os.path.join(CHECKPOINT_DIR, "best_svm_model.joblib")
+# Path to the best model
+best_model_with_prep_path = os.path.join(CHECKPOINT_DIR, f"best{model_type}_model_with_preproc_{num_iters}.joblib")
 
-# # Check if the best model exists
-# if os.path.exists(best_model_path):
-#    # Load the best model (which includes preprocessing)
-#    
-#     best_model = joblib.load(best_model_path)
-#     print(f"\nBest model loaded from {best_model_path}")
-# else:
-#     print("No best model found. Please ensure that cross-validation has been run successfully.")
-#     best_model = model_pipeline  # Fallback to the last trained model
-    
-    
-# # Access the preprocessor from the pipeline
-# preprocessor = best_model.named_steps['preprocessor']
+# Check if the best model exists
+if os.path.exists(best_model_with_prep_path):
+   # Load the best model (which includes preprocessing)
+   
+    preprocessor, best_model = joblib.load(best_model_with_prep_path)
+    print(f"\nBest model loaded from {best_model_with_prep_path}")
+else:
+    raise FileNotFoundError(f"No best model found at {best_model_with_prep_path}. Please ensure that cross-validation has been run successfully.")
+        
+# Transform the test data
+X_test_transformed = preprocessor.transform(X_test)
 
-# # Transform the test data
-# X_test_transformed = preprocessor.transform(X_test)
-
-# # Print the shape before and after preprocessing
-# print(f"Before preprocessing: X_test shape: {X_test.shape}")
-# print(f"After preprocessing: X_test_transformed shape: {X_test_transformed.shape}")    
+# Print the shape before and after preprocessing
+print(f"Before preprocessing: X_test shape: {X_test.shape}")
+print(f"After preprocessing: X_test_transformed shape: {X_test_transformed.shape}")    
  
 
-# # Evaluate on the test set
-# print("\nEvaluating the best model on the test set...")
-# Y_test_pred = best_model.predict(X_test)
-# Y_test_pred_proba = best_model.predict_proba(X_test)
+# Evaluate on the test set
+print("\nEvaluating the best model on the test set...")
+Y_test_pred = best_model.predict(X_test_transformed)
+Y_test_pred_proba = best_model.predict_proba(X_test_transformed)
 
-# test_bal_acc = balanced_accuracy_score(Y_test, Y_test_pred)
-# test_accuracy = accuracy_score(Y_test, Y_test_pred)
-# test_macro_f1 = f1_score(Y_test, Y_test_pred, average='macro')
-# test_precision = precision_score(Y_test, Y_test_pred, average='macro', zero_division=0)
-# test_recall = recall_score(Y_test, Y_test_pred, average='macro', zero_division=0)
-# Y_test_bin = label_binarize(Y_test, classes=np.arange(CLASSES))
-# test_auc = roc_auc_score(Y_test_bin, Y_test_pred_proba, average='macro', multi_class='ovo')
+test_bal_acc = balanced_accuracy_score(Y_test, Y_test_pred)
+test_accuracy = accuracy_score(Y_test, Y_test_pred)
+test_macro_f1 = f1_score(Y_test, Y_test_pred, average='macro')
+test_precision = precision_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+test_recall = recall_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+Y_test_bin = label_binarize(Y_test, classes=np.arange(CLASSES))
+test_auc = roc_auc_score(Y_test_bin, Y_test_pred_proba, average='macro', multi_class='ovo')
 
-# print(f"Test Balanced Accuracy: {test_bal_acc:.4f}")
-# print(f"Test Accuracy: {test_accuracy:.4f}")
-# print(f"Test Macro F1 Score: {test_macro_f1:.4f}")
-# print(f"Test Precision (Macro): {test_precision:.4f}")
-# print(f"Test Recall (Macro): {test_recall:.4f}")
-# print(f"Test ROC AUC Score: {test_auc:.4f}")
+print(f"Test Balanced Accuracy: {test_bal_acc:.4f}")
+print(f"Test Accuracy: {test_accuracy:.4f}")
+print(f"Test Macro F1 Score: {test_macro_f1:.4f}")
+print(f"Test Precision (Macro): {test_precision:.4f}")
+print(f"Test Recall (Macro): {test_recall:.4f}")
+print(f"Test ROC AUC Score: {test_auc:.4f}")
 
-# # Save test metrics
-# test_metrics = {
-#     "test_balanced_accuracy": test_bal_acc,
-#     "test_accuracy": test_accuracy,
-#     "test_macro_f1": test_macro_f1,
-#     "test_precision_macro": test_precision,
-#     "test_recall_macro": test_recall,
-#     "test_auc": test_auc,
-# }
-# test_metrics_file = os.path.join(CHECKPOINT_DIR, "test_metrics.json")
-# with open(test_metrics_file, 'w') as f:
-#     json.dump(test_metrics, f, indent=4)
-# print(f"Test metrics saved to {test_metrics_file}")
+# Save test metrics
+test_metrics = {
+    "test_balanced_accuracy": test_bal_acc,
+    "test_accuracy": test_accuracy,
+    "test_macro_f1": test_macro_f1,
+    "test_precision_macro": test_precision,
+    "test_recall_macro": test_recall,
+    "test_auc": test_auc,
+}
+test_metrics_file = os.path.join(CHECKPOINT_DIR, f"test_metrics{num_iters}.json")
+with open(test_metrics_file, 'w') as f:
+    json.dump(test_metrics, f, indent=4)
+print(f"Test metrics saved to {test_metrics_file}")
 
-# # Generate classification report
-# test_classification_report = classification_report(Y_test, Y_test_pred, target_names=class_labels, output_dict=True)
-# test_report_df = pd.DataFrame(test_classification_report).transpose()
-# test_report_file = os.path.join(CHECKPOINT_DIR, "test_classification_report.csv")
-# test_report_df.to_csv(test_report_file, index=True)
-# print(f"Test classification report saved to {test_report_file}")
+# Generate classification report
+test_classification_report = classification_report(Y_test, Y_test_pred, target_names=class_labels, output_dict=True)
+test_report_df = pd.DataFrame(test_classification_report).transpose()
+test_report_file = os.path.join(CHECKPOINT_DIR, f"test_classification_report{num_iters}.csv")
+test_report_df.to_csv(test_report_file, index=True)
+print(f"Test classification report saved to {test_report_file}")
 
-# # Plot confusion matrix
-# cm_test = confusion_matrix(Y_test, Y_test_pred)
-# plt.figure(figsize=FIG_SIZE)
-# sns.heatmap(cm_test, annot=True, fmt="d", cmap="Blues", xticklabels=class_labels, yticklabels=class_labels)
-# plt.xlabel('Predicted')
-# plt.ylabel('Actual')
-# plt.title('Test Set Confusion Matrix')
-# cm_file = os.path.join(CHECKPOINT_DIR, 'test_confusion_matrix.png')
-# plt.savefig(cm_file)
-# plt.show()
-# plt.close()
-# print(f"Confusion matrix saved to {cm_file}\n")
+# Plot confusion matrix
+cm_test = confusion_matrix(Y_test, Y_test_pred)
+plt.figure(figsize=FIG_SIZE)
+sns.heatmap(cm_test, annot=True, fmt="d", cmap="Blues", xticklabels=class_labels, yticklabels=class_labels)
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Test Set Confusion Matrix')
+cm_file = os.path.join(CHECKPOINT_DIR, f'test_confusion_matrix{num_iters}.png')
+plt.savefig(cm_file)
+plt.show()
+plt.close()
+print(f"Confusion matrix saved to {cm_file}\n")
 
-# # ---------------------------
-# # 4. Generate ROC Curves
-# # ---------------------------
+# ---------------------------
+# 4. Generate ROC Curves
+# ---------------------------
 
-# print("\nGenerating ROC Curves...")
-# plot_roc_curves(
-#     Y_true=Y_test,
-#     Y_score=Y_test_pred_proba,
-#     class_labels=class_labels,
-#     fig_size=FIG_SIZE,
-#     save_path=CHECKPOINT_DIR
-# )
+print("\nGenerating ROC Curves...")
+plot_roc_curves(
+    Y_true=Y_test,
+    Y_score=Y_test_pred_proba,
+    class_labels=class_labels,
+    fig_size=FIG_SIZE,
+    save_path=CHECKPOINT_DIR
+)
 
 # Clean up to save memory
 gc.collect()
 
+# In[37]:
+import os
+import joblib
+import numpy as np
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import gc
+
+from sklearn.metrics import (
+    balanced_accuracy_score,
+    accuracy_score,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+    classification_report,
+    confusion_matrix,
+)
+from sklearn.preprocessing import label_binarize
+
+# ---------------------------
+# 3. Load All Fold Models and Evaluate on the Test Set
+# ---------------------------
+
+# List to hold metrics for each fold
+all_metrics = []
+
+# Loop through folds 1 to 30
+for fold in range(1, 31):
+    model_path = os.path.join(CHECKPOINT_DIR, f"model_fold_with_preproc{fold}{num_iters}.joblib")
+    if os.path.exists(model_path):
+        # Load the model for the current fold (which includes preprocessing)
+        preprocessor, model = joblib.load(model_path)
+        
+        # Transform the test data
+        X_test_transformed = preprocessor.transform(X_test)
+
+        print(f"\nModel loaded from {model_path}")
+        
+        # Print the shape before and after preprocessing
+        print(f"Fold {fold}: Before preprocessing: X_test shape: {X_test.shape}")
+        print(f"Fold {fold}: After preprocessing: X_test_transformed shape: {X_test_transformed.shape}")
+
+        # Evaluate on the test set
+        print(f"\nEvaluating fold {fold} on the test set...")
+        Y_test_pred = model.predict(X_test_transformed)
+        Y_test_pred_proba = model.predict_proba(X_test_transformed)
+        
+        test_bal_acc = balanced_accuracy_score(Y_test, Y_test_pred)
+        test_accuracy = accuracy_score(Y_test, Y_test_pred)
+        test_macro_f1 = f1_score(Y_test, Y_test_pred, average='macro')
+        test_precision = precision_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+        test_recall = recall_score(Y_test, Y_test_pred, average='macro', zero_division=0)
+        
+        # Convert Y_test to binary for multi-class AUC calculation
+        Y_test_bin = label_binarize(Y_test, classes=np.arange(CLASSES))
+        test_auc = roc_auc_score(Y_test_bin, Y_test_pred_proba, average='macro', multi_class='ovo')
+        
+        # Collect metrics for the current fold
+        fold_metrics = {
+            "fold": fold,
+            "balanced_accuracy": test_bal_acc,
+            "accuracy": test_accuracy,
+            "macro_f1": test_macro_f1,
+            "precision_macro": test_precision,
+            "recall_macro": test_recall,
+            "auc": test_auc,
+        }
+        all_metrics.append(fold_metrics)
+        print(f"Fold {fold} metrics: {fold_metrics}")
+    else:
+        print(f"Model file not found: {model_path}")
+
+# Convert the list of metrics dictionaries to a DataFrame
+metrics_df = pd.DataFrame(all_metrics)
+
+# Calculate the mean and standard deviation for each metric across folds
+mean_metrics = metrics_df.mean(numeric_only=True)
+std_metrics = metrics_df.std(numeric_only=True)
+
+# Print the aggregated results in "mean ± std" format
+print("\nAggregated Metrics Across All Folds:")
+for metric in mean_metrics.index:
+    mean_val = mean_metrics[metric]
+    std_val = std_metrics[metric]
+    print(f"{metric}: {mean_val:.5f} ± {std_val:.5f}")
+
+# Save detailed fold metrics and aggregated (mean and std) metrics to a JSON file
+aggregated_metrics = {
+    "detailed": all_metrics,
+    "mean": mean_metrics.to_dict(),
+    "std": std_metrics.to_dict(),
+}
+metrics_file = os.path.join(CHECKPOINT_DIR, f"all_folds_metrics{num_iters}.json")
+with open(metrics_file, 'w') as f:
+    json.dump(aggregated_metrics, f, indent=4)
+print(f"\nAll folds metrics saved to {metrics_file}")
+
+# Clean up to save memory
+gc.collect()
 
 
 
