@@ -22,11 +22,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
+# --- Force TensorFlow to see only GPU 0 ------------------------
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"   # must be set before tf import
+# ---------------------------------------------------------------
+
 import tensorflow as tf
 from tensorflow import keras
+from tensorflow.keras.metrics import F1Score
 from tensorflow.keras import layers, regularizers
-from tensorflow.keras.layers import Dense, Dropout, ReLU
-from tensorflow.keras.optimizers import AdamW
+from tensorflow.keras.optimizers import AdamW, Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, TensorBoard
 from tensorflow.keras.utils import to_categorical
 from sklearn.preprocessing import LabelEncoder, StandardScaler, OneHotEncoder, label_binarize
@@ -34,6 +38,18 @@ from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold
 from sklearn.metrics import (roc_auc_score, f1_score, balanced_accuracy_score, 
                              accuracy_score, precision_score, recall_score)
 from IPython.display import clear_output
+
+import math
+
+# --- Keep only GPU 0 visible inside TF -------------------------
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        tf.config.set_visible_devices(gpus[0], 'GPU')   # hide the rest
+        tf.config.experimental.set_memory_growth(gpus[0], True)
+    except RuntimeError as e:         # happens if GPUs are already initialised
+        print(f"[GPU-setup] {e}")
+# ---------------------------------------------------------------
 
 warnings.filterwarnings("ignore")
 
@@ -46,23 +62,35 @@ tf.random.set_seed(SEED)
 # Settings / Hyperparameters
 N_FOLDS = 10
 N_REPEATS = 3
-BATCHSIZE = 128
-CLASSES = 13
-EPOCHS = 1500
-EARLY_STOP_EPOCHS = 300
-PATIENCE = 50
-DROPOUT_RATES = [0.13108334793016338]
-LEARNING_RATE = 0.00044168382406161057
-NEURONS_PER_HIDDEN_LAYER = [58]
-INPUT_SIZE = 83
-OPTIMIZER_NAME = "AdamW"
-FIG_SIZE = (12, 12)
-CHECKPOINT_DIR = "./checkpoints"
-LOGS_DIR = "./logs"
+BATCHSIZE = 1536
+EPOCHS = 100
+EARLY_STOP_EPOCHS = 40
+# PATIENCE = 50
+ALPHA       = 1e-3            # final_lr = ALPHA * BASE_LR
+WARM_EPOCHS = 3               # 3–5 is typical
+LR_MAX = 0.0025135018456015107
 
-FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, "final_model_from_model_evaluation.h5")
-BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, "best_model_from_model_validation_cv.h5")
-BEST_TFLITE_MODEL_PATH = os.path.join(CHECKPOINT_DIR, "best_model_from_model_validation_cv.tflite")
+INPUT_SIZE = 83
+CLASSES = 13
+
+# Autoencoder-specific parameters
+NEURONS_PER_HIDDEN_LAYER = [55]  # Number of units in the hidden layers
+DROPOUT_RATES = [0.20665523551570028]  # Dropout rate for the hidden layer
+LATENT_DIM = 36  # Size of the latent space
+
+# Optimization parameters
+OPTIMIZER_NAME = "AdamW"  # Optimizer for training
+LEARNING_RATE = 0.0002119240613571203  # Learning rate
+
+FIG_SIZE = (12, 12)
+num_iters = "_100"
+model_type = "_AE"
+CHECKPOINT_DIR = f"./checkpoints{model_type}{num_iters}"
+LOGS_DIR = f"./logs{model_type}{num_iters}"
+
+FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, f"final_model_from_model_evaluation{num_iters}.h5")
+BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, f"best_model_from_model_validation_cv{num_iters}.h5")
+BEST_TFLITE_MODEL_PATH = os.path.join(CHECKPOINT_DIR, f"best_model_from_model_validation_cv{num_iters}.tflite")
 
 # Device info
 DEVICE = "GPU" if tf.config.list_physical_devices('GPU') else "CPU"
@@ -71,9 +99,9 @@ print("Using device:", DEVICE)
 # Create necessary folders
 def create_folders():
     folders = [
-        "outputs/overall",
-        "outputs/validation_model",
-        "outputs/evaluation_model_full_training_set",
+        f"outputs{model_type}{num_iters}/overall",
+        f"outputs{model_type}{num_iters}/validation_model",
+        f"outputs{model_type}{num_iters}/evaluation_model_full_training_set",
         CHECKPOINT_DIR,
         LOGS_DIR
     ]
@@ -81,7 +109,7 @@ def create_folders():
         os.makedirs(folder, exist_ok=True)
 
 create_folders()
-save_path = "outputs/overall/"
+save_path = f"outputs{model_type}{num_iters}/overall/"
 
 # ---------------------------
 # Data Loading and Preprocessing
@@ -106,6 +134,18 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 print("Training set size:", X_train.shape)
 print("Test set size:", X_test.shape)
 del data, target
+
+# ---- Callback that prints & logs the LR every epoch -----------------
+class LREpochLogger(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        lr = self.model.optimizer.learning_rate          # schedule or variable
+        if isinstance(lr, tf.keras.optimizers.schedules.LearningRateSchedule):
+            # schedules need the current step
+            lr = lr(self.model.optimizer.iterations)
+        lr = tf.keras.backend.get_value(lr)               # convert to Python float
+        tf.print("epoch", epoch + 1, "lr", lr)
+        if logs is not None:                              # make it part of History / CSV / TB
+            logs["lr"] = lr
 
 # ---------------------------
 # Preprocessing Function
@@ -143,28 +183,157 @@ def preprocess_data(X_train, X_valid, num_cols, categorical_cols):
 # ---------------------------
 # Model Definition (for summary)
 # ---------------------------
-model = keras.Sequential()
-model.add(layers.Input(shape=(INPUT_SIZE,)))
-for i in range(len(NEURONS_PER_HIDDEN_LAYER)):
-    model.add(layers.Dense(
-        NEURONS_PER_HIDDEN_LAYER[i],
-        activation=None,
-        kernel_regularizer=regularizers.l2(1e-4),
-        use_bias=False
-    ))
-    model.add(layers.BatchNormalization())
-    model.add(layers.ReLU())
-    rate = DROPOUT_RATES[i] if i < len(DROPOUT_RATES) else DROPOUT_RATES[0]
-    model.add(layers.Dropout(rate))
-model.add(layers.Dense(CLASSES, activation='softmax'))
-optimizer = AdamW(learning_rate=LEARNING_RATE)
+def define_autoencoder_model(input_size, output_size, hidden_sizes, dropout_rates, latent_dim, l2_reg=1e-4):
+    """
+    Defines the AutoEncoderClassifier model using Keras' Functional API.
+
+    Parameters:
+        input_size (int): Number of input features.
+        output_size (int): Number of output classes.
+        hidden_sizes (list of int): List of neurons in each hidden layer.
+        dropout_rates (list of float): List of dropout rates corresponding to each hidden layer.
+        latent_dim (int): Dimensionality of the latent space.
+        l2_reg (float, optional): L2 regularization factor. Defaults to 1e-4.
+
+    Returns:
+        model (tf.keras.Model): The defined AutoEncoderClassifier model.
+    """
+    if len(hidden_sizes) != len(dropout_rates):
+        raise ValueError("The number of hidden_sizes must match the number of dropout_rates.")
+
+    # --------------------------
+    #        INPUT LAYER
+    # --------------------------
+    inputs = keras.Input(shape=(input_size,), name='encoder_input')
+
+    # --------------------------
+    #          ENCODER
+    # --------------------------
+    x = inputs
+    for i, (hs, dr) in enumerate(zip(hidden_sizes, dropout_rates)):
+        x = layers.Dense(
+            hs,
+            use_bias=False,
+            kernel_regularizer=regularizers.l2(l2_reg),
+            name=f'encoder_dense_{i}'
+        )(x)
+        x = layers.BatchNormalization(name=f'encoder_batchnorm_{i}')(x)
+        x = layers.ReLU(name=f'encoder_relu_{i}')(x)
+        x = layers.Dropout(dr, name=f'encoder_dropout_{i}')(x)
+
+    # Latent (bottleneck) layer
+    x = layers.Dense(
+        latent_dim,
+        use_bias=False,
+        kernel_regularizer=regularizers.l2(l2_reg),
+        name='latent_dense'
+    )(x)
+    x = layers.BatchNormalization(name='latent_batchnorm')(x)
+    latent = layers.ReLU(name='latent_relu')(x)
+
+    # --------------------------
+    #          DECODER
+    # --------------------------
+    dec = latent
+    reversed_hidden_sizes = list(reversed(hidden_sizes))
+    reversed_dropout_rates = list(reversed(dropout_rates))
+    for i, (hs, dr) in enumerate(zip(reversed_hidden_sizes, reversed_dropout_rates)):
+        dec = layers.Dense(
+            hs,
+            use_bias=False,
+            kernel_regularizer=regularizers.l2(l2_reg),
+            name=f'decoder_dense_{i}'
+        )(dec)
+        dec = layers.BatchNormalization(name=f'decoder_batchnorm_{i}')(dec)
+        dec = layers.ReLU(name=f'decoder_relu_{i}')(dec)
+        dec = layers.Dropout(dr, name=f'decoder_dropout_{i}')(dec)
+
+    # Reconstruction output
+    reconstruction = layers.Dense(
+        input_size,
+        activation='relu',
+        name='reconstruction_out',
+        kernel_regularizer=regularizers.l2(l2_reg)
+    )(dec)
+
+    # --------------------------
+    #     CLASSIFICATION HEAD
+    # --------------------------
+    classification = layers.Dense(
+        output_size,
+        activation='softmax',
+        name='classification_out'
+    )(latent)
+
+    # --------------------------
+    #          MODEL
+    # --------------------------
+    model = keras.Model(
+        inputs=inputs,
+        outputs={
+            "reconstruction_out": reconstruction,
+            "classification_out": classification
+        },
+        name='AutoEncoderClassifier'
+    )
+
+    return model
+
+# ---------------------------
+# Model Initialization & Compilation
+# ---------------------------
+model = define_autoencoder_model(
+    input_size=INPUT_SIZE,
+    output_size=CLASSES,
+    hidden_sizes=NEURONS_PER_HIDDEN_LAYER,  # Matches the updated NEURONS_PER_HIDDEN_LAYER
+    dropout_rates=DROPOUT_RATES,  # Matches updated DROPOUT_RATES
+    latent_dim=LATENT_DIM
+)
+
+# ---------------------------
+# This long part is just for the
+# Cosine Decay Optimizer
+# ---------------------------
+
+# Save original training fold (with categorical columns) for test preprocessing
+X_train_fold_orig = X_train.copy()
+
+# Identify numeric and categorical columns using the original training fold
+num_cols = X_train_fold_orig.select_dtypes(include=["int64", "float64"]).columns
+categorical_cols = ['proto', 'service']
+
+X_train_fold, _ = preprocess_data(X_train, X_test, num_cols, categorical_cols)
+
+X_train_array = X_train_fold.values.astype('float32')
+
+# -------------------  compute schedule parameters ------------------
+steps_per_epoch = math.ceil(len(X_train_array) / BATCHSIZE)
+decay_steps     = steps_per_epoch * EPOCHS
+warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+    initial_learning_rate = LR_MAX,
+    decay_steps           = decay_steps,
+    alpha                 = ALPHA,
+    warmup_target         = LR_MAX,        # comment out ↴
+    warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
+)
+
+optimizer = AdamW(learning_rate=lr_schedule)
 model.compile(
     optimizer=optimizer,
     loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
-    metrics=['accuracy']
+    metrics=['accuracy', F1Score(average='macro', name='f1_score')] 
 )
 print("Final model architecture:")
-model.summary()
+# ── write and print the summary simultaneously ──
+with open(f"{CHECKPOINT_DIR}/model_summary{model_type}{num_iters}.txt", "w") as f:
+    model.summary(                      # prints to console
+        print_fn=lambda line: f.write(line + "\n")
+    )                                   # …and writes each line to file
+
+del X_train_fold_orig, num_cols, categorical_cols, X_train_fold, _, X_train_array, steps_per_epoch, decay_steps, warmup_steps, lr_schedule, optimizer, model
+
 
 
 # ---------------------------
@@ -178,13 +347,13 @@ def load_checkpoint(model, checkpoint_path):
     return False
 
 def save_metrics(metrics, fold):
-    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold + 1}.json")
+    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold}{num_iters}.json")
     with open(metrics_file, 'w') as f:
         json.dump(metrics, f, indent=4)
     print(f"Metrics for fold {fold + 1} saved to {metrics_file}")
 
 def load_metrics(fold):
-    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold + 1}.json")
+    metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold}{num_iters}.json")
     if os.path.exists(metrics_file):
         with open(metrics_file, 'r') as f:
             return json.load(f)
@@ -194,7 +363,7 @@ def load_metrics(fold):
 # Custom Callbacks
 # ---------------------------
 class GlobalBestModelCheckpoint(tf.keras.callbacks.Callback):
-    def __init__(self, save_path, monitor='val_f1_score', mode='max', verbose=1):
+    def __init__(self, save_path, monitor='val_classification_out_f1_score', mode='max', verbose=1):
         super(GlobalBestModelCheckpoint, self).__init__()
         self.save_path = save_path
         self.monitor = monitor
@@ -220,7 +389,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
     rskf = RepeatedStratifiedKFold(n_splits=N_FOLDS, n_repeats=N_REPEATS, random_state=SEED)
     global_best_callback = GlobalBestModelCheckpoint(
         save_path=BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH,
-        monitor='val_f1_score',
+        monitor='val_classification_out_f1_score',
         mode='max',
         verbose=1
     )
@@ -234,10 +403,10 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
     test_accuracies = [] 
     
     fold_number = 1
-    for fold, (train_idx, val_idx) in enumerate(rskf.split(X, Y)):
+    for fold, (train_idx, val_idx) in enumerate(rskf.split(X, Y), 1): # enumerate starts from 1
         print(f"\nFold {fold_number}/{N_FOLDS * N_REPEATS}")
-        checkpoint_file = os.path.join(CHECKPOINT_DIR, f"model_checkpoint_fold{fold_number}.h5")
-        metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold_number}.json")
+        checkpoint_file = os.path.join(CHECKPOINT_DIR, f"model_checkpoint_fold{fold_number}{num_iters}.h5")
+        metrics_file = os.path.join(CHECKPOINT_DIR, f"metrics_fold{fold_number}{num_iters}.json")
         if os.path.exists(checkpoint_file) and os.path.exists(metrics_file):
             metrics = load_metrics(fold)
         else:
@@ -267,71 +436,96 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         Y_train_fold = Y_train_fold.astype('category').cat.codes
         Y_valid_fold = Y_valid_fold.astype('category').cat.codes
 
+        # Convert processed data to arrays
         X_train_array = X_train_fold.values.astype('float32')
         Y_train_array = Y_train_fold.values.astype('int32')
         X_valid_array = X_valid_fold.values.astype('float32')
         Y_valid_array = Y_valid_fold.values.astype('int32')
-        input_size = X_train_array.shape[1]
-
-        # Build the model for this fold (without BatchNormalization)
-        model = keras.Sequential()
-        model.add(layers.Input(shape=(input_size,)))
-        for i in range(len(NEURONS_PER_HIDDEN_LAYER)):
-            model.add(layers.Dense(
-                NEURONS_PER_HIDDEN_LAYER[i],
-                activation=None,
-                kernel_regularizer=regularizers.l2(1e-4),
-                use_bias=False
-            ))
-            model.add(layers.BatchNormalization())
-            model.add(layers.ReLU())
-            rate = DROPOUT_RATES[i] if i < len(DROPOUT_RATES) else DROPOUT_RATES[0]
-            model.add(layers.Dropout(rate))
-        model.add(layers.Dense(CLASSES, activation='softmax'))
-        optimizer = tf.keras.optimizers.AdamW(learning_rate=LEARNING_RATE)
         
-        # Include the custom F1Score metric only for training purposes
-        f1_score_metric = tf.keras.metrics.F1Score(average='macro', name='f1_score')
+        # Optionally, set input_size from the processed array shape or use the global INPUT_SIZE
+        input_size = X_train_array.shape[1]
+        
+        # Define training variables for the autoencoder model
+        X_train_processed = X_train_array
+        X_valid_processed = X_valid_array
+        Y_train_encoded = to_categorical(Y_train_array, num_classes=CLASSES)
+        Y_valid_encoded = to_categorical(Y_valid_array, num_classes=CLASSES)
+
+        # Build the model for this fold using the defined autoencoder function.
+        model = define_autoencoder_model(
+            input_size=input_size,          # Global hyperparameter
+            output_size=CLASSES,             # Global hyperparameter
+            hidden_sizes=NEURONS_PER_HIDDEN_LAYER,  # e.g. [39]
+            dropout_rates=DROPOUT_RATES,             # e.g. [0.19886192178341675]
+            latent_dim=LATENT_DIM            # Global hyperparameter
+        )
+        
+        # -------------------  compute schedule parameters ------------------
+        steps_per_epoch = math.ceil(len(X_train_processed) / BATCHSIZE)
+        decay_steps     = steps_per_epoch * EPOCHS
+        warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+        lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+            initial_learning_rate = LR_MAX,
+            decay_steps           = decay_steps,
+            alpha                 = ALPHA,
+            warmup_target         = LR_MAX,        # comment out ↴
+            warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
+        )
+
+        optimizer = tf.keras.optimizers.AdamW(learning_rate=lr_schedule, clipnorm=0.001)
+
         model.compile(
             optimizer=optimizer,
-            loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
-            metrics=['accuracy', f1_score_metric]
+            loss={
+                'reconstruction_out': 'mse',
+                'classification_out': 'categorical_crossentropy'
+            },
+            metrics={
+                'classification_out': [
+                    'accuracy', 
+                    F1Score(average='macro', name='f1_score')
+                ]
+            },
+            # run_eagerly=True  # Uncomment if eager execution is needed
         )
         load_checkpoint(model, checkpoint_file)
 
         # Define a unique directory for TensorBoard logs per fold
         fold_log_dir = os.path.join(
             LOGS_DIR, 
-            f"fold_{fold_number}_{datetime.now().strftime('%Y%m%d-%H%M%S')}"
+            f"fold_{fold_number}_{datetime.now().strftime('%Y%m%d-%H%M%S')}{num_iters}"
         )
         tensorboard_callback = TensorBoard(log_dir=fold_log_dir, histogram_freq=1)
     
         # Set up callbacks (EarlyStopping, ReduceLROnPlateau, global best callback, TensorBoard)
         callbacks = [
             EarlyStopping(
-                monitor='val_f1_score',
+                monitor='val_classification_out_f1_score',
                 mode='max',
                 patience=EARLY_STOP_EPOCHS,
                 restore_best_weights=True,
                 verbose=1
             ),
-            ReduceLROnPlateau(
-                monitor='val_f1_score',
-                mode='max',
-                factor=0.5,
-                patience=PATIENCE,
-                min_lr=1e-8,
-                verbose=1
-            ),
+            LREpochLogger(),
             global_best_callback,
             tensorboard_callback
         ]
         
-        # Train the model for the full number of epochs in one go.
+        # Train the model using the processed and encoded data
         history = model.fit(
-            X_train_array,
-            to_categorical(Y_train_array, num_classes=CLASSES),
-            validation_data=(X_valid_array, to_categorical(Y_valid_array, num_classes=CLASSES)),
+            X_train_processed,
+            {
+                'reconstruction_out': X_train_processed,
+                'classification_out': Y_train_encoded
+            },
+            validation_data=(
+                X_valid_processed,
+                {
+                    'reconstruction_out': X_valid_processed,
+                    'classification_out': Y_valid_encoded
+                }
+            ),
             batch_size=BATCHSIZE,
             epochs=EPOCHS,
             callbacks=callbacks,
@@ -340,8 +534,8 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         # Save final training/validation metrics for this fold (only final values)
         metrics['final_train_loss'] = history.history.get('loss', [])[-1]
         metrics['final_val_loss'] = history.history.get('val_loss', [])[-1]
-        metrics['final_train_f1'] = history.history.get('f1_score', [])[-1]
-        metrics['final_val_f1'] = history.history.get('val_f1_score', [])[-1]
+        metrics['final_train_f1'] = history.history.get('classification_out_f1_score', [])[-1]
+        metrics['final_val_f1'] = history.history.get('val_classification_out_f1_score', [])[-1]
         
         # ------------------- TFLite Conversion and Test Evaluation -------------------
         scaler = StandardScaler()
@@ -363,7 +557,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         converter = tf.lite.TFLiteConverter.from_keras_model(model)
         try:
             tflite_model = converter.convert()
-            tflite_filename = f"model_fold{fold_number}.tflite"
+            tflite_filename = f"model_fold{fold_number}{num_iters}.tflite"
             tflite_model_path = os.path.join(CHECKPOINT_DIR, tflite_filename)
             with open(tflite_model_path, "wb") as f:
                 f.write(tflite_model)
@@ -378,12 +572,28 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
             interpreter.allocate_tensors()
             input_details = interpreter.get_input_details()
             output_details = interpreter.get_output_details()
+            print("\nTFLite Model Output Details:")
+            for idx, detail in enumerate(output_details):
+                print(f"  Output {idx}: Name: {detail.get('name')}, Shape: {detail.get('shape')}")
+            
+            # Find the index of the classification output
+            classification_index = None
+            for idx, detail in enumerate(output_details):
+                if "classification_out" in detail.get("name", ""):
+                    classification_index = idx
+                    break
+            if classification_index is None:
+                classification_index = 0
+                print("Warning: 'classification_out' not found in output details. Defaulting to output index 0.")
+            else:
+                print(f"Using output index {classification_index} for classification predictions.")
+
             tflite_predictions = []
             for i in range(len(X_test_array)):
                 input_data = np.expand_dims(X_test_array[i], axis=0)
                 interpreter.set_tensor(input_details[0]['index'], input_data)
                 interpreter.invoke()
-                pred = interpreter.get_tensor(output_details[0]['index'])
+                pred = interpreter.get_tensor(output_details[classification_index]['index'])
                 tflite_predictions.append(pred)
             tflite_predictions = np.concatenate(tflite_predictions, axis=0)
             tflite_pred_labels = np.argmax(tflite_predictions, axis=1)
@@ -393,17 +603,15 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
             acc = accuracy_score(Y_test_encoded, tflite_pred_labels)
             bal_acc = balanced_accuracy_score(Y_test_encoded, tflite_pred_labels)
             Y_test_bin = label_binarize(Y_test_encoded, classes=np.arange(CLASSES))
+            test_auc = roc_auc_score(Y_test_bin, tf.nn.softmax(tflite_predictions), average='macro', multi_class='ovo')
             
-            # test_auc = roc_auc_score(Y_test_bin, tf.nn.softmax(tflite_predictions), average='macro', multi_class='ovo')
-            test_auc = roc_auc_score(Y_test_bin, tflite_predictions, average='macro', multi_class='ovo')
-
             test_precisions.append(precision)
             test_recalls.append(recall)
             test_f1_scores.append(f1)
             test_accuracies.append(acc)
             test_bal_accuracies.append(bal_acc)
             test_aucs.append(test_auc)
-            print(f"Fold {fold_number}: TFLite Test Metrics -> Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}, Accuracy: {acc:.4f}, Balanced Acc: {bal_acc:.4f}, AUC: {test_auc:.4f}")
+            print(f"Fold {fold_number}: TFLite Test Metrics -> Precision: {precision:.4f}, Recall: {recall:.4f}, F1 (classification): {f1:.4f}, Accuracy: {acc:.4f}, Balanced Acc: {bal_acc:.4f}, AUC: {test_auc:.4f}")
             
             # Save final test metrics in the metrics dictionary
             metrics['final_test_precision'] = precision
@@ -417,11 +625,10 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
             save_metrics(metrics, fold)
         else:
             print(f"Fold {fold_number}: Skipping TFLite test evaluation due to conversion failure.")
-            # Even if test evaluation fails, save whatever metrics we have.
             save_metrics(metrics, fold)
         
         # Save the final Keras model in .h5 format for this fold
-        h5_filename = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final.h5")
+        h5_filename = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final{num_iters}.h5")
         model.save(h5_filename)
         print(f"Fold {fold_number}: Keras model saved in .h5 format to {h5_filename}")
         
@@ -464,7 +671,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
             "std": float(np.std(test_aucs)) if test_aucs else None
         }
     }
-    agg_metrics_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.json")
+    agg_metrics_file = os.path.join(CHECKPOINT_DIR, f"aggregated_test_metrics{num_iters}.json")
     with open(agg_metrics_file, 'w') as f:
         json.dump(aggregated_test_metrics, f, indent=4)
     print(f"\nAggregated TFLite test metrics saved to {agg_metrics_file}")
@@ -481,7 +688,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         else:
             output_lines.append(f"{metric}: {mean_val:.5f} ± {std_val:.5f}")
     output_text = "\n".join(output_lines)
-    output_file = os.path.join(CHECKPOINT_DIR, "aggregated_metrics.txt")
+    output_file = os.path.join(CHECKPOINT_DIR, f"aggregated_metrics{num_iters}.txt")
     with open(output_file, "w") as f:
         f.write(output_text)
     print(f"\nFormatted aggregated metrics saved to {output_file}")
@@ -496,7 +703,7 @@ def run_training():
     
     # Print aggregated test metrics and also display the saved JSON content
     def aggregate_test_metrics():
-        agg_metrics_file = os.path.join(CHECKPOINT_DIR, "aggregated_test_metrics.json")
+        agg_metrics_file = os.path.join(CHECKPOINT_DIR, f"aggregated_test_metrics{num_iters}.json")
         if os.path.exists(agg_metrics_file):
             with open(agg_metrics_file, 'r') as f:
                 agg_metrics = json.load(f)
