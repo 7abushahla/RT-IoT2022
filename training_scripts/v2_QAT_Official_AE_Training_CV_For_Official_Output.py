@@ -26,6 +26,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
+# --- Force TensorFlow to see only GPU 0 ------------------------
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"   # must be set before tf import
+# ---------------------------------------------------------------
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.metrics import F1Score
@@ -39,6 +43,18 @@ from sklearn.metrics import (roc_auc_score, f1_score, balanced_accuracy_score,
                              accuracy_score, precision_score, recall_score)
 from IPython.display import clear_output
 
+import math
+
+# --- Keep only GPU 0 visible inside TF -------------------------
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        tf.config.set_visible_devices(gpus[0], 'GPU')   # hide the rest
+        tf.config.experimental.set_memory_growth(gpus[0], True)
+    except RuntimeError as e:         # happens if GPUs are already initialised
+        print(f"[GPU-setup] {e}")
+# ---------------------------------------------------------------
+
 warnings.filterwarnings("ignore")
 
 # Set seed for reproducibility
@@ -50,34 +66,40 @@ tf.random.set_seed(SEED)
 # Settings / Hyperparameters
 N_FOLDS = 10
 N_REPEATS = 3
-BATCHSIZE = 128
-EPOCHS = 750
-EARLY_STOP_EPOCHS = 100
-PATIENCE = 10
+BATCHSIZE = 1536
+EPOCHS = 50
+EARLY_STOP_EPOCHS = 20
+# PATIENCE = 50
+ALPHA       = 1e-3            # final_lr = ALPHA * BASE_LR
+WARM_EPOCHS = 3               # 3–5 is typical
+LR_MAX = 0.0025135018456015107
 
 INPUT_SIZE = 83
 CLASSES = 13
 
 # Autoencoder-specific parameters
-NEURONS_PER_HIDDEN_LAYER = [39]  # Number of units in the hidden layers
-DROPOUT_RATES = [0.19886192178341675]  # Dropout rate for the hidden layer
-LATENT_DIM = 18  # Size of the latent space
+NEURONS_PER_HIDDEN_LAYER = [55]  # Number of units in the hidden layers
+DROPOUT_RATES = [0.20665523551570028]  # Dropout rate for the hidden layer
+LATENT_DIM = 36  # Size of the latent space
 
 # Optimization parameters
-OPTIMIZER_NAME = "Adam"  # Optimizer for training
+OPTIMIZER_NAME = "AdamW"  # Optimizer for training
 LEARNING_RATE = 0.0002119240613571203  # Learning rate
 
 FIG_SIZE = (12, 12)
-CHECKPOINT_DIR = "./checkpoints"
-LOGS_DIR = "./logs"
+#FOR ORIGINAL AE (NO QAT)
+num_iters = "_100"
+model_type = "_AE"
+CHECKPOINT_DIR = f"./checkpoints{model_type}{num_iters}"
+LOGS_DIR = "./logs_AE_QAT"
 
 # New QAT paths:
 QAT_BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, "best_model_qat_from_validation_cv.h5")
 QAT_BEST_TFLITE_MODEL_PATH = os.path.join(CHECKPOINT_DIR, "best_model_qat_from_validation_INT8.tflite")
 
 # (Other paths remain as before)
-FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, "final_model_from_model_evaluation.h5")
-BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, "best_model_from_model_validation_cv.h5")
+FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, f"final_model_from_model_evaluation{num_iters}.h5")
+BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, f"best_model_from_model_validation_cv{num_iters}.h5")
 
 # Device info
 DEVICE = "GPU" if tf.config.list_physical_devices('GPU') else "CPU"
@@ -86,9 +108,9 @@ print("Using device:", DEVICE)
 # Create necessary folders
 def create_folders():
     folders = [
-        "outputs/overall",
-        "outputs/validation_model",
-        "outputs/evaluation_model_full_training_set",
+        f"outputs{model_type}{num_iters}/overall",
+        f"outputs{model_type}{num_iters}/validation_model",
+        f"outputs{model_type}{num_iters}/evaluation_model_full_training_set",
         CHECKPOINT_DIR,
         LOGS_DIR
     ]
@@ -96,7 +118,7 @@ def create_folders():
         os.makedirs(folder, exist_ok=True)
 
 create_folders()
-save_path = "outputs/overall/"
+save_path = f"outputs{model_type}{num_iters}/overall/"
 
 # ---------------------------
 # Data Loading and Preprocessing
@@ -121,6 +143,20 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 print("Training set size:", X_train.shape)
 print("Test set size:", X_test.shape)
 del data, target
+
+
+# ---- Callback that prints & logs the LR every epoch -----------------
+class LREpochLogger(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        lr = self.model.optimizer.learning_rate          # schedule or variable
+        if isinstance(lr, tf.keras.optimizers.schedules.LearningRateSchedule):
+            # schedules need the current step
+            lr = lr(self.model.optimizer.iterations)
+        lr = tf.keras.backend.get_value(lr)               # convert to Python float
+        tf.print("epoch", epoch + 1, "lr", lr)
+        if logs is not None:                              # make it part of History / CSV / TB
+            logs["lr"] = lr
+
 
 # ---------------------------
 # Preprocessing Function
@@ -265,25 +301,46 @@ model = define_autoencoder_model(
     latent_dim=LATENT_DIM
 )
 
-optimizer = Adam(learning_rate=LEARNING_RATE)
-model.compile(
-    optimizer=optimizer,
-    loss={
-        'reconstruction_out': 'mse',
-        'classification_out': 'categorical_crossentropy'
-    },
-    metrics={
-        'classification_out': [
-            'accuracy', 
-            F1Score(average='macro', name='f1_score')
-        ]
-    },
-    # run_eagerly=True  # Optional: Uncomment if you need eager execution
+
+# ---------------------------
+# This long part is just for the
+# Cosine Decay Optimizer
+# ---------------------------
+
+# Save original training fold (with categorical columns) for test preprocessing
+X_train_fold_orig = X_train.copy()
+
+# Identify numeric and categorical columns using the original training fold
+num_cols = X_train_fold_orig.select_dtypes(include=["int64", "float64"]).columns
+categorical_cols = ['proto', 'service']
+
+X_train_fold, _ = preprocess_data(X_train, X_test, num_cols, categorical_cols)
+
+X_train_array = X_train_fold.values.astype('float32')
+
+# -------------------  compute schedule parameters ------------------
+steps_per_epoch = math.ceil(len(X_train_array) / BATCHSIZE)
+decay_steps     = steps_per_epoch * EPOCHS
+warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+    initial_learning_rate = LR_MAX,
+    decay_steps           = decay_steps,
+    alpha                 = ALPHA,
+    warmup_target         = LR_MAX,        # comment out ↴
+    warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
 )
 
-# Print Model Summary
+optimizer = AdamW(learning_rate=lr_schedule)
+model.compile(
+    optimizer=optimizer,
+    loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
+    metrics=['accuracy', F1Score(average='macro', name='f1_score')] 
+)
 print("Final model architecture:")
-model.summary()
+model.summary()                        
+
+del X_train_fold_orig, num_cols, categorical_cols, X_train_fold, _, X_train_array, steps_per_epoch, decay_steps, warmup_steps, lr_schedule, optimizer, model
 
 # ---------------------------
 # Utility Functions: Checkpoint and Metrics Saving
@@ -356,7 +413,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
     fold_number = 1
     for fold, (train_idx, val_idx) in enumerate(rskf.split(X, Y)):
         print(f"\nFold {fold_number}/{N_FOLDS * N_REPEATS}")
-        final_model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final.h5")
+        final_model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final{num_iters}.h5")
         if not os.path.exists(final_model_path):
             print(f"Fold {fold_number}: Final model not found at {final_model_path}. Skipping fold.")
             fold_number += 1
@@ -407,7 +464,21 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         print(f"Loading final model for Fold {fold_number} from {final_model_path}")
         model = keras.models.load_model(final_model_path, compile=False)
         
-        optimizer = tf.keras.optimizers.Adam(learning_rate=LEARNING_RATE, clipnorm=0.001)
+        # -------------------  compute schedule parameters ------------------
+        steps_per_epoch = math.ceil(len(X_train_processed) / BATCHSIZE)
+        decay_steps     = steps_per_epoch * EPOCHS
+        warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+        lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+            initial_learning_rate = LR_MAX,
+            decay_steps           = decay_steps,
+            alpha                 = ALPHA,
+            warmup_target         = LR_MAX,        # comment out ↴
+            warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
+        )
+
+        optimizer = tf.keras.optimizers.AdamW(learning_rate=lr_schedule, clipnorm=0.001)
+                
         print(f"Loaded pretrained model for QAT fine-tuning for Fold {fold_number}.")
 
         # ---------------------------
@@ -446,14 +517,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
                 restore_best_weights=True,
                 verbose=1
             ),
-            ReduceLROnPlateau(
-                monitor='val_quant_classification_out_f1_score',
-                mode='max',
-                factor=0.5,
-                patience=PATIENCE,
-                min_lr=1e-8,
-                verbose=1
-            ),
+            LREpochLogger(),
             tensorboard_callback
         ]
 
