@@ -25,10 +25,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
+# --- Force TensorFlow to see only GPU 0 ------------------------
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"   # must be set before tf import
+# ---------------------------------------------------------------
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, regularizers
-from tensorflow.keras.layers import Dense, Dropout, ReLU
 from tensorflow.keras.optimizers import AdamW
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, TensorBoard
 from tensorflow.keras.utils import to_categorical
@@ -40,6 +43,19 @@ from IPython.display import clear_output
 
 warnings.filterwarnings("ignore")
 
+import math
+from tensorflow.keras.metrics import F1Score
+
+# --- Keep only GPU 0 visible inside TF -------------------------
+gpus = tf.config.list_physical_devices('GPU')
+if gpus:
+    try:
+        tf.config.set_visible_devices(gpus[0], 'GPU')   # hide the rest
+        tf.config.experimental.set_memory_growth(gpus[0], True)
+    except RuntimeError as e:         # happens if GPUs are already initialised
+        print(f"[GPU-setup] {e}")
+# ---------------------------------------------------------------
+
 # Set seed for reproducibility
 SEED = 42
 np.random.seed(SEED)
@@ -49,18 +65,24 @@ tf.random.set_seed(SEED)
 # Settings / Hyperparameters
 N_FOLDS = 10
 N_REPEATS = 3
-BATCHSIZE = 128
+BATCHSIZE = 1536
 CLASSES = 13
-EPOCHS = 750
-EARLY_STOP_EPOCHS = 100
-PATIENCE = 10
-DROPOUT_RATES = [0.13108334793016338]
+EPOCHS = 50
+EARLY_STOP_EPOCHS = 30
+# PATIENCE = 50
+ALPHA       = 1e-3            # final_lr = ALPHA * BASE_LR
+WARM_EPOCHS = 3               # 3–5 is typical
+DROPOUT_RATES = [0.3325362428573535]
 LEARNING_RATE = 0.00044168382406161057
-NEURONS_PER_HIDDEN_LAYER = [58]
+LR_MAX = 0.0032238360865479076
+NEURONS_PER_HIDDEN_LAYER = [64]
 INPUT_SIZE = 83
 OPTIMIZER_NAME = "AdamW"
 FIG_SIZE = (12, 12)
-CHECKPOINT_DIR = "./checkpoints"
+#FOR ORIGINAL FCNN (NO QAT)
+num_iters = "_100"
+model_type = "_FCNN"
+CHECKPOINT_DIR = f"./checkpoints{model_type}{num_iters}"
 LOGS_DIR = "./logs"
 
 # New QAT paths:
@@ -68,8 +90,9 @@ QAT_BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, "bes
 QAT_BEST_TFLITE_MODEL_PATH = os.path.join(CHECKPOINT_DIR, "best_model_qat_from_validation_INT8.tflite")
 
 # (Other paths remain as before)
-FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, "final_model_from_model_evaluation.h5")
-BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, "best_model_from_model_validation_cv.h5")
+FINAL_MODEL_FROM_MODEL_EVALUATION_PATH = os.path.join(CHECKPOINT_DIR, f"final_model_from_model_evaluation{num_iters}.h5")
+BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH = os.path.join(CHECKPOINT_DIR, f"best_model_from_model_validation_cv{num_iters}.h5")
+
 
 # Device info
 DEVICE = "GPU" if tf.config.list_physical_devices('GPU') else "CPU"
@@ -78,9 +101,9 @@ print("Using device:", DEVICE)
 # Create necessary folders
 def create_folders():
     folders = [
-        "outputs/overall",
-        "outputs/validation_model",
-        "outputs/evaluation_model_full_training_set",
+        f"outputs{model_type}{num_iters}/overall",
+        f"outputs{model_type}{num_iters}/validation_model",
+        f"outputs{model_type}{num_iters}/evaluation_model_full_training_set",
         CHECKPOINT_DIR,
         LOGS_DIR
     ]
@@ -88,7 +111,7 @@ def create_folders():
         os.makedirs(folder, exist_ok=True)
 
 create_folders()
-save_path = "outputs/overall/"
+save_path = f"outputs{model_type}{num_iters}/overall/"
 
 # ---------------------------
 # Data Loading and Preprocessing
@@ -113,6 +136,18 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 print("Training set size:", X_train.shape)
 print("Test set size:", X_test.shape)
 del data, target
+
+# ---- Callback that prints & logs the LR every epoch -----------------
+class LREpochLogger(tf.keras.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        lr = self.model.optimizer.learning_rate          # schedule or variable
+        if isinstance(lr, tf.keras.optimizers.schedules.LearningRateSchedule):
+            # schedules need the current step
+            lr = lr(self.model.optimizer.iterations)
+        lr = tf.keras.backend.get_value(lr)               # convert to Python float
+        tf.print("epoch", epoch + 1, "lr", lr)
+        if logs is not None:                              # make it part of History / CSV / TB
+            logs["lr"] = lr
 
 # ---------------------------
 # Preprocessing Function
@@ -159,19 +194,51 @@ for i in range(len(NEURONS_PER_HIDDEN_LAYER)):
         kernel_regularizer=regularizers.l2(1e-4),
         use_bias=False
     ))
-    # Removed BatchNormalization
+    model.add(layers.BatchNormalization())
     model.add(layers.ReLU())
     rate = DROPOUT_RATES[i] if i < len(DROPOUT_RATES) else DROPOUT_RATES[0]
     model.add(layers.Dropout(rate))
 model.add(layers.Dense(CLASSES, activation='softmax'))
-optimizer = AdamW(learning_rate=LEARNING_RATE)
+
+# ---------------------------
+# This long part is just for the
+# Cosine Decay Optimizer
+# ---------------------------
+
+# Save original training fold (with categorical columns) for test preprocessing
+X_train_fold_orig = X_train.copy()
+
+# Identify numeric and categorical columns using the original training fold
+num_cols = X_train_fold_orig.select_dtypes(include=["int64", "float64"]).columns
+categorical_cols = ['proto', 'service']
+
+X_train_fold, _ = preprocess_data(X_train, X_test, num_cols, categorical_cols)
+
+X_train_array = X_train_fold.values.astype('float32')
+
+# -------------------  compute schedule parameters ------------------
+steps_per_epoch = math.ceil(len(X_train_array) / BATCHSIZE)
+decay_steps     = steps_per_epoch * EPOCHS
+warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+    initial_learning_rate = LR_MAX,
+    decay_steps           = decay_steps,
+    alpha                 = ALPHA,
+    warmup_target         = LR_MAX,        # comment out ↴
+    warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
+)
+
+optimizer = AdamW(learning_rate=lr_schedule)
 model.compile(
     optimizer=optimizer,
     loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
-    metrics=['accuracy']
+    metrics=['accuracy', F1Score(average='macro', name='f1_score')] 
 )
 print("Final model architecture:")
-model.summary()
+model.summary()                        
+
+del X_train_fold_orig, num_cols, categorical_cols, X_train_fold, _, X_train_array, steps_per_epoch, decay_steps, warmup_steps, lr_schedule, optimizer, model
 
 # ---------------------------
 # Utility Functions: Checkpoint and Metrics Saving
@@ -201,34 +268,16 @@ def load_metrics(fold):
 # ---------------------------
 import tensorflow_model_optimization as tfmot
 
-# def annotate_model(model):
-#     # Annotate Dense layers (for example) for quantization
-#     def apply_annotation(layer):
-#         if isinstance(layer, tf.keras.layers.Dense):
-#             return tfmot.quantization.keras.quantize_annotate_layer(layer)
-#         return layer
-#     annotated_model = tf.keras.models.clone_model(
-#         model,
-#         clone_function=apply_annotation
-#     )
-#     quantized_model = tfmot.quantization.keras.quantize_apply(annotated_model)
-#     return quantized_model
-
 def annotate_model(model):
-    # This function will clone the model and annotate layers that are suitable for quantization.
+    # Annotate Dense layers (for example) for quantization
     def apply_annotation(layer):
-        # Annotate only specific layers: you can adjust this list as needed.
-        if isinstance(layer, (Dense, ReLU, Dropout)): 
+        if isinstance(layer, tf.keras.layers.Dense):
             return tfmot.quantization.keras.quantize_annotate_layer(layer)
         return layer
-
-    # Clone the model with the annotation applied on each layer.
     annotated_model = tf.keras.models.clone_model(
         model,
         clone_function=apply_annotation
     )
-    
-    # Now apply the quantization transformation to convert the annotations into actual quantized layers.
     quantized_model = tfmot.quantization.keras.quantize_apply(annotated_model)
     return quantized_model
 
@@ -262,7 +311,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
     fold_number = 1
     for fold, (train_idx, val_idx) in enumerate(rskf.split(X, Y)):
         print(f"\nFold {fold_number}/{N_FOLDS * N_REPEATS}")
-        final_model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final.h5")
+        final_model_path = os.path.join(CHECKPOINT_DIR, f"model_fold{fold_number}_final{num_iters}.h5")
         if not os.path.exists(final_model_path):
             print(f"Fold {fold_number}: Final model not found at {final_model_path}. Skipping fold.")
             fold_number += 1
@@ -304,26 +353,34 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         # ---------------------------
         print(f"Loading final model for Fold {fold_number} from {final_model_path}")
         model = keras.models.load_model(final_model_path, compile=False)
-        optimizer = AdamW(learning_rate=LEARNING_RATE)
+        
+        # -------------------  compute schedule parameters ------------------
+        steps_per_epoch = math.ceil(len(X_train_array) / BATCHSIZE)
+        decay_steps     = steps_per_epoch * EPOCHS
+        warmup_steps    = steps_per_epoch * WARM_EPOCHS
+
+        lr_schedule = tf.keras.optimizers.schedules.CosineDecay(
+            initial_learning_rate = LR_MAX,
+            decay_steps           = decay_steps,
+            alpha                 = ALPHA,
+            warmup_target         = LR_MAX,        # comment out ↴
+            warmup_steps          = warmup_steps   # these two lines if you *don’t* want warm-up
+        )
+
+        optimizer = AdamW(learning_rate=lr_schedule)
+        
         f1_score_metric = tf.keras.metrics.F1Score(average='macro', name='f1_score')
         print(f"Loaded pretrained model for QAT fine-tuning for Fold {fold_number}.")
 
         # ---------------------------
         # Apply QAT annotation and fine-tune the model
         # ---------------------------
-        # qat_model = annotate_model(model)
-        
-        qat_model = tfmot.quantization.keras.quantize_model(model)
-
+        qat_model = annotate_model(model)
         qat_model.compile(
             optimizer=optimizer,
             loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
             metrics=['accuracy', f1_score_metric]
         )
-        print("Converted model to QAT.")
-
-        # qat_model.summary()
-      
         print(f"Starting QAT fine-tuning for Fold {fold_number}...")
         
         # Define TensorBoard log directory for this fold
@@ -340,14 +397,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
                 restore_best_weights=True,
                 verbose=1
             ),
-            ReduceLROnPlateau(
-                monitor='val_f1_score',
-                mode='max',
-                factor=0.5,
-                patience=PATIENCE,
-                min_lr=1e-8,
-                verbose=1
-            ),
+            LREpochLogger(),
             tensorboard_callback
         ]
 
@@ -383,7 +433,6 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
         # Convert the QAT model to a quantized TFLite model (INT8)
         # ---------------------------
         converter = tf.lite.TFLiteConverter.from_keras_model(qat_model)
-        
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
         converter.inference_input_type = tf.int8
@@ -452,9 +501,7 @@ def run_cross_validation(X, Y, hidden_sizes, output_size, dropout_rates):
             acc = accuracy_score(Y_test_encoded, tflite_pred_labels)
             bal_acc = balanced_accuracy_score(Y_test_encoded, tflite_pred_labels)
             Y_test_bin = label_binarize(Y_test_encoded, classes=np.arange(CLASSES))
-           
-            # test_auc = roc_auc_score(Y_test_bin, tf.nn.softmax(tflite_predictions), average='macro', multi_class='ovo')
-            test_auc = roc_auc_score(Y_test_bin, tflite_predictions, average='macro', multi_class='ovo')
+            test_auc = roc_auc_score(Y_test_bin, tf.nn.softmax(tflite_predictions), average='macro', multi_class='ovo')
 
             test_precisions.append(precision)
             test_recalls.append(recall)
@@ -580,17 +627,13 @@ def run_training():
             custom_objects={"F1Score": tf.keras.metrics.F1Score}
         )
         print("Loaded pretrained model for QAT fine-tuning.")
+        qat_model = annotate_model(pretrained_model)
         
-        # qat_model = annotate_model(pretrained_model)
-        
-        qat_model = tfmot.quantization.keras.quantize_model(pretrained_model)
         qat_model.compile(
             optimizer=AdamW(learning_rate=LEARNING_RATE),
             loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
             metrics=['accuracy', tf.keras.metrics.F1Score(average='macro', name='f1_score')]
         )
-        print("Converted best validated model to QAT.")
-        
         # Use a representative dataset built on the global training set with the same preprocessing as in training.
         def representative_data_gen_best():
             # Determine numeric and categorical columns from global X_train
@@ -613,9 +656,9 @@ def run_training():
         converter.representative_dataset = representative_data_gen_best
         try:
             quantized_tflite_model = converter.convert()
-            with open(QAT_BEST_TFLITE_MODEL_PATH, "wb") as f:
+            with open(QAT_BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH, "wb") as f:
                 f.write(quantized_tflite_model)
-            print(f"Quantized TFLite model saved to {QAT_BEST_TFLITE_MODEL_PATH}")
+            print(f"Quantized TFLite model saved to {QAT_BEST_MODEL_FROM_MODEL_VALIDATION_CV_PATH}")
         except ValueError as e:    
             print(f"QAT TFLite conversion failed: {e}")
     else:
