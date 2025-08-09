@@ -1,0 +1,171 @@
+Post-hoc Wilcoxon pairs after Holm correction
+=============================================
+           metric             model1             model2                                     pair  wilcoxon_stat        p_raw       p_holm    effect
+         Accuracy AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)            0.0 1.862645e-09 5.587935e-09  0.963333
+         Accuracy        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)            0.0 1.862645e-09 7.450581e-09 -0.981111
+         Accuracy        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)            0.0 1.862645e-09 9.313226e-09  0.964444
+         Accuracy        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)            0.0 1.862645e-09 1.117587e-08  0.975556
+         Accuracy           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)            0.0 1.862645e-09 1.303852e-08  1.000000
+         Accuracy           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)            0.0 1.862645e-09 1.490116e-08  1.000000
+         Accuracy           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)            0.0 1.862645e-09 1.676381e-08  1.000000
+         Accuracy           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)            0.0 1.862645e-09 1.862645e-08  1.000000
+         Accuracy            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)            0.0 1.862645e-09 2.048910e-08  1.000000
+         Accuracy            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)            0.0 1.862645e-09 2.235174e-08  1.000000
+         Accuracy            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)            0.0 1.862645e-09 2.421439e-08  1.000000
+         Accuracy            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)            0.0 1.862645e-09 2.607703e-08  1.000000
+         Accuracy            XGBoost           LightGBM                      XGBoost vs LightGBM            0.0 1.862645e-09 2.793968e-08  1.000000
+         Accuracy                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 2.980232e-08 -1.000000
+         Accuracy                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.166497e-08 -1.000000
+         Accuracy                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.352761e-08 -1.000000
+         Accuracy                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 3.539026e-08 -1.000000
+         Accuracy                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 3.725290e-08 -1.000000
+         Accuracy                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 3.911555e-08 -1.000000
+         Accuracy      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.097819e-08  1.000000
+         Accuracy      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            0.0 1.862645e-09 4.284084e-08  1.000000
+         Accuracy      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.470348e-08  1.000000
+         Accuracy      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 4.656613e-08  1.000000
+         Accuracy      Random Forest           LightGBM                Random Forest vs LightGBM            0.0 1.862645e-09 4.842877e-08  0.993333
+         Accuracy      Random Forest            XGBoost                 Random Forest vs XGBoost            0.0 1.862645e-09 5.029142e-08 -1.000000
+         Accuracy      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+         Accuracy        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)           66.0 3.127549e-04 6.255098e-04 -0.314444
+         Accuracy        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)          137.0 4.971012e-02 4.971012e-02 -0.502222
+Balanced Accuracy            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)            0.0 1.862645e-09 2.235174e-08  1.000000
+Balanced Accuracy            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)            0.0 1.862645e-09 2.421439e-08  1.000000
+Balanced Accuracy            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)            0.0 1.862645e-09 2.607703e-08  1.000000
+Balanced Accuracy            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)            0.0 1.862645e-09 2.793968e-08  1.000000
+Balanced Accuracy            XGBoost           LightGBM                      XGBoost vs LightGBM            0.0 1.862645e-09 2.980232e-08  0.944444
+Balanced Accuracy                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 3.166497e-08 -1.000000
+Balanced Accuracy                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.352761e-08 -1.000000
+Balanced Accuracy                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.539026e-08 -0.975556
+Balanced Accuracy                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 3.725290e-08 -1.000000
+Balanced Accuracy                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 3.911555e-08 -1.000000
+Balanced Accuracy                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 4.097819e-08 -1.000000
+Balanced Accuracy      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.284084e-08  0.997778
+Balanced Accuracy      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            0.0 1.862645e-09 4.470348e-08  1.000000
+Balanced Accuracy      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.656613e-08  0.997778
+Balanced Accuracy      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 4.842877e-08  1.000000
+Balanced Accuracy      Random Forest            XGBoost                 Random Forest vs XGBoost            0.0 1.862645e-09 5.029142e-08 -0.935556
+Balanced Accuracy      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+Balanced Accuracy           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)            2.0 5.587935e-09 6.146729e-08  0.948889
+Balanced Accuracy           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)            3.0 9.313226e-09 9.313226e-08  0.866667
+Balanced Accuracy           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)            5.0 1.862645e-08 1.676381e-07  0.888889
+Balanced Accuracy           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)            6.0 2.607703e-08 2.086163e-07  0.895556
+Balanced Accuracy        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)           54.0 8.856505e-05 6.199554e-04 -0.560000
+Balanced Accuracy        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)           61.0 1.886003e-04 1.131602e-03 -0.537778
+Balanced Accuracy      Random Forest           LightGBM                Random Forest vs LightGBM          107.0 8.705463e-03 4.352732e-02  0.406667
+Balanced Accuracy        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)          135.0 4.490721e-02 1.796288e-01 -0.317778
+Balanced Accuracy        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)          216.0 7.456547e-01 7.456547e-01 -0.026667
+Balanced Accuracy        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)          201.0 5.291052e-01 1.000000e+00 -0.055556
+Balanced Accuracy AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)          203.0 5.561133e-01 1.000000e+00  0.106667
+         Macro F1           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)            0.0 1.862645e-09 2.235174e-08  0.984444
+         Macro F1           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)            0.0 1.862645e-09 2.421439e-08  0.960000
+         Macro F1           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)            0.0 1.862645e-09 2.607703e-08  0.988889
+         Macro F1            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)            0.0 1.862645e-09 2.793968e-08  0.997778
+         Macro F1            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)            0.0 1.862645e-09 2.980232e-08  1.000000
+         Macro F1            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)            0.0 1.862645e-09 3.166497e-08  1.000000
+         Macro F1                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 3.352761e-08 -1.000000
+         Macro F1                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.539026e-08 -1.000000
+         Macro F1                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.725290e-08 -0.995556
+         Macro F1           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)            1.0 3.725290e-09 3.725290e-08  0.988889
+         Macro F1                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 3.911555e-08 -1.000000
+         Macro F1                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 4.097819e-08 -1.000000
+         Macro F1            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)            1.0 3.725290e-09 4.097819e-08  0.964444
+         Macro F1                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 4.284084e-08 -1.000000
+         Macro F1      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.470348e-08  1.000000
+         Macro F1      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            0.0 1.862645e-09 4.656613e-08  1.000000
+         Macro F1      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.842877e-08  1.000000
+         Macro F1      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 5.029142e-08  1.000000
+         Macro F1      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+         Macro F1      Random Forest            XGBoost                 Random Forest vs XGBoost           26.0 1.991168e-06 1.792051e-05  0.784444
+         Macro F1 AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)           57.0 1.233369e-04 9.866953e-04  0.537778
+         Macro F1            XGBoost           LightGBM                      XGBoost vs LightGBM           69.0 4.183967e-04 2.928777e-03 -0.664444
+         Macro F1        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)           80.0 1.131454e-03 6.788727e-03 -0.604444
+         Macro F1        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)          103.0 6.639536e-03 3.319768e-02 -0.475556
+         Macro F1        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)          203.0 5.561133e-01 5.561133e-01  0.104444
+         Macro F1      Random Forest           LightGBM                Random Forest vs LightGBM          179.0 2.800868e-01 5.601736e-01  0.028889
+         Macro F1        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)          176.0 2.534361e-01 7.603083e-01  0.195556
+         Macro F1        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)          174.0 2.366523e-01 9.466094e-01 -0.184444
+Precision (Macro)           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)            0.0 1.862645e-09 2.793968e-08  1.000000
+Precision (Macro)           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)            0.0 1.862645e-09 2.980232e-08  1.000000
+Precision (Macro)           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)            0.0 1.862645e-09 3.166497e-08  1.000000
+Precision (Macro)           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)            0.0 1.862645e-09 3.352761e-08  1.000000
+Precision (Macro)                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 3.539026e-08 -0.997778
+Precision (Macro)                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.725290e-08 -1.000000
+Precision (Macro)                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.911555e-08 -0.982222
+Precision (Macro)                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 4.097819e-08 -1.000000
+Precision (Macro)                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 4.284084e-08 -1.000000
+Precision (Macro)                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 4.470348e-08 -1.000000
+Precision (Macro)      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.656613e-08  1.000000
+Precision (Macro)      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.842877e-08  1.000000
+Precision (Macro)      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 5.029142e-08  0.955556
+Precision (Macro)      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+Precision (Macro)            XGBoost           LightGBM                      XGBoost vs LightGBM            1.0 3.725290e-09 5.215406e-08 -0.933333
+Precision (Macro)      Random Forest            XGBoost                 Random Forest vs XGBoost            4.0 1.303852e-08 1.695007e-07  0.924444
+Precision (Macro)      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            5.0 1.862645e-08 2.235174e-07  0.924444
+Precision (Macro) AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)           17.0 3.855675e-07 4.241243e-06  0.693333
+Precision (Macro)      Random Forest           LightGBM                Random Forest vs LightGBM           57.0 1.233369e-04 1.233369e-03 -0.431111
+Precision (Macro)        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)           80.0 1.131454e-03 1.018309e-02 -0.417778
+Precision (Macro)        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)           90.0 2.560090e-03 2.048072e-02  0.488889
+Precision (Macro)            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)           99.0 5.012613e-03 3.508829e-02  0.420000
+Precision (Macro)        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)          113.0 1.283373e-02 7.700240e-02  0.411111
+Precision (Macro)            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)          121.0 2.084985e-02 1.042493e-01 -0.442222
+Precision (Macro)        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)          155.0 1.141767e-01 4.567067e-01 -0.302222
+Precision (Macro)            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)          214.0 7.151330e-01 7.151330e-01  0.017778
+Precision (Macro)            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)          196.0 4.645450e-01 1.000000e+00  0.000000
+Precision (Macro)        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)          201.0 5.291052e-01 1.000000e+00  0.117778
+          ROC AUC            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)            0.0 1.862645e-09 2.048910e-08  1.000000
+          ROC AUC            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)            0.0 1.862645e-09 2.235174e-08  1.000000
+          ROC AUC            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)            0.0 1.862645e-09 2.421439e-08  1.000000
+          ROC AUC            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)            0.0 1.862645e-09 2.607703e-08  1.000000
+          ROC AUC            XGBoost           LightGBM                      XGBoost vs LightGBM            0.0 1.862645e-09 2.793968e-08  1.000000
+          ROC AUC                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 2.980232e-08 -1.000000
+          ROC AUC                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.166497e-08 -1.000000
+          ROC AUC                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.352761e-08 -1.000000
+          ROC AUC                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 3.539026e-08 -1.000000
+          ROC AUC                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 3.725290e-08 -1.000000
+          ROC AUC                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 3.911555e-08 -1.000000
+          ROC AUC      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.097819e-08 -1.000000
+          ROC AUC      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            0.0 1.862645e-09 4.284084e-08 -1.000000
+          ROC AUC      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.470348e-08 -1.000000
+          ROC AUC      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 4.656613e-08 -1.000000
+          ROC AUC      Random Forest           LightGBM                Random Forest vs LightGBM            0.0 1.862645e-09 4.842877e-08 -1.000000
+          ROC AUC      Random Forest            XGBoost                 Random Forest vs XGBoost            0.0 1.862645e-09 5.029142e-08 -1.000000
+          ROC AUC      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+          ROC AUC        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)           32.0 5.144626e-06 5.144626e-05 -0.651111
+          ROC AUC        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)           54.0 8.856505e-05 7.970855e-04 -0.680000
+          ROC AUC        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)          108.0 9.301122e-03 7.440898e-02 -0.540000
+          ROC AUC        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)          114.0 1.366324e-02 9.564269e-02 -0.455556
+          ROC AUC           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)          119.0 1.852948e-02 1.111769e-01 -0.460000
+          ROC AUC AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)          131.0 3.643500e-02 1.821750e-01 -0.435556
+          ROC AUC           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)          157.0 1.241345e-01 3.724034e-01  0.400000
+          ROC AUC           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)          151.0 9.610157e-02 3.844063e-01  0.328889
+          ROC AUC           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)          206.0 5.978078e-01 5.978078e-01 -0.073333
+          ROC AUC        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)          200.0 5.158484e-01 1.000000e+00  0.088889
+   Recall (Macro)            XGBoost AutoEncoder (INT8)            XGBoost vs AutoEncoder (INT8)            0.0 1.862645e-09 2.235174e-08  1.000000
+   Recall (Macro)            XGBoost AutoEncoder (FP32)            XGBoost vs AutoEncoder (FP32)            0.0 1.862645e-09 2.421439e-08  1.000000
+   Recall (Macro)            XGBoost        FCNN (INT8)                   XGBoost vs FCNN (INT8)            0.0 1.862645e-09 2.607703e-08  1.000000
+   Recall (Macro)            XGBoost        FCNN (FP32)                   XGBoost vs FCNN (FP32)            0.0 1.862645e-09 2.793968e-08  1.000000
+   Recall (Macro)            XGBoost           LightGBM                      XGBoost vs LightGBM            0.0 1.862645e-09 2.980232e-08  0.944444
+   Recall (Macro)                SVM AutoEncoder (INT8)                SVM vs AutoEncoder (INT8)            0.0 1.862645e-09 3.166497e-08 -1.000000
+   Recall (Macro)                SVM AutoEncoder (FP32)                SVM vs AutoEncoder (FP32)            0.0 1.862645e-09 3.352761e-08 -1.000000
+   Recall (Macro)                SVM        FCNN (INT8)                       SVM vs FCNN (INT8)            0.0 1.862645e-09 3.539026e-08 -0.975556
+   Recall (Macro)                SVM        FCNN (FP32)                       SVM vs FCNN (FP32)            0.0 1.862645e-09 3.725290e-08 -1.000000
+   Recall (Macro)                SVM           LightGBM                          SVM vs LightGBM            0.0 1.862645e-09 3.911555e-08 -1.000000
+   Recall (Macro)                SVM            XGBoost                           SVM vs XGBoost            0.0 1.862645e-09 4.097819e-08 -1.000000
+   Recall (Macro)      Random Forest AutoEncoder (INT8)      Random Forest vs AutoEncoder (INT8)            0.0 1.862645e-09 4.284084e-08  0.997778
+   Recall (Macro)      Random Forest AutoEncoder (FP32)      Random Forest vs AutoEncoder (FP32)            0.0 1.862645e-09 4.470348e-08  1.000000
+   Recall (Macro)      Random Forest        FCNN (INT8)             Random Forest vs FCNN (INT8)            0.0 1.862645e-09 4.656613e-08  0.997778
+   Recall (Macro)      Random Forest        FCNN (FP32)             Random Forest vs FCNN (FP32)            0.0 1.862645e-09 4.842877e-08  1.000000
+   Recall (Macro)      Random Forest            XGBoost                 Random Forest vs XGBoost            0.0 1.862645e-09 5.029142e-08 -0.935556
+   Recall (Macro)      Random Forest                SVM                     Random Forest vs SVM            0.0 1.862645e-09 5.215406e-08  1.000000
+   Recall (Macro)           LightGBM        FCNN (FP32)                  LightGBM vs FCNN (FP32)            2.0 5.587935e-09 6.146729e-08  0.948889
+   Recall (Macro)           LightGBM AutoEncoder (FP32)           LightGBM vs AutoEncoder (FP32)            3.0 9.313226e-09 9.313226e-08  0.866667
+   Recall (Macro)           LightGBM AutoEncoder (INT8)           LightGBM vs AutoEncoder (INT8)            5.0 1.862645e-08 1.676381e-07  0.888889
+   Recall (Macro)           LightGBM        FCNN (INT8)                  LightGBM vs FCNN (INT8)            6.0 2.607703e-08 2.086163e-07  0.895556
+   Recall (Macro)        FCNN (FP32) AutoEncoder (FP32)        FCNN (FP32) vs AutoEncoder (FP32)           54.0 8.856505e-05 6.199554e-04 -0.560000
+   Recall (Macro)        FCNN (FP32) AutoEncoder (INT8)        FCNN (FP32) vs AutoEncoder (INT8)           61.0 1.886003e-04 1.131602e-03 -0.537778
+   Recall (Macro)      Random Forest           LightGBM                Random Forest vs LightGBM          107.0 8.705463e-03 4.352732e-02  0.406667
+   Recall (Macro)        FCNN (FP32)        FCNN (INT8)               FCNN (FP32) vs FCNN (INT8)          135.0 4.490721e-02 1.796288e-01 -0.317778
+   Recall (Macro)        FCNN (INT8) AutoEncoder (INT8)        FCNN (INT8) vs AutoEncoder (INT8)          216.0 7.456547e-01 7.456547e-01 -0.026667
+   Recall (Macro)        FCNN (INT8) AutoEncoder (FP32)        FCNN (INT8) vs AutoEncoder (FP32)          201.0 5.291052e-01 1.000000e+00 -0.055556
+   Recall (Macro) AutoEncoder (FP32) AutoEncoder (INT8) AutoEncoder (FP32) vs AutoEncoder (INT8)          203.0 5.561133e-01 1.000000e+00  0.106667

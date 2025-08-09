@@ -1,0 +1,51 @@
+Q1 SUMMARY: Which model is best?
+================================
+
+Friedman omnibus per metric:
+  - Accuracy: chi2=206.611, p=4.56e-41
+  - Balanced Accuracy: chi2=181.322, p=1.02e-35
+  - Macro F1: chi2=181.889, p=7.77e-36
+  - Precision (Macro): chi2=163.567, p=5.69e-32
+  - ROC AUC: chi2=173.122, p=5.51e-34
+  - Recall (Macro): chi2=181.322, p=1.02e-35
+
+Global leaderboard (average rank across metrics):
+             Model  Global Avg Rank (↓ better)  Wins (Holm<0.05)  Losses
+           XGBoost                    1.950000                35       4
+          LightGBM                    2.644444                30       7
+     Random Forest                    2.811111                31      10
+AutoEncoder (FP32)                    4.483333                17      15
+AutoEncoder (INT8)                    5.266667                12      21
+       FCNN (FP32)                    5.394444                10      22
+       FCNN (INT8)                    5.450000                 7      21
+               SVM                    8.000000                 0      42
+
+Per-metric best model (mean ± sd; avg rank):
+  - Accuracy: XGBoost (0.9988 ± 0.0001; rank=1.00)
+  - Balanced Accuracy: XGBoost (0.9787 ± 0.0032; rank=1.00)
+  - Macro F1: Random Forest (0.9807 ± 0.0026; rank=1.50)
+  - Precision (Macro): LightGBM (0.9961 ± 0.0010; rank=1.30)
+  - ROC AUC: XGBoost (1.0000 ± 0.0000; rank=1.00)
+  - Recall (Macro): XGBoost (0.9787 ± 0.0032; rank=1.00)
+
+Significant post-hoc pairs after Holm (directional):
+  - Accuracy: AutoEncoder (FP32) > AutoEncoder (INT8) (p_holm=5.59e-09)
+  - Accuracy: FCNN (INT8) < AutoEncoder (FP32) (p_holm=7.45e-09)
+  - Accuracy: FCNN (FP32) > AutoEncoder (INT8) (p_holm=9.31e-09)
+  - Accuracy: FCNN (FP32) > FCNN (INT8) (p_holm=1.12e-08)
+  - Accuracy: LightGBM > AutoEncoder (INT8) (p_holm=1.30e-08)
+  - Accuracy: LightGBM > AutoEncoder (FP32) (p_holm=1.49e-08)
+  - Accuracy: LightGBM > FCNN (INT8) (p_holm=1.68e-08)
+  - Accuracy: LightGBM > FCNN (FP32) (p_holm=1.86e-08)
+  - Accuracy: XGBoost > AutoEncoder (INT8) (p_holm=2.05e-08)
+  - ROC AUC: XGBoost > AutoEncoder (INT8) (p_holm=2.05e-08)
+  - Accuracy: XGBoost > AutoEncoder (FP32) (p_holm=2.24e-08)
+  - Balanced Accuracy: XGBoost > AutoEncoder (INT8) (p_holm=2.24e-08)
+  - Macro F1: LightGBM > AutoEncoder (INT8) (p_holm=2.24e-08)
+  - ROC AUC: XGBoost > AutoEncoder (FP32) (p_holm=2.24e-08)
+  - Recall (Macro): XGBoost > AutoEncoder (INT8) (p_holm=2.24e-08)
+  - Accuracy: XGBoost > FCNN (INT8) (p_holm=2.42e-08)
+  - Balanced Accuracy: XGBoost > AutoEncoder (FP32) (p_holm=2.42e-08)
+  - Macro F1: LightGBM > AutoEncoder (FP32) (p_holm=2.42e-08)
+  - ROC AUC: XGBoost > FCNN (INT8) (p_holm=2.42e-08)
+  - Recall (Macro): XGBoost > AutoEncoder (FP32) (p_holm=2.42e-08)

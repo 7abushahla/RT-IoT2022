@@ -1,0 +1,15 @@
+Quantization comparisons (FP32 vs INT8) with chosen test and effect size
+========================================================================
+           metric                                     pair  n_folds  normality_p     test       stat      p_value    effect
+         Accuracy AutoEncoder (FP32) vs AutoEncoder (INT8)       30 1.383980e-02 Wilcoxon   0.000000 1.862645e-09  0.963333
+         Accuracy               FCNN (FP32) vs FCNN (INT8)       30 3.286976e-01 Paired t  11.578212 2.150142e-12  2.113883
+Balanced Accuracy AutoEncoder (FP32) vs AutoEncoder (INT8)       30 1.314347e-01 Paired t   0.228474 8.208815e-01  0.041713
+Balanced Accuracy               FCNN (FP32) vs FCNN (INT8)       30 4.336224e-06 Wilcoxon 135.000000 4.490721e-02 -0.317778
+         Macro F1 AutoEncoder (FP32) vs AutoEncoder (INT8)       30 4.786925e-01 Paired t   4.459049 1.136948e-04  0.814107
+         Macro F1               FCNN (FP32) vs FCNN (INT8)       30 1.776503e-07 Wilcoxon 174.000000 2.366523e-01 -0.184444
+Precision (Macro) AutoEncoder (FP32) vs AutoEncoder (INT8)       30 2.142936e-01 Paired t   6.475639 4.358150e-07  1.182285
+Precision (Macro)               FCNN (FP32) vs FCNN (INT8)       30 1.602498e-04 Wilcoxon 201.000000 5.291052e-01  0.117778
+          ROC AUC AutoEncoder (FP32) vs AutoEncoder (INT8)       30 2.031697e-06 Wilcoxon 131.000000 3.643500e-02 -0.435556
+          ROC AUC               FCNN (FP32) vs FCNN (INT8)       30 4.746803e-01 Paired t   0.730553 4.709134e-01  0.133380
+   Recall (Macro) AutoEncoder (FP32) vs AutoEncoder (INT8)       30 1.314347e-01 Paired t   0.228474 8.208815e-01  0.041713
+   Recall (Macro)               FCNN (FP32) vs FCNN (INT8)       30 4.336224e-06 Wilcoxon 135.000000 4.490721e-02 -0.317778
