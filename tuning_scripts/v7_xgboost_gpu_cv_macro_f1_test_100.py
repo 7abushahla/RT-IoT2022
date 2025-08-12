@@ -49,7 +49,7 @@ SEED = 42
 np.random.seed(SEED)
 random.seed(SEED)
 
-FILE_NAME = 'XGBoost_Official_No_RFECV_No_PCA'
+FILE_NAME = 'XGBoost_Official_No_RFECV_No_PCA_100'
 N_FOLDS = 10
 CV_RESULT_DIR = "./xgboost_cv_results"
 TUNED_OR_NO = "Tuned_Hyperparameters" # or Untuned_Hyperparameters
@@ -95,7 +95,7 @@ def objective(trial):
         "verbosity": 0,
         "objective": "multi:softprob",
         # "eval_metric": ['merror','mlogloss'],
-        "booster": trial.suggest_categorical("booster", ["gbtree", "gblinear", "dart"]),
+        "booster": trial.suggest_categorical("booster", ["gbtree"]),
         "lambda": trial.suggest_float("lambda", 1e-8, 1.0, log=True),
         "alpha": trial.suggest_float("alpha", 1e-8, 1.0, log=True),
         "device": "cuda",
@@ -256,7 +256,7 @@ def objective(trial):
 
 # %%
 if __name__ == "__main__":
-    STORAGE = "sqlite:///xgboost_db.sqlite3"
+    STORAGE = "sqlite:///xgboost_db_100.sqlite3"
     # Turn off optuna log notes.
     # optuna.logging.set_verbosity(optuna.logging.WARN)
     SAMPLER = optuna.samplers.TPESampler(seed=SEED, multivariate=True)
