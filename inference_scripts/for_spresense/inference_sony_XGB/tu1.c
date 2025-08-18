@@ -1,0 +1,11728 @@
+
+#include "header.h"
+
+void predict_unit1(union Entry* data, float* result) {
+  unsigned int tmp;
+  if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.2629079819)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.35428348184)) {
+        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+            if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.57866376638)) {
+              result[0] += 0.016195659;
+            } else {
+              result[0] += 0.1534828;
+            }
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31460806727)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                result[0] += -0;
+              } else {
+                result[0] += -0.071108535;
+              }
+            } else {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.66162455082)) {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+                  result[0] += 0.0010829603;
+                } else {
+                  result[0] += 0.10151481;
+                }
+              } else {
+                if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0103553534)) {
+                  result[0] += 0.0064191115;
+                } else {
+                  result[0] += -0.010142681;
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.2706193924)) {
+            result[0] += -0;
+          } else {
+            result[0] += -0.07991775;
+          }
+        }
+      } else {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+              result[0] += -0.051512774;
+            } else {
+              result[0] += 0.021084985;
+            }
+          } else {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+              if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                  result[0] += -0.012548039;
+                } else {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426038504)) {
+                    result[0] += -0.010525016;
+                  } else {
+                    if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0937361717)) {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414606333)) {
+                        if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.2718229294)) {
+                          result[0] += 0.07938266;
+                        } else {
+                          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62015038729)) {
+                            result[0] += 0.020682236;
+                          } else {
+                            result[0] += -0.010248711;
+                          }
+                        }
+                      } else {
+                        if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.1285303086)) {
+                          if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.7153120041)) {
+                            result[0] += -0;
+                          } else {
+                            result[0] += 0.03264665;
+                          }
+                        } else {
+                          result[0] += -0.034276154;
+                        }
+                      }
+                    } else {
+                      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.99036180973)) {
+                        result[0] += 0.095015176;
+                      } else {
+                        result[0] += -0;
+                      }
+                    }
+                  }
+                }
+              } else {
+                result[0] += 0.086652465;
+              }
+            } else {
+              result[0] += 0.08844031;
+            }
+          }
+        } else {
+          if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16561180353)) {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.10499257594)) {
+              result[0] += -0.1577333;
+            } else {
+              result[0] += 0.0028482927;
+            }
+          } else {
+            result[0] += 0.051714554;
+          }
+        }
+      }
+    } else {
+      result[0] += -0.11637338;
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+        result[0] += -0.095238;
+      } else {
+        result[0] += 0.0059918873;
+      }
+    } else {
+      if ( (data[31].missing != -1) && (data[31].fvalue < (float)-0.085173599422)) {
+        if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.5942275524)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018990517)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.73520982265)) {
+              result[0] += -0.014058992;
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45554211736)) {
+                result[0] += 0.008562832;
+              } else {
+                result[0] += 0.07456977;
+              }
+            }
+          } else {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+              result[0] += -0.07463134;
+            } else {
+              result[0] += 0.0063677044;
+            }
+          }
+        } else {
+          result[0] += -0.10074156;
+        }
+      } else {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)0.55058819056)) {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.085147149861)) {
+            result[0] += 0.08958443;
+          } else {
+            if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.16896049678)) {
+              result[0] += 0.06653205;
+            } else {
+              result[0] += -0.0019224266;
+            }
+          }
+        } else {
+          result[0] += -0;
+        }
+      }
+    }
+  }
+  if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.46705591679)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+      result[1] += -0.09207125;
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.0887905359)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.082774102688)) {
+              result[1] += 0.014611487;
+            } else {
+              result[1] += 0.09478478;
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+              result[1] += -0.10032361;
+            } else {
+              result[1] += 0.033180047;
+            }
+          }
+        } else {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025323992595)) {
+            result[1] += -0.07260747;
+          } else {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60252219439)) {
+              result[1] += 0.05052012;
+            } else {
+              result[1] += -0.0055891545;
+            }
+          }
+        }
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+              result[1] += -0.038531866;
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+                result[1] += 0.09909653;
+              } else {
+                result[1] += -0.012410843;
+              }
+            }
+          } else {
+            result[1] += -0.06425335;
+          }
+        } else {
+          result[1] += -0.10024631;
+        }
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.4874599874)) {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61979103088)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90166765451)) {
+              result[1] += -0;
+            } else {
+              result[1] += -0.1108728;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.25268346071)) {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.54449033737)) {
+                result[1] += 0.084990054;
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+                if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62329429388)) {
+                  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62009710073)) {
+                    result[1] += 0.0050691552;
+                  } else {
+                    result[1] += -0.05385129;
+                  }
+                } else {
+                  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62014120817)) {
+                    result[1] += -0;
+                  } else {
+                    result[1] += 0.053157598;
+                  }
+                }
+              } else {
+                result[1] += -0.09318202;
+              }
+            }
+          }
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54161769152)) {
+            result[1] += 0.09489083;
+          } else {
+            result[1] += 0.051089652;
+          }
+        }
+      } else {
+        if ( (data[59].missing != -1) && (data[59].fvalue < (float)-0.46938577294)) {
+          result[1] += -0;
+        } else {
+          if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.0045417477377)) {
+            result[1] += 0.09577961;
+          } else {
+            result[1] += 0.038729914;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.088328615;
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.09454283;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)0.056300889701)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62011021376)) {
+            result[2] += 0.12684354;
+          } else {
+            result[2] += 0.02376323;
+          }
+        } else {
+          if ( (data[46].missing != -1) && (data[46].fvalue < (float)1.9170114994)) {
+            result[2] += -0.048060015;
+          } else {
+            result[2] += 0.07699754;
+          }
+        }
+      } else {
+        result[2] += -0.072856896;
+      }
+    } else {
+      result[2] += -0.08679449;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09598392;
+  } else {
+    result[3] += -0.095044695;
+  }
+  if ( (data[89].missing != -1) && (data[89].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.2213975191)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        result[4] += -0.08379931;
+      } else {
+        result[4] += 0.073330075;
+      }
+    } else {
+      result[4] += -0.0945351;
+    }
+  } else {
+    result[4] += 0.09470173;
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3160247803)) {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+      if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.2646687031)) {
+        result[5] += -0.09528692;
+      } else {
+        result[5] += -0.029838407;
+      }
+    } else {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+        if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+          result[5] += -0.084379576;
+        } else {
+          result[5] += -0;
+        }
+      } else {
+        result[5] += 0.059777856;
+      }
+    }
+  } else {
+    result[5] += 0.0065564015;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+      result[6] += 0.013979536;
+    } else {
+      result[6] += -0.08597159;
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[6] += -0.094523184;
+    } else {
+      result[6] += -0.014633807;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[19].missing != -1) && (data[19].fvalue < (float)0.5904673934)) {
+      result[7] += -0.0903629;
+    } else {
+      result[7] += 0.056929834;
+    }
+  } else {
+    result[7] += -0.09528956;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)9.5720357895)) {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+      if ( (data[10].missing != -1) && (data[10].fvalue < (float)0.050166197121)) {
+        result[8] += 0.021202996;
+      } else {
+        result[8] += -0.07420156;
+      }
+    } else {
+      result[8] += -0.09529615;
+    }
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.11647147685)) {
+      result[8] += -0;
+    } else {
+      result[8] += 0.0899618;
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.45095446706)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31460806727)) {
+            result[9] += -0;
+          } else {
+            result[9] += -0.07292259;
+          }
+        } else {
+          result[9] += 0.10182415;
+        }
+      } else {
+        result[9] += -0.09203697;
+      }
+    } else {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+        if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+          result[9] += 0.0031971296;
+        } else {
+          result[9] += 0.087945655;
+        }
+      } else {
+        if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+          result[9] += -0.078943126;
+        } else {
+          result[9] += 0.043830786;
+        }
+      }
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.7997173071)) {
+      result[9] += -0.09360518;
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61980682611)) {
+        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.85384505987)) {
+          result[9] += 0.0465666;
+        } else {
+          result[9] += -0.07688183;
+        }
+      } else {
+        result[9] += -0.06803211;
+      }
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09458195;
+    } else {
+      result[10] += -0.020431576;
+    }
+  } else {
+    result[10] += 0.09296639;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60401982069)) {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.61982524395)) {
+        if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31298440695)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+                  result[11] += -0.04281575;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.10234069079)) {
+                    result[11] += 0.029747276;
+                  } else {
+                    result[11] += -8.903862e-05;
+                  }
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.92375618219)) {
+                    result[11] += -0.08978392;
+                  } else {
+                    result[11] += -0.0123007735;
+                  }
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31154632568)) {
+                result[11] += 0.07366417;
+              } else {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.0278730392)) {
+                  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.48612654209)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.03051043;
+                  }
+                } else {
+                  result[11] += -0.05539916;
+                }
+              }
+            }
+          } else {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.066392295063)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.041795373)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.07788593;
+                  }
+                } else {
+                  result[11] += -0.0065066502;
+                }
+              } else {
+                result[11] += 0.08604016;
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+                result[11] += -0.0077871024;
+              } else {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.85384505987)) {
+                  result[11] += 0.07163355;
+                } else {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+                    result[11] += -0.021567557;
+                  } else {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62017637491)) {
+                      result[11] += 0.044124044;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          result[11] += -0.082340516;
+        }
+      } else {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+          if ( (data[59].missing != -1) && (data[59].fvalue < (float)-0.27036428452)) {
+            result[11] += -0.070368886;
+          } else {
+            result[11] += 0.04749929;
+          }
+        } else {
+          if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.014357995242)) {
+            result[11] += 0.09090517;
+          } else {
+            result[11] += -0;
+          }
+        }
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02519598417)) {
+        if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.084822289646)) {
+          result[11] += -0.089489736;
+        } else {
+          result[11] += -0.008108176;
+        }
+      } else {
+        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6029086709)) {
+          result[11] += -0.059954226;
+        } else {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+            result[11] += 0.0606647;
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.40275913477)) {
+              result[11] += -0.02408218;
+            } else {
+              result[11] += 0.035467144;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62014216185)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2002477646)) {
+          result[11] += 0.02444643;
+        } else {
+          result[11] += -0.08910568;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.90419763327)) {
+          result[11] += 0.09965048;
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+            result[11] += -0.07588588;
+          } else {
+            result[11] += 0.022563787;
+          }
+        }
+      }
+    } else {
+      if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+        result[11] += -0.094171226;
+      } else {
+        result[11] += 0.0038177397;
+      }
+    }
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59852188826)) {
+    if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.88865399361)) {
+      if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.2706193924)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+          if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+            result[12] += -0.07945777;
+          } else {
+            result[12] += 0.01131484;
+          }
+        } else {
+          result[12] += 0.117842354;
+        }
+      } else {
+        result[12] += -0.086997285;
+      }
+    } else {
+      result[12] += 0.10979251;
+    }
+  } else {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010471519083)) {
+      result[12] += -0.094670795;
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+        if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+          result[12] += 0.011315409;
+        } else {
+          result[12] += -0.088411465;
+        }
+      } else {
+        result[12] += 0.0981154;
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025407476351)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.53519374132)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+            result[0] += 0.07223762;
+          } else {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+              result[0] += -0.03993667;
+            } else {
+              result[0] += 0.032427955;
+            }
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.95877230167)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+              result[0] += 0.06865114;
+            } else {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039231427014)) {
+                result[0] += -0.06097427;
+              } else {
+                result[0] += 0.009586488;
+              }
+            }
+          } else {
+            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.22042307258)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59773939848)) {
+                result[0] += 0.026842035;
+              } else {
+                result[0] += 0.09076743;
+              }
+            } else {
+              result[0] += 0.017158821;
+            }
+          }
+        }
+      } else {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.44744732976)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.3703558743)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.8134265542)) {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                result[0] += 0.008922347;
+              } else {
+                result[0] += -0.06803022;
+              }
+            } else {
+              if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20782999694)) {
+                if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.0082885762677)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1560666561)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+                      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+                        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.34276419878)) {
+                          result[0] += -0.07667074;
+                        } else {
+                          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.17802235484)) {
+                              if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.0815498829)) {
+                                result[0] += 0.055651147;
+                              } else {
+                                result[0] += -0;
+                              }
+                            } else {
+                              if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+                                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                                  result[0] += -0;
+                                } else {
+                                  result[0] += -0.047563434;
+                                }
+                              } else {
+                                result[0] += -0;
+                              }
+                            }
+                          } else {
+                            if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62001216412)) {
+                              result[0] += 0.07986188;
+                            } else {
+                              result[0] += 0.012368513;
+                            }
+                          }
+                        }
+                      } else {
+                        result[0] += 0.10162845;
+                      }
+                    } else {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)6.14879179)) {
+                        if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.029784545302)) {
+                          result[0] += -0.081050605;
+                        } else {
+                          if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+                            result[0] += 0.029663464;
+                          } else {
+                            result[0] += -0.004328068;
+                          }
+                        }
+                      } else {
+                        result[0] += 0.030601772;
+                      }
+                    }
+                  } else {
+                    result[0] += -0.038637754;
+                  }
+                } else {
+                  result[0] += -0.052177995;
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0680017471)) {
+                  result[0] += 0.06291575;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            }
+          } else {
+            result[0] += 0.09880671;
+          }
+        } else {
+          result[0] += -0.08143592;
+        }
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+        result[0] += -0.09059372;
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+            if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.8430133462)) {
+              result[0] += -0.06037509;
+            } else {
+              result[0] += 0.012075385;
+            }
+          } else {
+            if ( (data[16].missing != -1) && (data[16].fvalue < (float)0.39758354425)) {
+              result[0] += 0.07081673;
+            } else {
+              result[0] += 0.002769029;
+            }
+          }
+        } else {
+          result[0] += -0.09415845;
+        }
+      }
+    }
+  } else {
+    if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.026879794896)) {
+      if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.92990243435)) {
+        result[0] += -0.09187421;
+      } else {
+        result[0] += 0.03602361;
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025424173102)) {
+        result[0] += 0.08159995;
+      } else {
+        if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.87892109156)) {
+          result[0] += 0.006635858;
+        } else {
+          result[0] += -0.056547653;
+        }
+      }
+    }
+  }
+  if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.46705591679)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+      result[1] += -0.09037234;
+    } else {
+      if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.7314175367)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61850941181)) {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59719163179)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+                  result[1] += 0.043368224;
+                } else {
+                  result[1] += 0.1203616;
+                }
+              } else {
+                result[1] += 0.008097287;
+              }
+            } else {
+              result[1] += 0.0018424306;
+            }
+          } else {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77788865566)) {
+              result[1] += -0;
+            } else {
+              result[1] += -0.029518265;
+            }
+          }
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+                result[1] += -0.030572917;
+              } else {
+                result[1] += 0.0347186;
+              }
+            } else {
+              result[1] += -0.05107287;
+            }
+          } else {
+            result[1] += -0.09909507;
+          }
+        }
+      } else {
+        result[1] += -0.10139632;
+      }
+    }
+  } else {
+    if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6197001338)) {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.55193799734)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.07265426;
+            }
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0937361717)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59750467539)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62006014585)) {
+                    result[1] += -0.023366883;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.041795373)) {
+                      if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.12977306545)) {
+                        result[1] += 0.06973211;
+                      } else {
+                        result[1] += 0.0019855525;
+                      }
+                    } else {
+                      result[1] += -0.0018015736;
+                    }
+                  }
+                } else {
+                  result[1] += -0.13287456;
+                }
+              } else {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60428112745)) {
+                  result[1] += -0.014852955;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+                    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62005096674)) {
+                      result[1] += 0.10514729;
+                    } else {
+                      result[1] += 0.028301492;
+                    }
+                  } else {
+                    result[1] += -0;
+                  }
+                }
+              }
+            } else {
+              result[1] += -0.08918203;
+            }
+          }
+        } else {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+            result[1] += -0;
+          } else {
+            result[1] += -0.09247791;
+          }
+        }
+      } else {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31361842155)) {
+          result[1] += 0.090497285;
+        } else {
+          result[1] += 0.0014110656;
+        }
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+        if ( (data[55].missing != -1) && (data[55].fvalue < (float)7.806274516e-05)) {
+          if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+            result[1] += 0.095941365;
+          } else {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.18107253313)) {
+              result[1] += -0.053300004;
+            } else {
+              result[1] += 0.09084225;
+            }
+          }
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.86625015736)) {
+            result[1] += 0.05282037;
+          } else {
+            result[1] += -0.03093117;
+          }
+        }
+      } else {
+        result[1] += -0.0868561;
+      }
+    }
+  }
+  if ( (data[55].missing != -1) && (data[55].fvalue < (float)1.9582731724)) {
+    if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.44429585338)) {
+      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60363996029)) {
+        result[2] += -0.084612906;
+      } else {
+        result[2] += 0.02669644;
+      }
+    } else {
+      result[2] += -0.09510816;
+    }
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[72].missing != -1) && (data[72].fvalue < (float)-0.11422163248)) {
+        result[2] += 0.12342071;
+      } else {
+        result[2] += 0.017216356;
+      }
+    } else {
+      result[2] += -0.07760999;
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.09483821;
+  } else {
+    result[3] += 0.095795795;
+  }
+  if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.0045417477377)) {
+    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63134372234)) {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+        result[4] += -0.08325657;
+      } else {
+        result[4] += 0.047569964;
+      }
+    } else {
+      result[4] += -0.0951468;
+    }
+  } else {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.97013407946)) {
+      result[4] += 0.09487471;
+    } else {
+      result[4] += -0.011684251;
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3160247803)) {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+      result[5] += -0.09429319;
+    } else {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+        result[5] += -0.08276098;
+      } else {
+        result[5] += 0.02286871;
+      }
+    }
+  } else {
+    result[5] += 0.005482049;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+      result[6] += 0.016872594;
+    } else {
+      result[6] += -0.08397352;
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[6] += -0.09516157;
+    } else {
+      result[6] += -0.0116209695;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.42764511704)) {
+      result[7] += -0.089192204;
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.68544656038)) {
+        result[7] += 0.07604688;
+      } else {
+        result[7] += -0.07125742;
+      }
+    }
+  } else {
+    result[7] += -0.095173754;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)9.5720357895)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+      result[8] += -0.0943455;
+    } else {
+      result[8] += -0;
+    }
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.11647147685)) {
+      result[8] += -0;
+    } else {
+      result[8] += 0.08883086;
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)3.6675543785)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.48187279701)) {
+        if ( (data[12].missing != -1) && (data[12].fvalue < (float)-0.0058834324591)) {
+          result[9] += 0.07188039;
+        } else {
+          if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.50391459465)) {
+            result[9] += -0.013653013;
+          } else {
+            result[9] += 0.01374021;
+          }
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+          result[9] += -0.08063571;
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+            result[9] += -0.08459146;
+          } else {
+            if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16032426059)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31448435783)) {
+                  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                    result[9] += 0.03496681;
+                  } else {
+                    result[9] += -0.047287192;
+                  }
+                } else {
+                  result[9] += 0.12368182;
+                }
+              } else {
+                result[9] += -0.05657111;
+              }
+            } else {
+              result[9] += 0.100456096;
+            }
+          }
+        }
+      }
+    } else {
+      result[9] += 0.081557356;
+    }
+  } else {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[9] += -0.09507485;
+    } else {
+      result[9] += -0.036679704;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.53552961349)) {
+      result[10] += -0.079839416;
+    } else {
+      result[10] += 0.08859595;
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09425298;
+    } else {
+      result[10] += -0.016163642;
+    }
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010497917421)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.2894229889)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.071803093)) {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.61771321297)) {
+              if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.15738289058)) {
+                if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.38432779908)) {
+                  result[11] += 0.11538018;
+                } else {
+                  result[11] += 0.00012707597;
+                }
+              } else {
+                result[11] += -0.003618664;
+              }
+            } else {
+              result[11] += -0.03656579;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+                if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.81487703323)) {
+                  result[11] += 0.022734897;
+                } else {
+                  result[11] += -0.013716709;
+                }
+              } else {
+                result[11] += -0.08322858;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62005215883)) {
+                  result[11] += 0.0016744608;
+                } else {
+                  result[11] += 0.05578098;
+                }
+              } else {
+                if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44837236404)) {
+                  result[11] += -0.0469506;
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.1416378021)) {
+                    result[11] += 0.014099825;
+                  } else {
+                    result[11] += -0.015227456;
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+            if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59750467539)) {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007111311)) {
+                result[11] += -0;
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62002635002)) {
+                  result[11] += 0.08152001;
+                } else {
+                  result[11] += 0.00067244255;
+                }
+              }
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+                result[11] += -0.052617744;
+              } else {
+                result[11] += 0.0008827151;
+              }
+            }
+          } else {
+            result[11] += 0.12800613;
+          }
+        }
+      } else {
+        result[11] += -0.087338194;
+      }
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+        if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.13308440149)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.30208304524)) {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.018760954961)) {
+              result[11] += 0.09363326;
+            } else {
+              result[11] += 0.03302047;
+            }
+          } else {
+            result[11] += 0.0049093887;
+          }
+        } else {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            result[11] += -0;
+          } else {
+            if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.31898909807)) {
+              result[11] += -0;
+            } else {
+              if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0606098175)) {
+                result[11] += 0.06604894;
+              } else {
+                result[11] += -0;
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.15058320761)) {
+          result[11] += -0.08126462;
+        } else {
+          result[11] += -0;
+        }
+      }
+    }
+  } else {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.43852174282)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.82510781288)) {
+            result[11] += -0.031435706;
+          } else {
+            result[11] += 0.02064334;
+          }
+        } else {
+          result[11] += -0.07388227;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1678738594)) {
+          result[11] += 0.07434833;
+        } else {
+          result[11] += -0;
+        }
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+        result[11] += -0.093826644;
+      } else {
+        result[11] += 0.0051865615;
+      }
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+      if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.669532299)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.23471385241)) {
+            result[12] += -0.072085634;
+          } else {
+            result[12] += 0.05197569;
+          }
+        } else {
+          result[12] += 0.09389079;
+        }
+      } else {
+        result[12] += -0.0710225;
+      }
+    } else {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.1137475967)) {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.0095211574808)) {
+          result[12] += -0.0942065;
+        } else {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.8841226697)) {
+            result[12] += 0.039641723;
+          } else {
+            result[12] += -0.08251611;
+          }
+        }
+      } else {
+        result[12] += 0.013721525;
+      }
+    }
+  } else {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)-0.40983131528)) {
+      if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+        result[12] += -0.07643094;
+      } else {
+        result[12] += 0.012898361;
+      }
+    } else {
+      result[12] += 0.14552473;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025418607518)) {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.4555876255)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.56359541416)) {
+            result[0] += -0.018652763;
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.12229329348)) {
+              result[0] += 0.046187244;
+            } else {
+              result[0] += -0;
+            }
+          }
+        } else {
+          if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.046441379935)) {
+            result[0] += 0.09613435;
+          } else {
+            result[0] += -0;
+          }
+        }
+      } else {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.44744732976)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024123216048)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.0078816348687)) {
+              if ( (data[31].missing != -1) && (data[31].fvalue < (float)-0.54701089859)) {
+                if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.65017938614)) {
+                  result[0] += 0.113512315;
+                } else {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16623981297)) {
+                    result[0] += -0.020981811;
+                  } else {
+                    result[0] += 0.08777647;
+                  }
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              result[0] += -0;
+            }
+          } else {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+              if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.016198860481)) {
+                result[0] += -0.10439924;
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6200453043)) {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60422152281)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.8283338547)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426217318)) {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60427820683)) {
+                        if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.38767385483)) {
+                          result[0] += 0.07221533;
+                        } else {
+                          if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14091680944)) {
+                            result[0] += -0;
+                          } else {
+                            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021076679)) {
+                              result[0] += -0;
+                            } else {
+                              result[0] += 0.025163667;
+                            }
+                          }
+                        }
+                      } else {
+                        result[0] += -0.046762194;
+                      }
+                    } else {
+                      result[0] += 0.055960234;
+                    }
+                  } else {
+                    result[0] += -0.010121335;
+                  }
+                } else {
+                  result[0] += 0.089434445;
+                }
+              } else {
+                if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+                    if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.2646687031)) {
+                        result[0] += 0.04832967;
+                      } else {
+                        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60363996029)) {
+                          result[0] += -0.026912067;
+                        } else {
+                          result[0] += 0.02971509;
+                        }
+                      }
+                    } else {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60252219439)) {
+                        result[0] += -0.061900288;
+                      } else {
+                        result[0] += -0;
+                      }
+                    }
+                  } else {
+                    result[0] += 0.03765979;
+                  }
+                } else {
+                  result[0] += -0.05736792;
+                }
+              }
+            }
+          }
+        } else {
+          result[0] += -0.079031795;
+        }
+      }
+    } else {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)3.7342278957)) {
+        if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.43627506495)) {
+          if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.55523556471)) {
+            result[0] += -0.09392178;
+          } else {
+            result[0] += -0.024206694;
+          }
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243385196)) {
+          result[0] += 0.0138574075;
+        } else {
+          if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.61064589024)) {
+            result[0] += -0.012102544;
+          } else {
+            result[0] += -0;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.10984566063)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3814028502)) {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.92990243435)) {
+          if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+            result[0] += -0.16269138;
+          } else {
+            result[0] += -0.09211299;
+          }
+        } else {
+          result[0] += 0.049079053;
+        }
+      } else {
+        result[0] += 0.042917717;
+      }
+    } else {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)0.74213886261)) {
+        result[0] += -0;
+      } else {
+        result[0] += 0.07821676;
+      }
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.8352009058)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.082774102688)) {
+              result[1] += -0.0519835;
+            } else {
+              result[1] += 0.016694129;
+            }
+          } else {
+            result[1] += -0.11254401;
+          }
+        } else {
+          result[1] += -0.09864311;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.6996152401)) {
+          result[1] += 0.026652168;
+        } else {
+          result[1] += -0;
+        }
+      }
+    } else {
+      if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59719163179)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+          if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.1031159237)) {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61960500479)) {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4864132404)) {
+                result[1] += 0.19393347;
+              } else {
+                result[1] += 0.081870735;
+              }
+            } else {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.39887568355)) {
+                  result[1] += 0.009584972;
+                } else {
+                  result[1] += -0.09793445;
+                }
+              } else {
+                result[1] += 0.048013516;
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.16122038662)) {
+              result[1] += 0.05640737;
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.7153120041)) {
+                result[1] += 0.015884373;
+              } else {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                    result[1] += -0.00963891;
+                  } else {
+                    result[1] += 0.02077376;
+                  }
+                } else {
+                  result[1] += -0.059839446;
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+            result[1] += -0.06621037;
+          } else {
+            result[1] += 0.012131838;
+          }
+        }
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.0052853799425)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.5222806931)) {
+              result[1] += -0.015814884;
+            } else {
+              result[1] += -0.09106914;
+            }
+          } else {
+            result[1] += 0.009285204;
+          }
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+            result[1] += 0.075162396;
+          } else {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+              result[1] += 0.046223164;
+            } else {
+              result[1] += -0.0798973;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.0261459351)) {
+          result[1] += 0.032241844;
+        } else {
+          result[1] += -0.028738515;
+        }
+      } else {
+        if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+          result[1] += 0.095645085;
+        } else {
+          if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.079303629696)) {
+            result[1] += 0.08967059;
+          } else {
+            result[1] += -0.046452425;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.08556958;
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.093976595;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+        result[2] += 0.09990024;
+      } else {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45484149456)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+            result[2] += 0.062564075;
+          } else {
+            result[2] += -0;
+          }
+        } else {
+          result[2] += -0.074408986;
+        }
+      }
+    } else {
+      result[2] += -0.08374677;
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.094642244;
+  } else {
+    result[3] += 0.095385134;
+  }
+  if ( (data[89].missing != -1) && (data[89].fvalue < (float)1)) {
+    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63134372234)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        result[4] += -0.08107084;
+      } else {
+        result[4] += 0.0538848;
+      }
+    } else {
+      if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+        result[4] += -0.095013596;
+      } else {
+        result[4] += -0.012196205;
+      }
+    }
+  } else {
+    result[4] += 0.09343501;
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[5] += -0.09506212;
+    } else {
+      if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.27132934332)) {
+        result[5] += -0.071062356;
+      } else {
+        result[5] += 0.029392274;
+      }
+    }
+  } else {
+    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+      result[5] += -0.08416802;
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025336515158)) {
+        result[5] += -0.03902535;
+      } else {
+        result[5] += 0.07641307;
+      }
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+      result[6] += 0.010132221;
+    } else {
+      result[6] += -0.08327877;
+    }
+  } else {
+    result[6] += -0.09188114;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.52890723944)) {
+      result[7] += -0.07307838;
+    } else {
+      result[7] += 0.053623848;
+    }
+  } else {
+    result[7] += -0.09504196;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61931306124)) {
+      result[8] += -0.08103059;
+    } else {
+      result[8] += 0.08438395;
+    }
+  } else {
+    result[8] += -0.095053;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.81956714392)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1565849781)) {
+        if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.82510781288)) {
+            result[9] += 0.07506498;
+          } else {
+            result[9] += 0.016189242;
+          }
+        } else {
+          result[9] += -0.07619113;
+        }
+      } else {
+        result[9] += 0.108424835;
+      }
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.43852174282)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77628856897)) {
+          result[9] += -0.071314394;
+        } else {
+          if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16032426059)) {
+            if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62003540993)) {
+              if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.55644726753)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+                    result[9] += -0.039946318;
+                  } else {
+                    result[9] += 0.060353275;
+                  }
+                } else {
+                  result[9] += 0.06288314;
+                }
+              } else {
+                result[9] += -0.027284222;
+              }
+            } else {
+              result[9] += -0.03547335;
+            }
+          } else {
+            result[9] += 0.08698996;
+          }
+        }
+      } else {
+        result[9] += -0.082394555;
+      }
+    }
+  } else {
+    if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+      result[9] += -0.0949265;
+    } else {
+      result[9] += -0.019477557;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09404188;
+    } else {
+      result[10] += -0.010184127;
+    }
+  } else {
+    result[10] += 0.09112441;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010497917421)) {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)1.3602274656)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.15738289058)) {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.38432779908)) {
+                result[11] += 0.09973208;
+              } else {
+                result[11] += -0;
+              }
+            } else {
+              result[11] += -0.024320563;
+            }
+          } else {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59280967712)) {
+                result[11] += -0;
+              } else {
+                result[11] += -0.02707594;
+              }
+            } else {
+              result[11] += -0.08952134;
+            }
+          }
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.68544656038)) {
+              result[11] += -0.027118022;
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.7546197772)) {
+                  result[11] += -0;
+                } else {
+                  result[11] += 0.07315961;
+                }
+              } else {
+                if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26050439477)) {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59773939848)) {
+                    result[11] += 0.08129887;
+                  } else {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62013185024)) {
+                      result[11] += 0.027291048;
+                    } else {
+                      result[11] += -0.04071319;
+                    }
+                  }
+                } else {
+                  result[11] += -0.034650262;
+                }
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0563672781)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.85385841131)) {
+                if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.48886889219)) {
+                  result[11] += -0;
+                } else {
+                  result[11] += 0.07745807;
+                }
+              } else {
+                result[11] += -0.029528966;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1251373291)) {
+                result[11] += 0.10002942;
+              } else {
+                result[11] += 0.017858159;
+              }
+            }
+          }
+        }
+      } else {
+        result[11] += -0.0853831;
+      }
+    } else {
+      if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.13308440149)) {
+        if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.52279245853)) {
+          result[11] += -0.03444529;
+        } else {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+            result[11] += 0.09099463;
+          } else {
+            result[11] += 0.016346589;
+          }
+        }
+      } else {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.3703558743)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.5222806931)) {
+            result[11] += -0.0030895919;
+          } else {
+            result[11] += 0.06421084;
+          }
+        } else {
+          result[11] += -0.07195343;
+        }
+      }
+    }
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62014216185)) {
+      if ( (data[15].missing != -1) && (data[15].fvalue < (float)1.8430496454)) {
+        if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0376743078)) {
+            if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+              result[11] += 0.011526107;
+            } else {
+              result[11] += -0.03588667;
+            }
+          } else {
+            if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.016017412767)) {
+              result[11] += 0.07459114;
+            } else {
+              result[11] += -0;
+            }
+          }
+        } else {
+          result[11] += -0.07532489;
+        }
+      } else {
+        result[11] += 0.08881417;
+      }
+    } else {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)1.5676244497)) {
+        result[11] += -0.092747234;
+      } else {
+        result[11] += -0.005572595;
+      }
+    }
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.1137475967)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+          result[12] += 0.033250198;
+        } else {
+          result[12] += -0.07631826;
+        }
+      } else {
+        if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.10010892153)) {
+          result[12] += -0.094998226;
+        } else {
+          result[12] += -0.023477254;
+        }
+      }
+    } else {
+      result[12] += 0.011740328;
+    }
+  } else {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+      if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.2706193924)) {
+        result[12] += 0.014743763;
+      } else {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.631049335)) {
+          result[12] += -0.0022847427;
+        } else {
+          result[12] += -0.08783036;
+        }
+      }
+    } else {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+        result[12] += 0.112483494;
+      } else {
+        result[12] += -0;
+      }
+    }
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)-0.0058834324591)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59852188826)) {
+            result[0] += 0.0006995936;
+          } else {
+            result[0] += 0.045093592;
+          }
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.11706339568)) {
+            result[0] += -0.032952942;
+          } else {
+            result[0] += 0.028671274;
+          }
+        }
+      } else {
+        result[0] += 0.09288154;
+      }
+    } else {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.63763225079)) {
+        if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.29869630933)) {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+              if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16675952077)) {
+                if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012988329)) {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+                    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.79142647982)) {
+                      if ( (data[90].missing != -1) && (data[90].fvalue < (float)1)) {
+                        result[0] += 0.007113416;
+                      } else {
+                        result[0] += -0.018776882;
+                      }
+                    } else {
+                      result[0] += -0.06526318;
+                    }
+                  } else {
+                    if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.13125431538)) {
+                      result[0] += 0.03627783;
+                    } else {
+                      if ( (data[46].missing != -1) && (data[46].fvalue < (float)1.0866270065)) {
+                        result[0] += -0.018540092;
+                      } else {
+                        if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0611419678)) {
+                          result[0] += 0.02529119;
+                        } else {
+                          result[0] += -0.0021237384;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.018169729039)) {
+                    if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.85384505987)) {
+                      if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0096433163)) {
+                        result[0] += 0.027114375;
+                      } else {
+                        result[0] += -0;
+                      }
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    result[0] += 0.07574146;
+                  }
+                }
+              } else {
+                result[0] += -0.084233806;
+              }
+            } else {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.28573852777)) {
+                result[0] += -0.00582154;
+              } else {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                  result[0] += -0;
+                } else {
+                  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62016659975)) {
+                    result[0] += 0.0042709447;
+                  } else {
+                    result[0] += 0.06344709;
+                  }
+                }
+              }
+            }
+          } else {
+            result[0] += 0.08774199;
+          }
+        } else {
+          result[0] += 0.08451311;
+        }
+      } else {
+        if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.11085164547)) {
+          result[0] += -0.13893168;
+        } else {
+          result[0] += 0.014157939;
+        }
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.032075706869)) {
+        result[0] += -0.09476883;
+      } else {
+        result[0] += -0;
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025453392416)) {
+        if ( (data[93].missing != -1) && (data[93].fvalue < (float)1)) {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59171414375)) {
+            result[0] += 0.02868408;
+          } else {
+            result[0] += -0.01197443;
+          }
+        } else {
+          result[0] += 0.08220709;
+        }
+      } else {
+        if ( (data[76].missing != -1) && (data[76].fvalue < (float)1.2036006451)) {
+          if ( (data[49].missing != -1) && (data[49].fvalue < (float)-0.0010379530722)) {
+            if ( (data[16].missing != -1) && (data[16].fvalue < (float)0.39758354425)) {
+              result[0] += -0;
+            } else {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62017637491)) {
+                result[0] += -0.078984514;
+              } else {
+                result[0] += -0;
+              }
+            }
+          } else {
+            result[0] += 0.049416225;
+          }
+        } else {
+          result[0] += -0.09436048;
+        }
+      }
+    }
+  }
+  if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.038927663118)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6197001338)) {
+        if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+              if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.57866376638)) {
+                result[1] += -0;
+              } else {
+                result[1] += -0.09507131;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.6755399704)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.16375462711)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += 0.07413428;
+                }
+              } else {
+                result[1] += -0.05053597;
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.74638354778)) {
+              result[1] += 0.07190035;
+            } else {
+              result[1] += -0;
+            }
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.18137912452)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54161769152)) {
+              result[1] += 0.06403766;
+            } else {
+              result[1] += 0.0036535405;
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+              if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.039086114615)) {
+                result[1] += 0.049909946;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20948132873)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                      result[1] += 0.013935341;
+                    } else {
+                      result[1] += -0.016324777;
+                    }
+                  } else {
+                    result[1] += -0.08633627;
+                  }
+                } else {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                    result[1] += -0;
+                  } else {
+                    result[1] += 0.039378125;
+                  }
+                }
+              }
+            } else {
+              result[1] += -0.08777791;
+            }
+          }
+        }
+      } else {
+        if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.39758071303)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60252219439)) {
+              result[1] += 0.043009233;
+            } else {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.39887568355)) {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.82802081108)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += 0.035594027;
+                }
+              } else {
+                result[1] += -0.04410004;
+              }
+            }
+          } else {
+            result[1] += -0.08437875;
+          }
+        } else {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+            result[1] += 0.09200358;
+          } else {
+            result[1] += 0.015567757;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.09369811;
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62009418011)) {
+        if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.058391608298)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+            result[1] += 0.044655394;
+          } else {
+            result[1] += -0;
+          }
+        } else {
+          result[1] += -0.03566235;
+        }
+      } else {
+        result[1] += 0.09415798;
+      }
+    } else {
+      result[1] += -0.083753265;
+    }
+  }
+  if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)9.5720357895)) {
+      result[2] += -0.09498076;
+    } else {
+      result[2] += -0;
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.076251335;
+      } else {
+        result[2] += -0;
+      }
+    } else {
+      result[2] += -0.07147627;
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.094408505;
+  } else {
+    result[3] += 0.09498064;
+  }
+  if ( (data[89].missing != -1) && (data[89].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.2213975191)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61983728409)) {
+        result[4] += 0.06832757;
+      } else {
+        result[4] += -0.07895755;
+      }
+    } else {
+      result[4] += -0.09360428;
+    }
+  } else {
+    result[4] += 0.09274143;
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3160247803)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.2646687031)) {
+        result[5] += -0.09358761;
+      } else {
+        result[5] += -0.025867494;
+      }
+    } else {
+      if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.027970723808)) {
+        result[5] += -0.04139664;
+      } else {
+        result[5] += 0.005971148;
+      }
+    }
+  } else {
+    result[5] += -0;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+      result[6] += 0.011990834;
+    } else {
+      result[6] += -0.080719694;
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+      result[6] += -0.093494736;
+    } else {
+      result[6] += -0.041193426;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61777055264)) {
+      result[7] += -0.07412969;
+    } else {
+      result[7] += 0.05154179;
+    }
+  } else {
+    result[7] += -0.094886646;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61931306124)) {
+      result[8] += -0.07851798;
+    } else {
+      result[8] += 0.08096281;
+    }
+  } else {
+    result[8] += -0.09490424;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)3.6675543785)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.48187279701)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0517596006)) {
+          if ( (data[13].missing != -1) && (data[13].fvalue < (float)-0.3027947247)) {
+            result[9] += 0.048889905;
+          } else {
+            result[9] += -0.0075371037;
+          }
+        } else {
+          result[9] += 0.14571488;
+        }
+      } else {
+        if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26605242491)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+            result[9] += -0.07952783;
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.12229329348)) {
+              result[9] += -0.0497919;
+            } else {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6194216013)) {
+                result[9] += 0.07605937;
+              } else {
+                result[9] += -0.0027508168;
+              }
+            }
+          }
+        } else {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43870261312)) {
+            result[9] += 0.11289757;
+          } else {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.23778165877)) {
+              result[9] += -0.07838346;
+            } else {
+              result[9] += -0;
+            }
+          }
+        }
+      }
+    } else {
+      result[9] += 0.07930564;
+    }
+  } else {
+    if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+      result[9] += -0.094745964;
+    } else {
+      result[9] += -0.01281357;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09368494;
+    } else {
+      result[10] += -0.006566255;
+    }
+  } else {
+    result[10] += 0.09027566;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.61669498682)) {
+      if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.53552961349)) {
+        if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+          if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.53573900461)) {
+            if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.7546197772)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+                  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+                    result[11] += -0.01613357;
+                  } else {
+                    result[11] += 0.034407362;
+                  }
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+                    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77148842812)) {
+                      result[11] += -0.083087474;
+                    } else {
+                      result[11] += -0;
+                    }
+                  } else {
+                    if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                      result[11] += -0.05915611;
+                    } else {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60419660807)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += 0.0478189;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.55644726753)) {
+                  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+                    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63046061993)) {
+                      result[11] += 0.053894233;
+                    } else {
+                      result[11] += -0.0070427377;
+                    }
+                  } else {
+                    if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20994369686)) {
+                      result[11] += 0.09995121;
+                    } else {
+                      result[11] += 0.012138968;
+                    }
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.3176026344)) {
+                    result[11] += -0.033821143;
+                  } else {
+                    if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62010025978)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += 0.072285414;
+                      }
+                    } else {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414910316)) {
+                        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60421293974)) {
+                          result[11] += -0;
+                        } else {
+                          result[11] += -0.04520145;
+                        }
+                      } else {
+                        result[11] += 0.021288434;
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.13326488435)) {
+                result[11] += 0.07462245;
+              } else {
+                if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0098451376)) {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31154632568)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.03472758;
+                  }
+                } else {
+                  result[11] += -0;
+                }
+              }
+            }
+          } else {
+            result[11] += -0.07331844;
+          }
+        } else {
+          result[11] += -0.08089311;
+        }
+      } else {
+        result[11] += -0.07286694;
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+        if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.13326488435)) {
+          result[11] += -0.08139891;
+        } else {
+          result[11] += 0.017082063;
+        }
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+          result[11] += 0.08948592;
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.021068219095)) {
+            result[11] += -0.034022577;
+          } else {
+            result[11] += 0.06732384;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)-0.3027947247)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        result[11] += -0.03321611;
+      } else {
+        if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.15530490875)) {
+          result[11] += 0.082980655;
+        } else {
+          result[11] += -0;
+        }
+      }
+    } else {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010524965823)) {
+        result[11] += -0.092497416;
+      } else {
+        result[11] += -0.0037583148;
+      }
+    }
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025232160464)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+        result[12] += 0.029407239;
+      } else {
+        result[12] += -0.07344589;
+      }
+    } else {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010372631252)) {
+        result[12] += -0.093296915;
+      } else {
+        result[12] += -0.006982773;
+      }
+    }
+  } else {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+        result[12] += 0.09736301;
+      } else {
+        if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+          result[12] += 0.039731763;
+        } else {
+          result[12] += -0.073529;
+        }
+      }
+    } else {
+      if ( (data[44].missing != -1) && (data[44].fvalue < (float)0.065898813307)) {
+        result[12] += -0.088003896;
+      } else {
+        result[12] += -0.012572713;
+      }
+    }
+  }
+  if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.2629079819)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.59183168411)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.35428348184)) {
+          if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.2706193924)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+              result[0] += 0.05521935;
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31460806727)) {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                  result[0] += -0.0022566;
+                } else {
+                  result[0] += -0.06657337;
+                }
+              } else {
+                if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021189928)) {
+                  result[0] += 0.04014103;
+                } else {
+                  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.61824411154)) {
+                    result[0] += -0;
+                  } else {
+                    result[0] += -0.016103404;
+                  }
+                }
+              }
+            }
+          } else {
+            result[0] += -0.075448826;
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.0078816348687)) {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+                  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77948868275)) {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.60239255428)) {
+                      result[0] += 0.028994026;
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    result[0] += 0.08625679;
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.5393471718)) {
+                    result[0] += -0.035011683;
+                  } else {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.28573852777)) {
+                      result[0] += -0.0037082094;
+                    } else {
+                      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.25304949284)) {
+                        result[0] += 0.0824333;
+                      } else {
+                        if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20921711624)) {
+                          result[0] += 0.028496308;
+                        } else {
+                          result[0] += -0.010835747;
+                        }
+                      }
+                    }
+                  }
+                }
+              } else {
+                if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.35898321867)) {
+                  result[0] += -0.11232612;
+                } else {
+                  result[0] += 0.012721026;
+                }
+              }
+            } else {
+              if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010385181755)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.54537212849)) {
+                  result[0] += 0.094616935;
+                } else {
+                  if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010553312488)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.10594877601)) {
+                      result[0] += 0.079220966;
+                    } else {
+                      result[0] += 0.0057210242;
+                    }
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62007504702)) {
+                  result[0] += 0.01945133;
+                } else {
+                  result[0] += -0.03914269;
+                }
+              }
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.0084628881887)) {
+              result[0] += -0.08964764;
+            } else {
+              result[0] += 0.016618691;
+            }
+          }
+        }
+      } else {
+        result[0] += 0.11924515;
+      }
+    } else {
+      result[0] += -0.11894283;
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+        result[0] += -0.09458098;
+      } else {
+        result[0] += 0.0071729845;
+      }
+    } else {
+      if ( (data[31].missing != -1) && (data[31].fvalue < (float)-0.085173599422)) {
+        if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.16745822132)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018990517)) {
+            result[0] += 0.03937251;
+          } else {
+            result[0] += -0.022618527;
+          }
+        } else {
+          if ( (data[51].missing != -1) && (data[51].fvalue < (float)-0.01244112663)) {
+            if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.11440932006)) {
+              result[0] += 0.019859454;
+            } else {
+              result[0] += -0.048200887;
+            }
+          } else {
+            result[0] += -0.09912331;
+          }
+        }
+      } else {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.01054682117)) {
+          result[0] += 0.07726605;
+        } else {
+          if ( (data[21].missing != -1) && (data[21].fvalue < (float)-0.26361367106)) {
+            result[0] += 0.06314094;
+          } else {
+            result[0] += -0.040366616;
+          }
+        }
+      }
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31535029411)) {
+          if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+            if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.2696479857)) {
+              result[1] += -0.12071744;
+            } else {
+              result[1] += -0.020114161;
+            }
+          } else {
+            result[1] += -0;
+          }
+        } else {
+          result[1] += -0.09808177;
+        }
+      } else {
+        result[1] += 0.030071115;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.430107832)) {
+          if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010497917421)) {
+            result[1] += 0.08821441;
+          } else {
+            result[1] += 0.0023236014;
+          }
+        } else {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021076679)) {
+            result[1] += -0.08721381;
+          } else {
+            result[1] += 0.022313038;
+          }
+        }
+      } else {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.95877230167)) {
+              result[1] += 0.06733569;
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.42360827327)) {
+                result[1] += -0.09933374;
+              } else {
+                result[1] += 0.025856981;
+              }
+            }
+          } else {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.92445510626)) {
+              result[1] += 0.08265596;
+            } else {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62014120817)) {
+                result[1] += -0.028131686;
+              } else {
+                if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.46705591679)) {
+                  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039240390062)) {
+                    result[1] += -0;
+                  } else {
+                    result[1] += -0.05257879;
+                  }
+                } else {
+                  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62007719278)) {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.7825541496)) {
+                      result[1] += -0.015547547;
+                    } else {
+                      result[1] += 0.039794985;
+                    }
+                  } else {
+                    result[1] += 0.07407785;
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)10.599714279)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.1065300256)) {
+              result[1] += -0.08904228;
+            } else {
+              result[1] += -0.017322147;
+            }
+          } else {
+            result[1] += 0.07743737;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.2252106667)) {
+        result[1] += 0.09489838;
+      } else {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62015110254)) {
+          result[1] += -0.07847733;
+        } else {
+          result[1] += 0.083168276;
+        }
+      }
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.23496000469)) {
+        result[1] += -0.08344621;
+      } else {
+        result[1] += 0.011451858;
+      }
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.09317314;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)1.9582731724)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.43852174282)) {
+          result[2] += 0.0050873673;
+        } else {
+          result[2] += -0.020776596;
+        }
+      } else {
+        result[2] += 0.08655658;
+      }
+    } else {
+      result[2] += -0.07975318;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.094986334;
+  } else {
+    result[3] += -0.09432071;
+  }
+  if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.0045417477377)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.2213975191)) {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+        result[4] += -0.07725591;
+      } else {
+        result[4] += 0.031185668;
+      }
+    } else {
+      result[4] += -0.094663136;
+    }
+  } else {
+    if ( (data[89].missing != -1) && (data[89].fvalue < (float)1)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.091973044;
+    }
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+      result[5] += -0.094733894;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+      result[5] += -0.07918507;
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.018215337768)) {
+        result[5] += 0.04646043;
+      } else {
+        result[5] += -0;
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1498845816)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      result[6] += 0.023271807;
+    } else {
+      result[6] += -0.084941454;
+    }
+  } else {
+    result[6] += -0.09155641;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61777055264)) {
+      result[7] += -0.072127245;
+    } else {
+      if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26883500814)) {
+        result[7] += 0.051140755;
+      } else {
+        result[7] += -0;
+      }
+    }
+  } else {
+    result[7] += -0.094709486;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)9.5720357895)) {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+      result[8] += -0.014136965;
+    } else {
+      result[8] += -0.09472299;
+    }
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.11647147685)) {
+      result[8] += -0;
+    } else {
+      result[8] += 0.08511114;
+    }
+  }
+  if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.17268300056)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.81956714392)) {
+      if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+        result[9] += -0.010975413;
+      } else {
+        result[9] += 0.07643808;
+      }
+    } else {
+      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90621083975)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+          result[9] += -0.06872321;
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3814028502)) {
+            result[9] += 0.013602032;
+          } else {
+            result[9] += -0.04159197;
+          }
+        }
+      } else {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77628856897)) {
+          result[9] += -0.07747705;
+        } else {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.84881222248)) {
+            result[9] += 0.16125537;
+          } else {
+            if ( (data[13].missing != -1) && (data[13].fvalue < (float)0.15478906035)) {
+              result[9] += -0.03528609;
+            } else {
+              result[9] += 0.012497489;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[9] += -0.094469965;
+    } else {
+      result[9] += -0.017693372;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09327208;
+    } else {
+      result[10] += -0.0033515482;
+    }
+  } else {
+    result[10] += 0.089286745;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62017846107)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.43852174282)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.99036180973)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.016826236621)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.029597979;
+              }
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31227308512)) {
+                result[11] += -0.030186439;
+              } else {
+                result[11] += -0;
+              }
+            }
+          } else {
+            result[11] += -0.058603063;
+          }
+        } else {
+          result[11] += 0.074898675;
+        }
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+          result[11] += -0.086850725;
+        } else {
+          result[11] += -0.00089715485;
+        }
+      }
+    } else {
+      result[11] += -0.092419304;
+    }
+  } else {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+        if ( (data[65].missing != -1) && (data[65].fvalue < (float)-0.016915978864)) {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.631049335)) {
+            result[11] += -0;
+          } else {
+            result[11] += 0.092492305;
+          }
+        } else {
+          result[11] += -0.057249;
+        }
+      } else {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024322185665)) {
+          result[11] += -0.06240729;
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.067782856524)) {
+            if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+              result[11] += -0.055806614;
+            } else {
+              if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14162181318)) {
+                result[11] += 0.040013745;
+              } else {
+                if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.061311610043)) {
+                  result[11] += -0.039763443;
+                } else {
+                  result[11] += 0.002209663;
+                }
+              }
+            }
+          } else {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31372666359)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.55644726753)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                    if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.45259317756)) {
+                      result[11] += 0.08827663;
+                    } else {
+                      result[11] += 0.009820185;
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0903491974)) {
+                      result[11] += -0.007414398;
+                    } else {
+                      result[11] += 0.0052982545;
+                    }
+                  }
+                } else {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16697607934)) {
+                    result[11] += -0.028984603;
+                  } else {
+                    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+                      result[11] += 0.035613757;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.4199834168)) {
+                  result[11] += 0.09745918;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31298440695)) {
+                result[11] += -0.03340669;
+              } else {
+                result[11] += 0.024231816;
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.14431166649)) {
+        result[11] += -0;
+      } else {
+        result[11] += -0.07675473;
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60419660807)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+            result[12] += -0.06951249;
+          } else {
+            result[12] += -0;
+          }
+        } else {
+          result[12] += 0.09752521;
+        }
+      } else {
+        result[12] += -0.08331344;
+      }
+    } else {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)0.050166197121)) {
+          result[12] += 0.23109707;
+        } else {
+          result[12] += 0.07921756;
+        }
+      } else {
+        result[12] += -0.055905096;
+      }
+    }
+  } else {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010369817726)) {
+      result[12] += -0.094355725;
+    } else {
+      result[12] += -0;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.4874599874)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62383723259)) {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          result[0] += 0.108250245;
+        } else {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.8134265542)) {
+            result[0] += -0.028417967;
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62015038729)) {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+                  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018430233)) {
+                    if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038947977126)) {
+                      result[0] += 0.033091243;
+                    } else {
+                      result[0] += 0.077848695;
+                    }
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.82117939)) {
+                      result[0] += -0.0005344204;
+                    } else {
+                      result[0] += 0.014702769;
+                    }
+                  }
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+                result[0] += 0.02736272;
+              } else {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54161769152)) {
+                  result[0] += -0.03085825;
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.9971444607)) {
+                    result[0] += 0.05162629;
+                  } else {
+                    if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20878776908)) {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60372674465)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += -0.047543004;
+                      }
+                    } else {
+                      if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61979103088)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += 0.03082755;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+          if ( (data[49].missing != -1) && (data[49].fvalue < (float)-0.040186408907)) {
+            if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.52279245853)) {
+              result[0] += 0.022617385;
+            } else {
+              result[0] += 0.089782916;
+            }
+          } else {
+            if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.15457670391)) {
+              result[0] += -0.061815694;
+            } else {
+              result[0] += 0.0703465;
+            }
+          }
+        } else {
+          result[0] += -0.0051848004;
+        }
+      }
+    } else {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+        result[0] += -0.09510243;
+      } else {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.36591973901)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61938333511)) {
+            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45554211736)) {
+              result[0] += -0;
+            } else {
+              result[0] += 0.07829259;
+            }
+          } else {
+            result[0] += -0.021819144;
+          }
+        } else {
+          if ( (data[33].missing != -1) && (data[33].fvalue < (float)1.2945084572)) {
+            if ( (data[18].missing != -1) && (data[18].fvalue < (float)3.2361967564)) {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1390959024)) {
+                result[0] += -0.11083798;
+              } else {
+                result[0] += -0.023735335;
+              }
+            } else {
+              result[0] += -0;
+            }
+          } else {
+            result[0] += 0.006144984;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.039107099175)) {
+      if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+        result[0] += -0.09125182;
+      } else {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.92990243435)) {
+          result[0] += -0.017845316;
+        } else {
+          result[0] += 0.020294867;
+        }
+      }
+    } else {
+      if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.87892109156)) {
+        if ( (data[49].missing != -1) && (data[49].fvalue < (float)0.10463186353)) {
+          result[0] += 0.07043137;
+        } else {
+          result[0] += 0.0009583512;
+        }
+      } else {
+        result[0] += -0.03947808;
+      }
+    }
+  }
+  if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024123216048)) {
+        if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.54036176205)) {
+          result[1] += -0.018716864;
+        } else {
+          result[1] += -0.09879309;
+        }
+      } else {
+        result[1] += -0.0121512385;
+      }
+    } else {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62560343742)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016272545)) {
+            result[1] += 0.032078434;
+          } else {
+            result[1] += 0.085405305;
+          }
+        } else {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.631049335)) {
+              result[1] += 0.099652015;
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007713318)) {
+                  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038397628814)) {
+                    result[1] += 0.020966094;
+                  } else {
+                    result[1] += -0;
+                  }
+                } else {
+                  result[1] += -0.099674284;
+                }
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62002420425)) {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16619649529)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                      result[1] += -0.06574739;
+                    } else {
+                      result[1] += -0;
+                    }
+                  } else {
+                    result[1] += 0.004324347;
+                  }
+                } else {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60342478752)) {
+                    result[1] += 0.071331;
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.0429239273)) {
+                      result[1] += 0.03431481;
+                    } else {
+                      result[1] += -0.039815847;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            result[1] += -0.06987325;
+          }
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)3.6532914639)) {
+          result[1] += -0.07887554;
+        } else {
+          result[1] += 0.021269856;
+        }
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.0045417477377)) {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+            result[1] += 0.094778486;
+          } else {
+            if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.0832099244)) {
+              result[1] += 0.08386556;
+            } else {
+              result[1] += -0.026293822;
+            }
+          }
+        } else {
+          result[1] += 0.0025381388;
+        }
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.95877230167)) {
+          result[1] += 0.052304506;
+        } else {
+          result[1] += -0.025735784;
+        }
+      }
+    } else {
+      result[1] += -0.08667861;
+    }
+  }
+  if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)9.5720357895)) {
+      result[2] += -0.09284514;
+    } else {
+      result[2] += 0.023072422;
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025418607518)) {
+      result[2] += 0.0601311;
+    } else {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31298440695)) {
+        result[2] += 0.013942971;
+      } else {
+        result[2] += -0.07382142;
+      }
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.09383776;
+  } else {
+    result[3] += 0.09421305;
+  }
+  if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.0045417477377)) {
+    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63134372234)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+        result[4] += 0.042504434;
+      } else {
+        result[4] += -0.07659174;
+      }
+    } else {
+      result[4] += -0.09444305;
+    }
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.090155445;
+    }
+  }
+  if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.2646687031)) {
+      result[5] += -0.09110379;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025155633688)) {
+      result[5] += 0.045067087;
+    } else {
+      result[5] += -0.07208625;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1498845816)) {
+    if ( (data[19].missing != -1) && (data[19].fvalue < (float)0.5904673934)) {
+      result[6] += -0;
+    } else {
+      result[6] += -0.081054315;
+    }
+  } else {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+      result[6] += -0.0943839;
+    } else {
+      result[6] += -0.019701844;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      result[7] += -0.006748809;
+    } else {
+      result[7] += 0.03333223;
+    }
+  } else {
+    result[7] += -0.0944936;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+      result[8] += -0.07565642;
+    } else {
+      if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+        result[8] += 0.01985257;
+      } else {
+        result[8] += 0.10930401;
+      }
+    }
+  } else {
+    result[8] += -0.0945153;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31324729323)) {
+        if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.38874548674)) {
+          result[9] += -0.078288615;
+        } else {
+          result[9] += -0.011818211;
+        }
+      } else {
+        if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16032426059)) {
+          result[9] += -0.008507573;
+        } else {
+          result[9] += 0.12482324;
+        }
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1328552961)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.72576403618)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59280967712)) {
+                result[9] += -0.0022385174;
+              } else {
+                result[9] += 0.033024233;
+              }
+            } else {
+              result[9] += -0.082779795;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+              result[9] += 0.09666429;
+            } else {
+              result[9] += -0;
+            }
+          }
+        } else {
+          result[9] += -0.07391162;
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.56359541416)) {
+          result[9] += 0.14556803;
+        } else {
+          result[9] += 0.031211128;
+        }
+      }
+    }
+  } else {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[9] += -0.09425843;
+    } else {
+      result[9] += -0.012423084;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+      result[10] += -0.09277688;
+    } else {
+      result[10] += -0;
+    }
+  } else {
+    result[10] += 0.0880912;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025307295844)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.6201159358)) {
+        if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.066599451005)) {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.016826236621)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+                result[11] += -0.014340983;
+              } else {
+                result[11] += 0.014676358;
+              }
+            } else {
+              result[11] += -0.039410513;
+            }
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)2.691501379)) {
+              result[11] += 0.07984312;
+            } else {
+              result[11] += -0;
+            }
+          }
+        } else {
+          result[11] += -0.072795175;
+        }
+      } else {
+        result[11] += -0.08252512;
+      }
+    } else {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.63763225079)) {
+        if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.53573900461)) {
+          if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+              result[11] += -0.04922174;
+            } else {
+              if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62010097504)) {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+                  result[11] += -0.021554638;
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.2718229294)) {
+                    result[11] += 0.04658658;
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.9656729698)) {
+                      result[11] += -0.041556943;
+                    } else {
+                      result[11] += 0.011901794;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414606333)) {
+                    result[11] += 0.01644866;
+                  } else {
+                    result[11] += 0.08242979;
+                  }
+                } else {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20938225091)) {
+                    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+                      result[11] += 0.010074847;
+                    } else {
+                      result[11] += -0.024732536;
+                    }
+                  } else {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.26939401031)) {
+                      result[11] += -0;
+                    } else {
+                      result[11] += 0.05272023;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.27248257399)) {
+              result[11] += 0.08013078;
+            } else {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.66162455082)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.04123735;
+              }
+            }
+          }
+        } else {
+          result[11] += -0.06889795;
+        }
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+          result[11] += 0.08681922;
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.021068219095)) {
+            result[11] += -0.05581132;
+          } else {
+            result[11] += 0.06216227;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      if ( (data[51].missing != -1) && (data[51].fvalue < (float)0.30323809385)) {
+        result[11] += -0.09209324;
+      } else {
+        result[11] += -1.7224766e-05;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        if ( (data[85].missing != -1) && (data[85].fvalue < (float)1)) {
+          result[11] += -0.0480599;
+        } else {
+          result[11] += -0;
+        }
+      } else {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.036320734769)) {
+          result[11] += 0.09416055;
+        } else {
+          result[11] += -0;
+        }
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.88865399361)) {
+          if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.57866376638)) {
+            result[12] += -0;
+          } else {
+            result[12] += -0.06693385;
+          }
+        } else {
+          result[12] += 0.103644654;
+        }
+      } else {
+        result[12] += -0.081032544;
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)0.050166197121)) {
+          result[12] += 0.20241201;
+        } else {
+          result[12] += 0.08261168;
+        }
+      } else {
+        result[12] += -0.054425117;
+      }
+    }
+  } else {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010369817726)) {
+      result[12] += -0.09407618;
+    } else {
+      result[12] += -0;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.2629079819)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.53519374132)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+              result[0] += 0.0352138;
+            } else {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.92375618219)) {
+                result[0] += -0.022911139;
+              } else {
+                result[0] += 0.020615831;
+              }
+            }
+          } else {
+            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.12656737864)) {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.4555876255)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+                  result[0] += 0.06538525;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                    result[0] += -0.002484611;
+                  } else {
+                    result[0] += 0.035424568;
+                  }
+                }
+              } else {
+                result[0] += 0.08408314;
+              }
+            } else {
+              result[0] += -0.012589707;
+            }
+          }
+        } else {
+          if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.55193799734)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.81572955847)) {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60427820683)) {
+                if ( (data[70].missing != -1) && (data[70].fvalue < (float)0.21682018042)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.1259713918)) {
+                    result[0] += 0.073208064;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.15449461341)) {
+                    result[0] += 0.0028900101;
+                  } else {
+                    result[0] += -0.016903305;
+                  }
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.25268346071)) {
+                  result[0] += -0.061787713;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.1340187043)) {
+                    result[0] += 0.043280352;
+                  } else {
+                    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.53069013357)) {
+                      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += -0.054931935;
+                      }
+                    } else {
+                      result[0] += -0;
+                    }
+                  }
+                }
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.96582579613)) {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60415321589)) {
+                  result[0] += 0.075584315;
+                } else {
+                  result[0] += 0.004805398;
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1328552961)) {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                    result[0] += -0.018453313;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  result[0] += 0.032178644;
+                }
+              }
+            }
+          } else {
+            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45147165656)) {
+              result[0] += 0.041517753;
+            } else {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.11353146285)) {
+                result[0] += -0.15302892;
+              } else {
+                if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.1000680849)) {
+                  result[0] += 0.05920196;
+                } else {
+                  result[0] += -0.06908232;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        result[0] += -0.11913733;
+      }
+    } else {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)3.7342278957)) {
+        if ( (data[17].missing != -1) && (data[17].fvalue < (float)2.4384834766)) {
+          result[0] += -0.09226573;
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.6202095747)) {
+          result[0] += -0;
+        } else {
+          result[0] += 0.007542284;
+        }
+      }
+    }
+  } else {
+    if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.039107099175)) {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)-0.0058834324591)) {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038821898401)) {
+          result[0] += -0.034648944;
+        } else {
+          result[0] += 0.011337921;
+        }
+      } else {
+        result[0] += -0.090834476;
+      }
+    } else {
+      if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.87892109156)) {
+        if ( (data[49].missing != -1) && (data[49].fvalue < (float)0.10463186353)) {
+          result[0] += 0.066023074;
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        result[0] += -0.03959979;
+      }
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        result[1] += -0.08766244;
+      } else {
+        result[1] += 0.0029017536;
+      }
+    } else {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+        if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.039086114615)) {
+          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60342478752)) {
+            if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+              result[1] += 0.010215695;
+            } else {
+              result[1] += 0.0819288;
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+              if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14464202523)) {
+                result[1] += -0;
+              } else {
+                result[1] += -0.067197055;
+              }
+            } else {
+              result[1] += 0.037285443;
+            }
+          }
+        } else {
+          if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.43733534217)) {
+            if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.92445510626)) {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+                  result[1] += -0.0104646925;
+                } else {
+                  result[1] += 0.014789433;
+                }
+              } else {
+                result[1] += -0.064471446;
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.9198932648)) {
+                result[1] += 0.034580577;
+              } else {
+                result[1] += -0;
+              }
+            }
+          } else {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60427242517)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.07097199;
+            }
+          }
+        }
+      } else {
+        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)3.9638373852)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54431396723)) {
+              result[1] += 0.04000554;
+            } else {
+              result[1] += -0.06960602;
+            }
+          } else {
+            result[1] += 0.07389425;
+          }
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+            result[1] += -0.094187945;
+          } else {
+            result[1] += -0.01881004;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.2252106667)) {
+        result[1] += 0.09384806;
+      } else {
+        if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.014389973134)) {
+          result[1] += 0.07830402;
+        } else {
+          result[1] += -0.07560173;
+        }
+      }
+    } else {
+      if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+        result[1] += 0.019394243;
+      } else {
+        result[1] += -0.06969556;
+      }
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.09205459;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)1.9582731724)) {
+        if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62011039257)) {
+          result[2] += -0;
+        } else {
+          result[2] += -0.015917256;
+        }
+      } else {
+        result[2] += 0.05830312;
+      }
+    } else {
+      result[2] += -0.07549387;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09438215;
+  } else {
+    result[3] += -0.09376357;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.196121335)) {
+    if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.235338673)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+        result[4] += -0;
+      } else {
+        result[4] += -0.07621608;
+      }
+    } else {
+      result[4] += 0.10223678;
+    }
+  } else {
+    result[4] += -0.09421119;
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+      result[5] += -0.09427146;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+      result[5] += -0.07497868;
+    } else {
+      result[5] += 0.023979573;
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31443795562)) {
+        result[6] += -0.08537773;
+      } else {
+        result[6] += -0;
+      }
+    } else {
+      result[6] += 0.031053182;
+    }
+  } else {
+    result[6] += -0.09187689;
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+      result[7] += -0.062060833;
+    } else {
+      result[7] += 0.03939325;
+    }
+  } else {
+    result[7] += -0.094248116;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61899483204)) {
+      result[8] += -0.074762374;
+    } else {
+      result[8] += 0.08206711;
+    }
+  } else {
+    result[8] += -0.09427192;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)3.6675543785)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.53311687708)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+          result[9] += -0;
+        } else {
+          result[9] += 0.065043464;
+        }
+      } else {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+          if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+            result[9] += -0.07098924;
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+            result[9] += -0.07498269;
+          } else {
+            if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025323992595)) {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+                result[9] += 0.08424163;
+              } else {
+                result[9] += -0;
+              }
+            } else {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.078519709408)) {
+                result[9] += -0.033481013;
+              } else {
+                result[9] += -0;
+              }
+            }
+          }
+        }
+      }
+    } else {
+      result[9] += 0.0718412;
+    }
+  } else {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[9] += -0.09394636;
+    } else {
+      result[9] += -0.007110058;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+      result[10] += -0.09216343;
+    } else {
+      result[10] += -0.011733982;
+    }
+  } else {
+    result[10] += 0.08675208;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010497917421)) {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.99576175213)) {
+              if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+                result[11] += 0.03520974;
+              } else {
+                result[11] += -0;
+              }
+            } else {
+              result[11] += -0.07744164;
+            }
+          } else {
+            result[11] += 0.046063893;
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.0593373775)) {
+            result[11] += -0.0055625956;
+          } else {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)7.806274516e-05)) {
+              result[11] += 0.08948646;
+            } else {
+              result[11] += 0.01591621;
+            }
+          }
+        }
+      } else {
+        if ( (data[4].missing != -1) && (data[4].fvalue < (float)-0.50166469812)) {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.66160225868)) {
+              result[11] += -0;
+            } else {
+              if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26050439477)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.63733571768)) {
+                  result[11] += 0.106191486;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.60239255428)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.92375618219)) {
+                      result[11] += -0.011370018;
+                    } else {
+                      result[11] += 0.023020642;
+                    }
+                  } else {
+                    result[11] += 0.042058516;
+                  }
+                }
+              } else {
+                if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0103553534)) {
+                  if ( (data[53].missing != -1) && (data[53].fvalue < (float)0.14160977304)) {
+                    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.79142647982)) {
+                      result[11] += -0.004966855;
+                    } else {
+                      result[11] += 0.033043623;
+                    }
+                  } else {
+                    result[11] += -0.033745628;
+                  }
+                } else {
+                  result[11] += 0.023969239;
+                }
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+                result[11] += -0.07500004;
+              } else {
+                result[11] += -0;
+              }
+            } else {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.92445510626)) {
+                result[11] += -0.016694928;
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.81572955847)) {
+                  result[11] += 0.037968237;
+                } else {
+                  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.9127392769)) {
+                      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0903491974)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += -0.013186686;
+                      }
+                    } else {
+                      result[11] += 0.04321235;
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.097951889)) {
+                      result[11] += -0.064731754;
+                    } else {
+                      result[11] += 0.012082732;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          result[11] += -0.03235922;
+        }
+      }
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+        result[11] += -0.086381696;
+      } else {
+        if ( (data[16].missing != -1) && (data[16].fvalue < (float)0.83999991417)) {
+          result[11] += -0.03726185;
+        } else {
+          result[11] += 0.062859915;
+        }
+      }
+    }
+  } else {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.068880498409)) {
+        result[11] += -0.09129402;
+      } else {
+        result[11] += -0;
+      }
+    } else {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)1.3720816374)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+          result[11] += -0.056967072;
+        } else {
+          result[11] += 0.007115421;
+        }
+      } else {
+        result[11] += 0.035466295;
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.43630290031)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.64524072409)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.016243726015)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+              result[12] += -0.07320965;
+            } else {
+              result[12] += -0;
+            }
+          } else {
+            result[12] += 0.106779456;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.5222806931)) {
+            result[12] += -0.00886024;
+          } else {
+            result[12] += -0.08345726;
+          }
+        }
+      } else {
+        if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62011039257)) {
+          result[12] += 0.19872734;
+        } else {
+          result[12] += 0.061588462;
+        }
+      }
+    } else {
+      if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.34058767557)) {
+        result[12] += -0.08928797;
+      } else {
+        result[12] += -0;
+      }
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.018169729039)) {
+      result[12] += -0.09378511;
+    } else {
+      result[12] += 0.011906397;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6006770134)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.108556889)) {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61992967129)) {
+                result[0] += -0.1805942;
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+                if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.43492239714)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += 0.056872983;
+                }
+              } else {
+                result[0] += -0.06521356;
+              }
+            }
+          } else {
+            if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+                result[0] += 0.0496341;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.4163160324)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.39942288399)) {
+                    result[0] += -0.05614271;
+                  } else {
+                    if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20921711624)) {
+                      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.18767139316)) {
+                        result[0] += -0.0029403076;
+                      } else {
+                        result[0] += 0.033784933;
+                      }
+                    } else {
+                      result[0] += -0.040854443;
+                    }
+                  }
+                } else {
+                  if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+                    result[0] += -0.009378951;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.097951889)) {
+                      if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.542231679)) {
+                        result[0] += 0.052243475;
+                      } else {
+                        result[0] += -0;
+                      }
+                    } else {
+                      result[0] += -0;
+                    }
+                  }
+                }
+              }
+            } else {
+              result[0] += 0.082991436;
+            }
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+            if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14091680944)) {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.86629867554)) {
+                result[0] += -0;
+              } else {
+                result[0] += -0.021641111;
+              }
+            } else {
+              if ( (data[45].missing != -1) && (data[45].fvalue < (float)2.5961418152)) {
+                result[0] += 0.030560713;
+              } else {
+                result[0] += -0;
+              }
+            }
+          } else {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.99576175213)) {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1390959024)) {
+                result[0] += -0.0212479;
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[21].missing != -1) && (data[21].fvalue < (float)-0.26361367106)) {
+                result[0] += 0.08520699;
+              } else {
+                result[0] += 0.019801598;
+              }
+            }
+          }
+        }
+      } else {
+        result[0] += 0.07912091;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.73820483685)) {
+        if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.036114759743)) {
+          result[0] += -0.081592046;
+        } else {
+          result[0] += -0.005930046;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.78405153751)) {
+          result[0] += 0.048389893;
+        } else {
+          if ( (data[46].missing != -1) && (data[46].fvalue < (float)-0.1287959367)) {
+            result[0] += -0.056513414;
+          } else {
+            result[0] += -0;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+      result[0] += -0.10274394;
+    } else {
+      if ( (data[64].missing != -1) && (data[64].fvalue < (float)-0.28967893124)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)0.9095223546)) {
+            result[0] += 0.09157515;
+          } else {
+            result[0] += 0.010018402;
+          }
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        result[0] += -0.08689723;
+      }
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+      if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+        if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59719163179)) {
+          if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.03643072024)) {
+            if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.39657869935)) {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61850941181)) {
+                if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+                    result[1] += 0.031703584;
+                  } else {
+                    result[1] += -0.010356361;
+                  }
+                } else {
+                  result[1] += 0.117549315;
+                }
+              } else {
+                if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.60387730598)) {
+                  result[1] += -0.008214004;
+                } else {
+                  result[1] += 0.009674391;
+                }
+              }
+            } else {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.66063469648)) {
+                  result[1] += 0.01772772;
+                } else {
+                  result[1] += -0.045403387;
+                }
+              } else {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.18767139316)) {
+                  result[1] += 0.06393015;
+                } else {
+                  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007111311)) {
+                    result[1] += 0.02449957;
+                  } else {
+                    result[1] += -0.017966786;
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.29079607129)) {
+                result[1] += 0.03599124;
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              result[1] += -0.06253303;
+            }
+          }
+        } else {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+            result[1] += -0.058944337;
+          } else {
+            if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.07422779;
+            }
+          }
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+          result[1] += 0.008617281;
+        } else {
+          result[1] += -0.11248556;
+        }
+      }
+    } else {
+      result[1] += -0.09147929;
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+        result[1] += -0;
+      } else {
+        if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+          result[1] += 0.093825534;
+        } else {
+          if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.054048184305)) {
+            result[1] += 0.0755194;
+          } else {
+            result[1] += -0;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.076579675;
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.09134294;
+  } else {
+    if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.21045561135)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.069765806;
+      } else {
+        result[2] += -0.03636532;
+      }
+    } else {
+      result[2] += -0.038494468;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09387247;
+  } else {
+    result[3] += -0.09336649;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.196121335)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+        result[4] += 0.028660737;
+      } else {
+        result[4] += -0.07586645;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.57992994785)) {
+        result[4] += 0.13142659;
+      } else {
+        result[4] += 0.05095618;
+      }
+    }
+  } else {
+    result[4] += -0.09126669;
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+      result[5] += -0.093967654;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+      result[5] += -0.073893666;
+    } else {
+      result[5] += 0.029763738;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1498845816)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      result[6] += 0.021820858;
+    } else {
+      result[6] += -0.07978614;
+    }
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+      result[6] += -0.09379324;
+    } else {
+      result[6] += -0.009088732;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.2213975191)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+      result[7] += -0.060193263;
+    } else {
+      result[7] += 0.037314463;
+    }
+  } else {
+    result[7] += -0.0939384;
+  }
+  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+    if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+      result[8] += -0.07468515;
+    } else {
+      result[8] += 0.08428327;
+    }
+  } else {
+    result[8] += -0.0939802;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)3.6675543785)) {
+          if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.55193799734)) {
+            if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+              result[9] += -0.080076955;
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.1340187043)) {
+                result[9] += -0.048942633;
+              } else {
+                result[9] += 0.01848002;
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+              result[9] += -0;
+            } else {
+              result[9] += 0.060397144;
+            }
+          }
+        } else {
+          result[9] += 0.07995497;
+        }
+      } else {
+        result[9] += 0.10146658;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.0035779729951)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.92375618219)) {
+            result[9] += -0;
+          } else {
+            result[9] += -0.075760275;
+          }
+        } else {
+          result[9] += 0.0361945;
+        }
+      } else {
+        result[9] += -0.072023556;
+      }
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.082106918097)) {
+      result[9] += -0.09360681;
+    } else {
+      result[9] += -0.0034404194;
+    }
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    result[10] += 0.038848236;
+  } else {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+      result[10] += -0.09113298;
+    } else {
+      result[10] += -0.01931685;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61983728409)) {
+      if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.016005827114)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.3703558743)) {
+          if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.35726323724)) {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.69918745756)) {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025115283206)) {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77628856897)) {
+                  result[11] += -0.010301598;
+                } else {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+                    result[11] += 0.025999168;
+                  } else {
+                    result[11] += -0.006029987;
+                  }
+                }
+              } else {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77948868275)) {
+                  result[11] += 0.050045893;
+                } else {
+                  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77148842812)) {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.4477875233)) {
+                      result[11] += -0.032421574;
+                    } else {
+                      result[11] += -0;
+                    }
+                  } else {
+                    if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038621056825)) {
+                      result[11] += 0.044498235;
+                    } else {
+                      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+                        result[11] += -0.0074372175;
+                      } else {
+                        if ( (data[45].missing != -1) && (data[45].fvalue < (float)2.145118475)) {
+                          result[11] += 0.041826554;
+                        } else {
+                          result[11] += -0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.9656729698)) {
+                result[11] += -0.04375523;
+              } else {
+                result[11] += 0.00015791191;
+              }
+            }
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31154632568)) {
+              result[11] += 0.056573573;
+            } else {
+              result[11] += -0;
+            }
+          }
+        } else {
+          result[11] += -0.040001158;
+        }
+      } else {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025265553966)) {
+          result[11] += -0.031927384;
+        } else {
+          if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.01178185828)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.29902103543)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+                result[11] += 0.09463125;
+              } else {
+                result[11] += 0.025130015;
+              }
+            } else {
+              result[11] += 0.0012555834;
+            }
+          } else {
+            result[11] += -0.005586105;
+          }
+        }
+      }
+    } else {
+      if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+        result[11] += -0.08764639;
+      } else {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.40275913477)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.021839931607)) {
+            result[11] += -0;
+          } else {
+            result[11] += -0.051925126;
+          }
+        } else {
+          result[11] += 0.011413765;
+        }
+      }
+    }
+  } else {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.068880498409)) {
+        result[11] += -0.09035538;
+      } else {
+        result[11] += -0;
+      }
+    } else {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)1.3720816374)) {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.30947673321)) {
+          result[11] += 0.0025834523;
+        } else {
+          result[11] += -0.057013884;
+        }
+      } else {
+        result[11] += 0.033303086;
+      }
+    }
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025232160464)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+      if ( (data[4].missing != -1) && (data[4].fvalue < (float)-0.51474040747)) {
+        result[12] += 0.017649513;
+      } else {
+        result[12] += -0.03387981;
+      }
+    } else {
+      if ( (data[19].missing != -1) && (data[19].fvalue < (float)2.1549119949)) {
+        result[12] += -0.09183217;
+      } else {
+        result[12] += -0.026946647;
+      }
+    }
+  } else {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+      if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+          result[12] += -0;
+        } else {
+          result[12] += 0.10867186;
+        }
+      } else {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039009898901)) {
+          result[12] += -0;
+        } else {
+          result[12] += -0.05550443;
+        }
+      }
+    } else {
+      result[12] += -0.06273817;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025418607518)) {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018990517)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+            result[0] += -0.044630684;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                result[0] += 0.0038904997;
+              } else {
+                result[0] += -0.0107486155;
+              }
+            } else {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.0089722872)) {
+                result[0] += -0.011602109;
+              } else {
+                result[0] += 0.07442753;
+              }
+            }
+          }
+        } else {
+          if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.03903195262)) {
+            result[0] += 0.105304666;
+          } else {
+            result[0] += 0.028508205;
+          }
+        }
+      } else {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.44744732976)) {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.96582579613)) {
+              if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.25304949284)) {
+                    if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.018169729039)) {
+                      result[0] += 0.0883077;
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  result[0] += 0.1066562;
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              result[0] += -0;
+            }
+          } else {
+            if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20845749974)) {
+              if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16667290032)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54431396723)) {
+                  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038621056825)) {
+                    result[0] += -0.034468245;
+                  } else {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+                      result[0] += 0.024103405;
+                    } else {
+                      result[0] += -0.0011450767;
+                    }
+                  }
+                } else {
+                  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+                    if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14091680944)) {
+                      result[0] += -0.02680986;
+                    } else {
+                      if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+                        result[0] += 0.025778841;
+                      } else {
+                        result[0] += -0.0005276158;
+                      }
+                    }
+                  } else {
+                    result[0] += 0.056579415;
+                  }
+                }
+              } else {
+                if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038750100881)) {
+                  result[0] += -0.105252914;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024169132113)) {
+                result[0] += 0.06523189;
+              } else {
+                result[0] += -0;
+              }
+            }
+          }
+        } else {
+          result[0] += -0.06970279;
+        }
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+        result[0] += -0.08203052;
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+          result[0] += -0.053825058;
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.78405153751)) {
+            result[0] += 0.056527797;
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021076679)) {
+              result[0] += -0.040841416;
+            } else {
+              result[0] += -0;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+      result[0] += -0.10269973;
+    } else {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)1.4877724648)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+          if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.50391459465)) {
+            result[0] += 0.013045939;
+          } else {
+            result[0] += 0.09989307;
+          }
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        result[0] += -0.08874131;
+      }
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.52890723944)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.4328392446)) {
+        if ( (data[12].missing != -1) && (data[12].fvalue < (float)3.7342278957)) {
+          if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.57866376638)) {
+            result[1] += 0.017336115;
+          } else {
+            if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010558721609)) {
+              result[1] += -0.10305598;
+            } else {
+              result[1] += -0.004813413;
+            }
+          }
+        } else {
+          result[1] += 0.020832136;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.73308742046)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.64542460442)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.09057659;
+            }
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30989176035)) {
+              result[1] += -0.08764087;
+            } else {
+              result[1] += 0.023214204;
+            }
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62020581961)) {
+              result[1] += 0.08499331;
+            } else {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.60498034954)) {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60419660807)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += -0.07054523;
+                }
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62002527714)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.7825541496)) {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62015110254)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += -0.05498581;
+                    }
+                  } else {
+                    result[1] += -0;
+                  }
+                } else {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60252219439)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.25304949284)) {
+                      result[1] += 0.005865787;
+                    } else {
+                      result[1] += 0.0740254;
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.74638354778)) {
+                      result[1] += -0.013748812;
+                    } else {
+                      result[1] += -0;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.37125378847)) {
+              result[1] += -0.06925231;
+            } else {
+              result[1] += 0.03284157;
+            }
+          }
+        }
+      }
+    } else {
+      result[1] += -0.090641566;
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62019306421)) {
+        result[1] += -0;
+      } else {
+        if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+          result[1] += 0.09337985;
+        } else {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62002336979)) {
+            result[1] += -0;
+          } else {
+            result[1] += 0.07249815;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.0752139;
+    }
+  }
+  if ( (data[87].missing != -1) && (data[87].fvalue < (float)1)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.23504699767)) {
+      result[2] += -0.09086094;
+    } else {
+      result[2] += -0;
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025407476351)) {
+      result[2] += 0.046276726;
+    } else {
+      result[2] += -0.012448673;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09329705;
+  } else {
+    result[3] += -0.09290748;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[4] += -0.090642415;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.49699115753)) {
+        result[4] += -0;
+      } else {
+        result[4] += -0.07345659;
+      }
+    } else {
+      result[4] += 0.113015294;
+    }
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+        result[5] += -0.08594484;
+      } else {
+        result[5] += -0;
+      }
+    } else {
+      result[5] += 0.016340237;
+    }
+  } else {
+    result[5] += -0.09318869;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+      if ( (data[6].missing != -1) && (data[6].fvalue < (float)-0.30081537366)) {
+        result[6] += -0.082292944;
+      } else {
+        result[6] += -0;
+      }
+    } else {
+      result[6] += 0.03392594;
+    }
+  } else {
+    result[6] += -0.090270385;
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      result[7] += -0.0013095863;
+    } else {
+      result[7] += 0.024355607;
+    }
+  } else {
+    result[7] += -0.09361337;
+  }
+  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61931306124)) {
+      result[8] += -0.07294371;
+    } else {
+      result[8] += 0.080453835;
+    }
+  } else {
+    result[8] += -0.09363629;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+        result[9] += -0.07183556;
+      } else {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018120289)) {
+          result[9] += 0.059016302;
+        } else {
+          result[9] += -0;
+        }
+      }
+    } else {
+      if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+          result[9] += -0.042621557;
+        } else {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90621083975)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)2.691501379)) {
+              result[9] += -0.03883027;
+            } else {
+              if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+                result[9] += -0;
+              } else {
+                result[9] += 0.0386182;
+              }
+            }
+          } else {
+            result[9] += 0.08096839;
+          }
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.28573852777)) {
+          result[9] += 0.08737514;
+        } else {
+          result[9] += -0;
+        }
+      }
+    }
+  } else {
+    result[9] += -0.09313497;
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    result[10] += -0.08556467;
+  } else {
+    result[10] += 0.08419663;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.072805792093)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)-0.055533468723)) {
+        if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.12653501332)) {
+          result[11] += -0.07004445;
+        } else {
+          result[11] += -0;
+        }
+      } else {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+          result[11] += 0.05660173;
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+            result[11] += -0.035495587;
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038621056825)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.66160225868)) {
+                  result[11] += 0.0032602008;
+                } else {
+                  result[11] += 0.060479384;
+                }
+              } else {
+                result[11] += -0.00875815;
+              }
+            } else {
+              if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.7070043087)) {
+                if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.082331426442)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.8598051071)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.55644726753)) {
+                      result[11] += -0.009596647;
+                    } else {
+                      result[11] += -0.10331088;
+                    }
+                  } else {
+                    result[11] += -0;
+                  }
+                } else {
+                  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77148842812)) {
+                    result[11] += -0.00034423618;
+                  } else {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+                      result[11] += 0.047065493;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+                  if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.13308440149)) {
+                    result[11] += 0.038607523;
+                  } else {
+                    if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+                      result[11] += -0.0030650923;
+                    } else {
+                      result[11] += 0.014230718;
+                    }
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)7.1101660728)) {
+                    if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.044618733227)) {
+                      result[11] += -0.041745037;
+                    } else {
+                      result[11] += -0;
+                    }
+                  } else {
+                    if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0937361717)) {
+                      result[11] += 0.041052043;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.32745957375)) {
+        result[11] += -0.035328083;
+      } else {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010523018427)) {
+          result[11] += -0.010636915;
+        } else {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30468061566)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+              result[11] += 0.08887863;
+            } else {
+              result[11] += 0.0126456125;
+            }
+          } else {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.94137781858)) {
+              result[11] += -0.0046625235;
+            } else {
+              result[11] += 0.06267639;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      if ( (data[16].missing != -1) && (data[16].fvalue < (float)1.2824162245)) {
+        result[11] += -0.09285941;
+      } else {
+        result[11] += -0.009033104;
+      }
+    } else {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.0077007142827)) {
+        if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.57856816053)) {
+          result[11] += -0;
+        } else {
+          result[11] += 0.040624846;
+        }
+      } else {
+        result[11] += -0.019843638;
+      }
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.8958209753)) {
+            if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.57866376638)) {
+              result[12] += -0;
+            } else {
+              result[12] += -0.055379752;
+            }
+          } else {
+            result[12] += 0.104296714;
+          }
+        } else {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            result[12] += -0.0072236476;
+          } else {
+            result[12] += -0.08087026;
+          }
+        }
+      } else {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.07795444876)) {
+          result[12] += 0.15158068;
+        } else {
+          result[12] += 0.04244272;
+        }
+      }
+    } else {
+      result[12] += -0.08767699;
+    }
+  } else {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010369817726)) {
+      result[12] += -0.09286415;
+    } else {
+      result[12] += -0;
+    }
+  }
+  if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.17268300056)) {
+    if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16502712667)) {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.63763225079)) {
+        if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+            if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13474625349)) {
+              result[0] += -0.08173431;
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)-0.22371928394)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += -0.039847;
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5321929455)) {
+                  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                    result[0] += 0.069922015;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16619649529)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6017807126)) {
+                      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62008029222)) {
+                        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62016886473)) {
+                          result[0] += -0;
+                        } else {
+                          result[0] += -0.055525135;
+                        }
+                      } else {
+                        result[0] += 0.018442148;
+                      }
+                    } else {
+                      if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += -0.0877288;
+                      }
+                    }
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)7.0186066628)) {
+                      result[0] += 0.0660538;
+                    } else {
+                      result[0] += -0;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+              if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.56114780903)) {
+                  result[0] += -0;
+                } else {
+                  if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+                    result[0] += 0.084325336;
+                  } else {
+                    result[0] += 0.029370226;
+                  }
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.071116350591)) {
+                if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021154165)) {
+                  if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+                    result[0] += 0.016907167;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                result[0] += -0.021890124;
+              }
+            }
+          }
+        } else {
+          result[0] += 0.07742005;
+        }
+      } else {
+        result[0] += -0.057877302;
+      }
+    } else {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010022087954)) {
+        if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16620278358)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018883228)) {
+            result[0] += -0;
+          } else {
+            result[0] += 0.02997629;
+          }
+        } else {
+          result[0] += 0.07866885;
+        }
+      } else {
+        result[0] += -0.006759772;
+      }
+    }
+  } else {
+    if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63046061993)) {
+        if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.54742503166)) {
+          result[0] += -0;
+        } else {
+          result[0] += -0.072678044;
+        }
+      } else {
+        result[0] += -0.09252699;
+      }
+    } else {
+      if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.12430794537)) {
+        if ( (data[36].missing != -1) && (data[36].fvalue < (float)1.5222791433)) {
+          result[0] += -0.0566395;
+        } else {
+          result[0] += 0.004432669;
+        }
+      } else {
+        if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.66162455082)) {
+          result[0] += 0.07145365;
+        } else {
+          result[0] += -0;
+        }
+      }
+    }
+  }
+  if ( (data[79].missing != -1) && (data[79].fvalue < (float)-0.40983131528)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010495104827)) {
+          result[1] += -0.09237241;
+        } else {
+          result[1] += -0.021811442;
+        }
+      } else {
+        result[1] += 0.020267991;
+      }
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61976313591)) {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.68586885929)) {
+          result[1] += 0.05754157;
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+            result[1] += -0.057694312;
+          } else {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.40275913477)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                  if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.1452716887)) {
+                    result[1] += -0.106176466;
+                  } else {
+                    result[1] += 0.011419601;
+                  }
+                } else {
+                  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80862355232)) {
+                    result[1] += -0.006221395;
+                  } else {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54431396723)) {
+                      result[1] += 0.04566261;
+                    } else {
+                      result[1] += -0;
+                    }
+                  }
+                }
+              } else {
+                result[1] += -0.085782126;
+              }
+            } else {
+              if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.78268873692)) {
+                result[1] += 0.07810997;
+              } else {
+                if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+                  result[1] += -0.031456806;
+                } else {
+                  result[1] += 0.038926776;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.46705591679)) {
+          if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16697607934)) {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26880708337)) {
+              result[1] += 0.027611468;
+            } else {
+              result[1] += -0;
+            }
+          } else {
+            result[1] += -0.04803999;
+          }
+        } else {
+          result[1] += 0.07660364;
+        }
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+        if ( (data[51].missing != -1) && (data[51].fvalue < (float)-0.082552723587)) {
+          result[1] += 0.08528381;
+        } else {
+          result[1] += -0.036694758;
+        }
+      } else {
+        result[1] += 0.0953014;
+      }
+    } else {
+      result[1] += -0.07214117;
+    }
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.11440932006)) {
+        result[2] += -0;
+      } else {
+        result[2] += 0.07636682;
+      }
+    } else {
+      result[2] += -0.075539514;
+    }
+  } else {
+    result[2] += -0.08858758;
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.09219025;
+  } else {
+    result[3] += 0.09229927;
+  }
+  if ( (data[16].missing != -1) && (data[16].fvalue < (float)2.1672489643)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+      result[4] += -0.09337288;
+    } else {
+      result[4] += -0;
+    }
+  } else {
+    if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.26204559207)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.115318276;
+    }
+  }
+  if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[5] += -0.09303104;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021172047)) {
+      result[5] += -0.019303333;
+    } else {
+      result[5] += 0.020143148;
+    }
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.018215337768)) {
+      result[6] += -0.09328551;
+    } else {
+      result[6] += -0.02100228;
+    }
+  } else {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.86625015736)) {
+      result[6] += 0.04234191;
+    } else {
+      result[6] += -0.076408684;
+    }
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+      result[7] += -0.039155684;
+    } else {
+      result[7] += 0.03852333;
+    }
+  } else {
+    result[7] += -0.09320267;
+  }
+  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+    if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+      result[8] += -0.07209339;
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.56967777014)) {
+        result[8] += 0.11365085;
+      } else {
+        result[8] += 0.018198768;
+      }
+    }
+  } else {
+    result[8] += -0.09323899;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)3.6675543785)) {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+          if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+            if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+                result[9] += -0.051356822;
+              } else {
+                result[9] += 0.020497452;
+              }
+            } else {
+              result[9] += -0.08860879;
+            }
+          } else {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.86629867554)) {
+              result[9] += 0.086936146;
+            } else {
+              result[9] += -0;
+            }
+          }
+        } else {
+          result[9] += 0.049784746;
+        }
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)0.053351785988)) {
+          result[9] += 0.061992493;
+        } else {
+          result[9] += -0.0006272111;
+        }
+      }
+    } else {
+      result[9] += 0.05740505;
+    }
+  } else {
+    result[9] += -0.092619054;
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    result[10] += -0.09031022;
+  } else {
+    result[10] += 0.08267193;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)0.24895755947)) {
+        if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+          if ( (data[48].missing != -1) && (data[48].fvalue < (float)-0.30105000734)) {
+            if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.60602760315)) {
+                if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.61824411154)) {
+                  if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.0041107409634)) {
+                    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61550068855)) {
+                      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+                        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.81572955847)) {
+                          if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.35726323724)) {
+                            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414254665)) {
+                              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+                                result[11] += -0.041321535;
+                              } else {
+                                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+                                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.11714296788)) {
+                                    result[11] += 0.032477815;
+                                  } else {
+                                    result[11] += -0;
+                                  }
+                                } else {
+                                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+                                    if ( (data[37].missing != -1) && (data[37].fvalue < (float)2.9437801838)) {
+                                      result[11] += -0.0716337;
+                                    } else {
+                                      result[11] += -0;
+                                    }
+                                  } else {
+                                    result[11] += 0.026662203;
+                                  }
+                                }
+                              }
+                            } else {
+                              result[11] += -0.06824152;
+                            }
+                          } else {
+                            result[11] += 0.04351927;
+                          }
+                        } else {
+                          result[11] += -0.05901;
+                        }
+                      } else {
+                        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038802653551)) {
+                          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6040418148)) {
+                            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.79142647982)) {
+                              result[11] += 0.06989905;
+                            } else {
+                              if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.03643072024)) {
+                                result[11] += -0;
+                              } else {
+                                result[11] += 0.032456994;
+                              }
+                            }
+                          } else {
+                            result[11] += -0;
+                          }
+                        } else {
+                          if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.17355711758)) {
+                            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.85384505987)) {
+                              result[11] += -0;
+                            } else {
+                              result[11] += -0.02449826;
+                            }
+                          } else {
+                            result[11] += 0.002515639;
+                          }
+                        }
+                      }
+                    } else {
+                      result[11] += 0.046583105;
+                    }
+                  } else {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021154165)) {
+                      result[11] += -0;
+                    } else {
+                      result[11] += 0.054790433;
+                    }
+                  }
+                } else {
+                  result[11] += -0.017563201;
+                }
+              } else {
+                result[11] += 0.05022757;
+              }
+            } else {
+              result[11] += -0.052692406;
+            }
+          } else {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16675952077)) {
+              result[11] += 0.09504717;
+            } else {
+              result[11] += -0;
+            }
+          }
+        } else {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025232160464)) {
+            result[11] += -0.090586156;
+          } else {
+            result[11] += -0.017169803;
+          }
+        }
+      } else {
+        if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.016044974327)) {
+          result[11] += -0;
+        } else {
+          if ( (data[48].missing != -1) && (data[48].fvalue < (float)0.14331261814)) {
+            result[11] += 0.09531228;
+          } else {
+            result[11] += -0;
+          }
+        }
+      }
+    } else {
+      result[11] += -0.08865541;
+    }
+  } else {
+    result[11] += -0.09201814;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.95877230167)) {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+              result[12] += -0.072993666;
+            } else {
+              result[12] += 0.0007583694;
+            }
+          } else {
+            result[12] += 0.06405503;
+          }
+        } else {
+          result[12] += -0.058873143;
+        }
+      } else {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.07795444876)) {
+          result[12] += 0.13871314;
+        } else {
+          result[12] += 0.034541946;
+        }
+      }
+    } else {
+      result[12] += -0.085676335;
+    }
+  } else {
+    if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+      result[12] += -0.09225554;
+    } else {
+      result[12] += -0;
+    }
+  }
+  if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.17268300056)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1565849781)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+        if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62011039257)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+            result[0] += -0.058247883;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.7244440317)) {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6194216013)) {
+                result[0] += -0.011461983;
+              } else {
+                result[0] += 0.00783535;
+              }
+            } else {
+              if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                result[0] += -0;
+              } else {
+                result[0] += 0.07345908;
+              }
+            }
+          }
+        } else {
+          result[0] += 0.090365686;
+        }
+      } else {
+        if ( (data[77].missing != -1) && (data[77].fvalue < (float)-0.031930278987)) {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+            if ( (data[49].missing != -1) && (data[49].fvalue < (float)-0.040266092867)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.81572955847)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.56967777014)) {
+                  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.89404076338)) {
+                    result[0] += 0.053089052;
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.5779726505)) {
+                      if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.037399079651)) {
+                        result[0] += 0.060595654;
+                      } else {
+                        if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0606098175)) {
+                          result[0] += -0.012901954;
+                        } else {
+                          result[0] += 0.01038977;
+                        }
+                      }
+                    } else {
+                      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+                        result[0] += -0.04621036;
+                      } else {
+                        result[0] += -0;
+                      }
+                    }
+                  }
+                } else {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20948132873)) {
+                    result[0] += -0.03135233;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+                  result[0] += 0.064990506;
+                } else {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.55644726753)) {
+                    result[0] += -0.004816758;
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.9127392769)) {
+                      result[0] += 0.07202173;
+                    } else {
+                      if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.53069013357)) {
+                        result[0] += -0.032187212;
+                      } else {
+                        result[0] += 0.017999934;
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              result[0] += -0.038065813;
+            }
+          } else {
+            result[0] += -0.05683281;
+          }
+        } else {
+          result[0] += 0.05717495;
+        }
+      }
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007021904)) {
+        result[0] += -0.09119804;
+      } else {
+        result[0] += -0;
+      }
+    }
+  } else {
+    if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.0095211574808)) {
+          result[0] += -0.092797495;
+        } else {
+          result[0] += -0.01397033;
+        }
+      } else {
+        result[0] += -0.0077216513;
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025418607518)) {
+        if ( (data[93].missing != -1) && (data[93].fvalue < (float)1)) {
+          result[0] += -0;
+        } else {
+          result[0] += 0.07932212;
+        }
+      } else {
+        if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.13939358294)) {
+          result[0] += -0.069527544;
+        } else {
+          result[0] += 0.0021832415;
+        }
+      }
+    }
+  }
+  if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.54742503166)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+          if ( (data[4].missing != -1) && (data[4].fvalue < (float)-0.51474040747)) {
+            if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+              result[1] += -0.06263712;
+            } else {
+              result[1] += 0.014282675;
+            }
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62020581961)) {
+              result[1] += 0.06493587;
+            } else {
+              result[1] += 0.009686184;
+            }
+          }
+        } else {
+          result[1] += -0.10695265;
+        }
+      } else {
+        result[1] += -0.09993058;
+      }
+    } else {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54161769152)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.39068439603)) {
+          result[1] += 0.07520451;
+        } else {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.3104484081)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+              result[1] += -0.08839533;
+            } else {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018990517)) {
+                result[1] += -0.042554084;
+              } else {
+                result[1] += 0.043921627;
+              }
+            }
+          } else {
+            result[1] += 0.079637334;
+          }
+        }
+      } else {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61469757557)) {
+            if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025360168889)) {
+              result[1] += -0.013323126;
+            } else {
+              result[1] += -0.105830155;
+            }
+          } else {
+            result[1] += 0.03815223;
+          }
+        } else {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.9585189819)) {
+            result[1] += 0.080048114;
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.33477210999)) {
+                result[1] += 0.07332886;
+              } else {
+                result[1] += 0.0010592768;
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)7.0186066628)) {
+                result[1] += -0.09680259;
+              } else {
+                result[1] += -0;
+              }
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.024659089744)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+        if ( (data[51].missing != -1) && (data[51].fvalue < (float)-0.082552723587)) {
+          result[1] += 0.08027386;
+        } else {
+          result[1] += -0.03840932;
+        }
+      } else {
+        result[1] += 0.09484754;
+      }
+    } else {
+      if ( (data[44].missing != -1) && (data[44].fvalue < (float)0.041231166571)) {
+        result[1] += -0;
+      } else {
+        result[1] += -0.03438461;
+      }
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.088465184;
+  } else {
+    if ( (data[6].missing != -1) && (data[6].fvalue < (float)-0.30081537366)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.055296086;
+      } else {
+        result[2] += -0.011156889;
+      }
+    } else {
+      result[2] += -0.030279398;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09267359;
+  } else {
+    result[3] += -0.09190451;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[4] += -0.08866806;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+      result[4] += -0.019078575;
+    } else {
+      result[4] += 0.11377598;
+    }
+  }
+  if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+      result[5] += -0.09253514;
+    } else {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13342361152)) {
+        result[5] += -0.047217146;
+      } else {
+        result[5] += -0;
+      }
+    }
+  } else {
+    result[5] += 0.012304618;
+  }
+  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243385196)) {
+    result[6] += -0.0113222515;
+  } else {
+    result[6] += -0.08503618;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.11647147685)) {
+      result[7] += -0.0006749337;
+    } else {
+      result[7] += 0.02032542;
+    }
+  } else {
+    result[7] += -0.09271475;
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61961978674)) {
+      result[8] += -0.072779305;
+    } else {
+      result[8] += 0.055029035;
+    }
+  } else {
+    result[8] += -0.092761606;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61992967129)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.1340187043)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+              result[9] += -0.08109378;
+            } else {
+              result[9] += -0.0054160436;
+            }
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          result[9] += 0.043258734;
+        }
+      } else {
+        if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010411580093)) {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.42648643255)) {
+            if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1328552961)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+                  result[9] += 0.05777631;
+                } else {
+                  result[9] += -0.0734373;
+                }
+              } else {
+                result[9] += 0.09510575;
+              }
+            } else {
+              result[9] += 0.15032536;
+            }
+          } else {
+            result[9] += -0.0010027586;
+          }
+        } else {
+          result[9] += -0.03569929;
+        }
+      }
+    } else {
+      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.74951910973)) {
+        result[9] += -0.07943075;
+      } else {
+        result[9] += 0.013172105;
+      }
+    }
+  } else {
+    result[9] += -0.091998145;
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+      result[10] += -0.08857055;
+    } else {
+      result[10] += -0;
+    }
+  } else {
+    result[10] += 0.080902204;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018245459)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59280967712)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+              result[11] += -0;
+            } else {
+              result[11] += 0.01771823;
+            }
+          } else {
+            result[11] += -0.0134264985;
+          }
+        } else {
+          result[11] += -0.05255082;
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.46552827954)) {
+          result[11] += 0.054962564;
+        } else {
+          result[11] += -0;
+        }
+      }
+    } else {
+      result[11] += -0.08296023;
+    }
+  } else {
+    if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015943732113)) {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)1.1005766392)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.61824411154)) {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.34602001309)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.04341529;
+              }
+            } else {
+              result[11] += -0.021014512;
+            }
+          } else {
+            result[11] += -0.06034743;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16732256114)) {
+              result[11] += 0.06507306;
+            } else {
+              if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.35726323724)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.052679382;
+              }
+            }
+          } else {
+            if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.53381425142)) {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+                result[11] += -0.030492682;
+              } else {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.9127392769)) {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.2646687031)) {
+                      result[11] += 0.020251986;
+                    } else {
+                      result[11] += -0.019539874;
+                    }
+                  } else {
+                    result[11] += 0.04712233;
+                  }
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0943808556)) {
+                    result[11] += -0.037031654;
+                  } else {
+                    result[11] += 0.01141796;
+                  }
+                }
+              }
+            } else {
+              result[11] += 0.06908742;
+            }
+          }
+        }
+      } else {
+        result[11] += -0.05849183;
+      }
+    } else {
+      if ( (data[6].missing != -1) && (data[6].fvalue < (float)-0.25882396102)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+          result[11] += 0.08186024;
+        } else {
+          result[11] += 0.009739176;
+        }
+      } else {
+        result[11] += -0.0048170066;
+      }
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.27142873406)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.73670840263)) {
+            result[12] += -0.07120706;
+          } else {
+            result[12] += 0.005720668;
+          }
+        } else {
+          result[12] += 0.108396634;
+        }
+      } else {
+        result[12] += -0.08688017;
+      }
+    } else {
+      result[12] += -0.092096955;
+    }
+  } else {
+    if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+      result[12] += -0;
+    } else {
+      result[12] += 0.095326826;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.18199364841)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.4874599874)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)-0.22371928394)) {
+        result[0] += 0.0866835;
+      } else {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43720659614)) {
+          if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16032426059)) {
+            if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.68227016926)) {
+              if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+                if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                  result[0] += -0.08037266;
+                } else {
+                  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62008029222)) {
+                    result[0] += -0.032644432;
+                  } else {
+                    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61965614557)) {
+                      result[0] += 0.057521913;
+                    } else {
+                      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+                        result[0] += -0.044879034;
+                      } else {
+                        if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+                          result[0] += 0.06767823;
+                        } else {
+                          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+                            result[0] += -0.050974853;
+                          } else {
+                            result[0] += 0.0011709542;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              } else {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31538122892)) {
+                  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.79868918657)) {
+                    result[0] += -0;
+                  } else {
+                    result[0] += 0.0336428;
+                  }
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              result[0] += 0.056420356;
+            }
+          } else {
+            result[0] += -0.09067208;
+          }
+        } else {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007510662)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60427767038)) {
+              result[0] += 0.021530481;
+            } else {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426217318)) {
+                result[0] += -0.03810373;
+              } else {
+                result[0] += 0.0015538516;
+              }
+            }
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.95358139277)) {
+              result[0] += 0.0054068402;
+            } else {
+              result[0] += 0.07484519;
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+        result[0] += -0.07795719;
+      } else {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.36591973901)) {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45322018862)) {
+            if ( (data[12].missing != -1) && (data[12].fvalue < (float)3.7342278957)) {
+              result[0] += -0.0066038314;
+            } else {
+              result[0] += 0.007777982;
+            }
+          } else {
+            result[0] += 0.051711384;
+          }
+        } else {
+          if ( (data[51].missing != -1) && (data[51].fvalue < (float)-0.0050377990119)) {
+            if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+              result[0] += -0.020341918;
+            } else {
+              result[0] += 0.018008027;
+            }
+          } else {
+            result[0] += -0.07107427;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[36].missing != -1) && (data[36].fvalue < (float)1.6671026945)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.7286472321)) {
+        if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.015412813053)) {
+          result[0] += -0.0943102;
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        result[0] += -0;
+      }
+    } else {
+      result[0] += 0.031041494;
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010486016981)) {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.99576175213)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+            if ( (data[12].missing != -1) && (data[12].fvalue < (float)-2.2499501705)) {
+              result[1] += -0;
+            } else {
+              result[1] += -0.09375612;
+            }
+          } else {
+            result[1] += -0;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.7146641016)) {
+            result[1] += 0.070425004;
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+              if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77468854189)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20938225091)) {
+                    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62329429388)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += 0.06786232;
+                    }
+                  } else {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414910316)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += -0.021713987;
+                    }
+                  }
+                } else {
+                  result[1] += -0.09192191;
+                }
+              } else {
+                if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.087370470166)) {
+                  result[1] += 0.049126647;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+                    result[1] += 0.03139594;
+                  } else {
+                    result[1] += -0.028175436;
+                  }
+                }
+              }
+            } else {
+              result[1] += -0.07224156;
+            }
+          }
+        }
+      } else {
+        if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.03177870065)) {
+          if ( (data[6].missing != -1) && (data[6].fvalue < (float)-0.30081537366)) {
+            result[1] += 0.013723647;
+          } else {
+            if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+              result[1] += 0.017696662;
+            } else {
+              result[1] += 0.09067156;
+            }
+          }
+        } else {
+          result[1] += -0;
+        }
+      }
+    } else {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)3.9638373852)) {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.63155788183)) {
+          result[1] += -0.0050098575;
+        } else {
+          if ( (data[46].missing != -1) && (data[46].fvalue < (float)-0.14739742875)) {
+            result[1] += -0.08848324;
+          } else {
+            result[1] += -0.019416537;
+          }
+        }
+      } else {
+        result[1] += 0.04702664;
+      }
+    }
+  } else {
+    result[1] += 0.094594486;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.08714582;
+  } else {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.05511214;
+      } else {
+        result[2] += -0;
+      }
+    } else {
+      result[2] += -0.03677545;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.09121767;
+  } else {
+    result[3] += -0.09122298;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.196121335)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+      result[4] += -0.01953168;
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.57992994785)) {
+        result[4] += 0.15537703;
+      } else {
+        result[4] += 0.027525958;
+      }
+    }
+  } else {
+    result[4] += -0.08719997;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.87554603815)) {
+      result[5] += -0.07829299;
+    } else {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.57848584652)) {
+        result[5] += 0.09100008;
+      } else {
+        result[5] += -0.021585505;
+      }
+    }
+  } else {
+    result[5] += -0.09155063;
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+      result[6] += -0.09187261;
+    } else {
+      result[6] += -0.022411805;
+    }
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      result[6] += 0.044095866;
+    } else {
+      result[6] += -0.07061021;
+    }
+  }
+  if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      result[7] += -0.021479491;
+    } else {
+      result[7] += 0.017332802;
+    }
+  } else {
+    result[7] += -0.0921552;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.09233138;
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61899483204)) {
+      result[8] += -0.078783624;
+    } else {
+      result[8] += 0.14063695;
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.1452716887)) {
+      if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78048282862)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.5295907259)) {
+              result[9] += -0.039538007;
+            } else {
+              result[9] += 0.008308025;
+            }
+          } else {
+            if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.039066262543)) {
+              result[9] += 0.0014532369;
+            } else {
+              result[9] += 0.11517576;
+            }
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.1498845816)) {
+            result[9] += 0.12570684;
+          } else {
+            result[9] += 0.025302533;
+          }
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3160247803)) {
+          result[9] += -0.073836945;
+        } else {
+          result[9] += -0;
+        }
+      }
+    } else {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+        result[9] += -0;
+      } else {
+        result[9] += -0.055046767;
+      }
+    }
+  } else {
+    if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.028995452449)) {
+      result[9] += -0.09134823;
+    } else {
+      result[9] += -0;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.083364419639)) {
+      result[10] += -0.09211026;
+    } else {
+      result[10] += -0.026805516;
+    }
+  } else {
+    result[10] += 0.07904642;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)1.4050359726)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.9727897644)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.37019988894)) {
+            if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010543142445)) {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13394863904)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+                  result[11] += -0.018743169;
+                } else {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.2248044759)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.66160225868)) {
+                      result[11] += 0.008694616;
+                    } else {
+                      result[11] += 0.0596344;
+                    }
+                  } else {
+                    result[11] += -0;
+                  }
+                }
+              } else {
+                if ( (data[90].missing != -1) && (data[90].fvalue < (float)1)) {
+                  result[11] += -0.065823205;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+                result[11] += 0.06881994;
+              } else {
+                if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.46779358387)) {
+                  if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.53381425142)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += -0.016279427;
+                  }
+                } else {
+                  result[11] += 0.04514581;
+                }
+              }
+            }
+          } else {
+            result[11] += -0.074658416;
+          }
+        } else {
+          result[11] += -0.055094145;
+        }
+      } else {
+        if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.5391829014)) {
+          if ( (data[46].missing != -1) && (data[46].fvalue < (float)-0.10644187778)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+              if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.25986525416)) {
+                if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62003588676)) {
+                  result[11] += 0.11173673;
+                } else {
+                  result[11] += 0.005389128;
+                }
+              } else {
+                result[11] += -0;
+              }
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.1778291464)) {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62004899979)) {
+                  if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.051874365658)) {
+                    result[11] += -0.05327489;
+                  } else {
+                    result[11] += -0;
+                  }
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1251373291)) {
+                    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+                      result[11] += -0;
+                    } else {
+                      result[11] += 0.06264408;
+                    }
+                  } else {
+                    result[11] += -0.0031894108;
+                  }
+                }
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007844448)) {
+                  result[11] += 0.08577927;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            }
+          } else {
+            if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.36380371451)) {
+              result[11] += -0;
+            } else {
+              result[11] += -0.06369083;
+            }
+          }
+        } else {
+          result[11] += 0.116869904;
+        }
+      }
+    } else {
+      result[11] += -0.08521991;
+    }
+  } else {
+    result[11] += -0.09028398;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        result[12] += -0.016263634;
+      } else {
+        result[12] += 0.032023117;
+      }
+    } else {
+      if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.056726031005)) {
+        result[12] += -0.09115662;
+      } else {
+        result[12] += -0.010525181;
+      }
+    }
+  } else {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78673630953)) {
+      result[12] += -0.035398852;
+    } else {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.64524072409)) {
+        result[12] += 0.08678662;
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.82568901777)) {
+          result[12] += -0.041265555;
+        } else {
+          result[12] += 0.032612562;
+        }
+      }
+    }
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.079797491431)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0803849697)) {
+        if ( (data[35].missing != -1) && (data[35].fvalue < (float)1.214324832)) {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6006770134)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.66713088751)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.50672495365)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.34276419878)) {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3814028502)) {
+                    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+                      if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+                        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.7070043087)) {
+                          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80862355232)) {
+                            result[0] += -0;
+                          } else {
+                            result[0] += -0.07011732;
+                          }
+                        } else {
+                          if ( (data[2].missing != -1) && (data[2].fvalue < (float)0.079797036946)) {
+                            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.085147149861)) {
+                              result[0] += -0;
+                            } else {
+                              result[0] += 0.031350695;
+                            }
+                          } else {
+                            result[0] += -0.01595913;
+                          }
+                        }
+                      } else {
+                        result[0] += 0.027673343;
+                      }
+                    } else {
+                      result[0] += -0.11519395;
+                    }
+                  } else {
+                    result[0] += 0.053073384;
+                  }
+                } else {
+                  if ( (data[79].missing != -1) && (data[79].fvalue < (float)-0.40983131528)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.0078816348687)) {
+                      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+                        if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                          if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+                            result[0] += 0.059530325;
+                          } else {
+                            result[0] += -0;
+                          }
+                        } else {
+                          result[0] += -0;
+                        }
+                      } else {
+                        result[0] += 0.07293429;
+                      }
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.23322466016)) {
+                      result[0] += -0.059635665;
+                    } else {
+                      result[0] += 0.0016202981;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6041829586)) {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.54725086689)) {
+                    result[0] += -0.06535663;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  result[0] += -0.111031674;
+                }
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.88496041298)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60414606333)) {
+                    if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+                      result[0] += 0.06775058;
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.9531545639)) {
+                  if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+                    result[0] += 0.008859415;
+                  } else {
+                    result[0] += -0.09038818;
+                  }
+                } else {
+                  if ( (data[78].missing != -1) && (data[78].fvalue < (float)0.0078478725627)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                      result[0] += -0;
+                    } else {
+                      result[0] += 0.010014242;
+                    }
+                  } else {
+                    result[0] += 0.09469827;
+                  }
+                }
+              }
+            }
+          } else {
+            result[0] += 0.06576702;
+          }
+        } else {
+          result[0] += 0.057781927;
+        }
+      } else {
+        if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.1452716887)) {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            result[0] += -0.11402323;
+          } else {
+            result[0] += -0.017220417;
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+            result[0] += -0.011020526;
+          } else {
+            result[0] += 0.014711409;
+          }
+        }
+      }
+    } else {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.0057230344974)) {
+        result[0] += -0.08888167;
+      } else {
+        result[0] += -0;
+      }
+    }
+  } else {
+    result[0] += -0.084945075;
+  }
+  if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.53552961349)) {
+    if ( (data[19].missing != -1) && (data[19].fvalue < (float)0.5904673934)) {
+      if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61979103088)) {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426217318)) {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.26939401031)) {
+              if ( (data[4].missing != -1) && (data[4].fvalue < (float)-0.51474040747)) {
+                if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+                  result[1] += -0.058472272;
+                } else {
+                  result[1] += 0.013565288;
+                }
+              } else {
+                result[1] += 0.014377089;
+              }
+            } else {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038106448948)) {
+                if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                  result[1] += 0.13840367;
+                } else {
+                  result[1] += -0;
+                }
+              } else {
+                result[1] += -0;
+              }
+            }
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+              result[1] += -0.07513197;
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0376743078)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                    result[1] += -0.019675212;
+                  } else {
+                    result[1] += -0;
+                  }
+                } else {
+                  result[1] += 0.045405645;
+                }
+              } else {
+                result[1] += -0.024404626;
+              }
+            }
+          }
+        } else {
+          if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.098413728178)) {
+            result[1] += -0.07337777;
+          } else {
+            result[1] += -0;
+          }
+        }
+      } else {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039194416255)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78048282862)) {
+            result[1] += 0.04091242;
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61469757557)) {
+              result[1] += -0.072676174;
+            } else {
+              result[1] += -0;
+            }
+          }
+        } else {
+          if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.5635496974)) {
+            result[1] += 0.0821727;
+          } else {
+            result[1] += 0.0035516825;
+          }
+        }
+      }
+    } else {
+      result[1] += -0.07836055;
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.041249547154)) {
+      if ( (data[79].missing != -1) && (data[79].fvalue < (float)6.0763492584)) {
+        if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.095295451581)) {
+          result[1] += 0.017771494;
+        } else {
+          result[1] += 0.094163634;
+        }
+      } else {
+        result[1] += 0.0048490567;
+      }
+    } else {
+      if ( (data[53].missing != -1) && (data[53].fvalue < (float)0.48858639598)) {
+        result[1] += -0.011874625;
+      } else {
+        result[1] += -0;
+      }
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.085631065;
+  } else {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.04863757;
+      } else {
+        result[2] += -0.007844167;
+      }
+    } else {
+      result[2] += -0.032027386;
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[3] += 0.090679966;
+  } else {
+    result[3] += -0.09045191;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+    if ( (data[67].missing != -1) && (data[67].fvalue < (float)-0.00552511774)) {
+      result[4] += -0.09191075;
+    } else {
+      result[4] += -0;
+    }
+  } else {
+    if ( (data[18].missing != -1) && (data[18].fvalue < (float)1.797724247)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.0919096;
+    }
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+        result[5] += -0.07753198;
+      } else {
+        result[5] += -0;
+      }
+    } else {
+      if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20845749974)) {
+        result[5] += 0.09750957;
+      } else {
+        result[5] += -0.00079340726;
+      }
+    }
+  } else {
+    result[5] += -0.090746;
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62008976936)) {
+      result[6] += -0;
+    } else {
+      result[6] += -0.050404347;
+    }
+  } else {
+    result[6] += -0.0907404;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+      result[7] += -0.043775495;
+    } else {
+      result[7] += 0.03371275;
+    }
+  } else {
+    result[7] += -0.09148342;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.09172515;
+  } else {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61899483204)) {
+      result[8] += -0.07552711;
+    } else {
+      result[8] += 0.14099629;
+    }
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025312861428)) {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44750031829)) {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+            result[9] += -0.08585533;
+          } else {
+            result[9] += 0.021139931;
+          }
+        } else {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6194216013)) {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.7314175367)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3740458488)) {
+                result[9] += -0;
+              } else {
+                result[9] += 0.055413518;
+              }
+            } else {
+              result[9] += 0.08353742;
+            }
+          } else {
+            result[9] += -0.028623272;
+          }
+        }
+      } else {
+        result[9] += 0.114147656;
+      }
+    } else {
+      if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59719163179)) {
+        result[9] += -0;
+      } else {
+        if ( (data[55].missing != -1) && (data[55].fvalue < (float)1.9582731724)) {
+          result[9] += -0.08017826;
+        } else {
+          result[9] += -0.006221781;
+        }
+      }
+    }
+  } else {
+    result[9] += -0.09053218;
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    result[10] += -0.08187309;
+  } else {
+    result[10] += 0.07710983;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)1.4050359726)) {
+      if ( (data[25].missing != -1) && (data[25].fvalue < (float)28.495761871)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025336515158)) {
+          if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.041795373)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.016826236621)) {
+                if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.87554603815)) {
+                  result[11] += -0.0018594991;
+                } else {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59280967712)) {
+                    result[11] += 0.02678684;
+                  } else {
+                    result[11] += -0;
+                  }
+                }
+              } else {
+                result[11] += -0.048319705;
+              }
+            } else {
+              result[11] += 0.052914225;
+            }
+          } else {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+              result[11] += -0.087536454;
+            } else {
+              result[11] += -0.0043258197;
+            }
+          }
+        } else {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.021839931607)) {
+            if ( (data[48].missing != -1) && (data[48].fvalue < (float)-0.063644595444)) {
+              if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.52279245853)) {
+                result[11] += 0.006715632;
+              } else {
+                if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20921711624)) {
+                  result[11] += 0.108041756;
+                } else {
+                  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.40302154422)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.08362476;
+                  }
+                }
+              }
+            } else {
+              result[11] += -0.0068308064;
+            }
+          } else {
+            if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20812723041)) {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.11971406639)) {
+                result[11] += -0.027238974;
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62006723881)) {
+                  if ( (data[73].missing != -1) && (data[73].fvalue < (float)0.93308752775)) {
+                    if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+                      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.79971778393)) {
+                        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                          result[11] += -0.007910014;
+                        } else {
+                          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+                            result[11] += 0.056796968;
+                          } else {
+                            result[11] += -0;
+                          }
+                        }
+                      } else {
+                        if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.25506868958)) {
+                          result[11] += -0;
+                        } else {
+                          result[11] += -0.035113245;
+                        }
+                      }
+                    } else {
+                      result[11] += -0.06363317;
+                    }
+                  } else {
+                    result[11] += 0.02877723;
+                  }
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+                    result[11] += -0.009217167;
+                  } else {
+                    if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.2718229294)) {
+                        result[11] += -0.0052778474;
+                      } else {
+                        result[11] += 0.022840902;
+                      }
+                    } else {
+                      result[11] += 0.059460744;
+                    }
+                  }
+                }
+              }
+            } else {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.071116350591)) {
+                result[11] += 0.06376027;
+              } else {
+                result[11] += 0.0062984577;
+              }
+            }
+          }
+        }
+      } else {
+        result[11] += 0.10125639;
+      }
+    } else {
+      result[11] += -0.08320701;
+    }
+  } else {
+    result[11] += -0.08750353;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+      if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.23636563122)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.23471385241)) {
+          result[12] += -0.05797435;
+        } else {
+          result[12] += 0.00011284966;
+        }
+      } else {
+        result[12] += 0.042257097;
+      }
+    } else {
+      if ( (data[93].missing != -1) && (data[93].fvalue < (float)1)) {
+        result[12] += -0.083878756;
+      } else {
+        result[12] += -0;
+      }
+    }
+  } else {
+    if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+      result[12] += -0;
+    } else {
+      result[12] += 0.08344013;
+    }
+  }
+  if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+    if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16463732719)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6006770134)) {
+        if ( (data[47].missing != -1) && (data[47].fvalue < (float)0.032373789698)) {
+          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6017807126)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426217318)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3814028502)) {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+                    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77148842812)) {
+                      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77948868275)) {
+                        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+                          result[0] += 0.010068848;
+                        } else {
+                          result[0] += -0.016771434;
+                        }
+                      } else {
+                        result[0] += 0.034028403;
+                      }
+                    } else {
+                      if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.31900882721)) {
+                        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60428506136)) {
+                          result[0] += -0.032839283;
+                        } else {
+                          result[0] += 0.0076938276;
+                        }
+                      } else {
+                        if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14091680944)) {
+                          result[0] += -0;
+                        } else {
+                          if ( (data[56].missing != -1) && (data[56].fvalue < (float)0.68352377415)) {
+                            result[0] += 0.040909354;
+                          } else {
+                            result[0] += -0;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    result[0] += -0.022792935;
+                  }
+                } else {
+                  result[0] += -0.11349459;
+                }
+              } else {
+                result[0] += 0.0466114;
+              }
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)6.4234700203)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20895290375)) {
+                    result[0] += -0.0320478;
+                  } else {
+                    result[0] += 0.034890193;
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.4091620445)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60421293974)) {
+                      result[0] += 0.020636788;
+                    } else {
+                      result[0] += 0.10103861;
+                    }
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                result[0] += -0.014790803;
+              }
+            }
+          } else {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16680283844)) {
+              result[0] += -0.045079187;
+            } else {
+              result[0] += -0;
+            }
+          }
+        } else {
+          result[0] += -0.049064927;
+        }
+      } else {
+        result[0] += 0.07649345;
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025312861428)) {
+        result[0] += 0.0730584;
+      } else {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)9.3075933456)) {
+          result[0] += -0;
+        } else {
+          result[0] += 0.025431128;
+        }
+      }
+    }
+  } else {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+      result[0] += -0.08802969;
+    } else {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+        if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.073027424514)) {
+          result[0] += -0.019682154;
+        } else {
+          result[0] += 0.043996178;
+        }
+      } else {
+        if ( (data[93].missing != -1) && (data[93].fvalue < (float)1)) {
+          result[0] += -0.06596784;
+        } else {
+          result[0] += -0;
+        }
+      }
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+          if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.17268300056)) {
+            result[1] += -0.09016012;
+          } else {
+            result[1] += -0;
+          }
+        } else {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+            if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+              result[1] += 0.114792556;
+            } else {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.3104484081)) {
+                result[1] += -0.11284809;
+              } else {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.25304949284)) {
+                  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                    result[1] += -0.037500124;
+                  } else {
+                    result[1] += 0.03338764;
+                  }
+                } else {
+                  result[1] += 0.06001243;
+                }
+              }
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+              result[1] += -0.08585534;
+            } else {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54431396723)) {
+                if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                  result[1] += -0;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.39068439603)) {
+                    result[1] += 0.08211327;
+                  } else {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012881041)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += 0.049513385;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+                  result[1] += -0.07363106;
+                } else {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20895290375)) {
+                    result[1] += 0.07349486;
+                  } else {
+                    result[1] += -0.0014754388;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          result[1] += 0.07752707;
+        } else {
+          result[1] += -0;
+        }
+      }
+    } else {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+        result[1] += -0.097048484;
+      } else {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.59351676702)) {
+          result[1] += -0;
+        } else {
+          result[1] += 0.029546198;
+        }
+      }
+    }
+  } else {
+    result[1] += 0.09400761;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.083918795;
+  } else {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45147165656)) {
+      result[2] += 0.014074679;
+    } else {
+      if ( (data[48].missing != -1) && (data[48].fvalue < (float)-0.29714852571)) {
+        result[2] += 0.0030632573;
+      } else {
+        result[2] += -0.07305868;
+      }
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.08963133;
+  } else {
+    if ( (data[19].missing != -1) && (data[19].fvalue < (float)0.5904673934)) {
+      result[3] += 0.052295417;
+    } else {
+      result[3] += 0.09453897;
+    }
+  }
+  if ( (data[16].missing != -1) && (data[16].fvalue < (float)2.1672489643)) {
+    if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+      result[4] += -0.09144924;
+    } else {
+      result[4] += -0;
+    }
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+      result[4] += 0.106638685;
+    } else {
+      result[4] += 0.0028308812;
+    }
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.045129265636)) {
+      result[5] += -0.09093263;
+    } else {
+      result[5] += -0;
+    }
+  } else {
+    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+      result[5] += -0.022803279;
+    } else {
+      result[5] += 0.0711351;
+    }
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59406167269)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      result[6] += 0.0072809546;
+    } else {
+      result[6] += -0.07532482;
+    }
+  } else {
+    result[6] += -0.089918524;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.11647147685)) {
+      result[7] += -0.0057937293;
+    } else {
+      result[7] += 0.014852526;
+    }
+  } else {
+    result[7] += -0.09074582;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    result[8] += 0.023584729;
+  } else {
+    result[8] += -0.09085722;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.53311687708)) {
+      if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+        result[9] += 0.062942825;
+      } else {
+        result[9] += -0;
+      }
+    } else {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.7070043087)) {
+        if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+          result[9] += 0.04966895;
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+            if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+              result[9] += -0;
+            } else {
+              result[9] += 0.058337126;
+            }
+          } else {
+            result[9] += -0.048843835;
+          }
+        }
+      } else {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.6165232658)) {
+          result[9] += -0.080213144;
+        } else {
+          result[9] += -0;
+        }
+      }
+    }
+  } else {
+    if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.0328274481)) {
+      result[9] += -0.089514494;
+    } else {
+      result[9] += -0;
+    }
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+      result[10] += -0;
+    } else {
+      result[10] += -0.08367936;
+    }
+  } else {
+    result[10] += 0.07501933;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+      if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.41261711717)) {
+        if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+          if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.072805792093)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.0278730392)) {
+                  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+                    if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59280967712)) {
+                      if ( (data[81].missing != -1) && (data[81].fvalue < (float)1)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += 0.056849062;
+                      }
+                    } else {
+                      result[11] += -0.025392924;
+                    }
+                  } else {
+                    if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0606098175)) {
+                      result[11] += 0.04458389;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                } else {
+                  result[11] += -0.022857945;
+                }
+              } else {
+                if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6041829586)) {
+                    result[11] += -0.059634004;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+                      result[11] += -0.028919164;
+                    } else {
+                      result[11] += 0.036600873;
+                    }
+                  }
+                } else {
+                  result[11] += 0.011860966;
+                }
+              }
+            } else {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038802653551)) {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62002325058)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0563672781)) {
+                    result[11] += 0.07499951;
+                  } else {
+                    result[11] += 0.020324305;
+                  }
+                } else {
+                  if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.24775236845)) {
+                    result[11] += 0.021902326;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.071803093)) {
+                      result[11] += -0.027019436;
+                    } else {
+                      result[11] += 0.005229342;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+                  result[11] += -0.03345966;
+                } else {
+                  if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.44573503733)) {
+                    result[11] += -0.013699505;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1328552961)) {
+                      result[11] += 0.039067164;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62383723259)) {
+              result[11] += 0.07765159;
+            } else {
+              result[11] += -0;
+            }
+          }
+        } else {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025219637901)) {
+            result[11] += -0.08478108;
+          } else {
+            result[11] += -0;
+          }
+        }
+      } else {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025307295844)) {
+          result[11] += -0;
+        } else {
+          result[11] += 0.07627159;
+        }
+      }
+    } else {
+      result[11] += -0.08195777;
+    }
+  } else {
+    result[11] += -0.087691024;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025232160464)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        result[12] += -0.013716159;
+      } else {
+        result[12] += 0.024662364;
+      }
+    } else {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.008917838335)) {
+        result[12] += -0.089647315;
+      } else {
+        result[12] += -0.017118854;
+      }
+    }
+  } else {
+    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.64524072409)) {
+        result[12] += 0.055835105;
+      } else {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.73308742046)) {
+          result[12] += -0.05010872;
+        } else {
+          result[12] += 0.015879825;
+        }
+      }
+    } else {
+      result[12] += -0.044045843;
+    }
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+    if ( (data[21].missing != -1) && (data[21].fvalue < (float)-0.081141009927)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0803849697)) {
+        if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20878776908)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+            result[0] += 0.07141068;
+          } else {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+              if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+                result[0] += -0.11387946;
+              } else {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+                  if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13370315731)) {
+                    result[0] += -0.0038485003;
+                  } else {
+                    result[0] += 0.04800644;
+                  }
+                } else {
+                  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038821898401)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+                      result[0] += -0;
+                    } else {
+                      result[0] += -0.055040784;
+                    }
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              }
+            } else {
+              if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.11440932006)) {
+                if ( (data[12].missing != -1) && (data[12].fvalue < (float)3.7342278957)) {
+                  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+                      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6194216013)) {
+                        result[0] += -0.017617267;
+                      } else {
+                        if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59171414375)) {
+                          result[0] += 0.019572623;
+                        } else {
+                          result[0] += -0;
+                        }
+                      }
+                    } else {
+                      if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += 0.06939983;
+                      }
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62646782398)) {
+                      result[0] += -0;
+                    } else {
+                      result[0] += -0.068856515;
+                    }
+                  }
+                } else {
+                  result[0] += 0.0663228;
+                }
+              } else {
+                if ( (data[73].missing != -1) && (data[73].fvalue < (float)0.51107466221)) {
+                  result[0] += -0.023330364;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.78268873692)) {
+            if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.44429585338)) {
+              result[0] += -0;
+            } else {
+              result[0] += -0.03763407;
+            }
+          } else {
+            if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.16745822132)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.051844842732)) {
+                result[0] += -0;
+              } else {
+                if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.052392564714)) {
+                  result[0] += 0.07949766;
+                } else {
+                  result[0] += 0.021623729;
+                }
+              }
+            } else {
+              result[0] += -0;
+            }
+          }
+        }
+      } else {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+            result[0] += -0.110894345;
+          } else {
+            result[0] += -0;
+          }
+        } else {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.9127392769)) {
+            result[0] += 0.028979436;
+          } else {
+            result[0] += -0.007182514;
+          }
+        }
+      }
+    } else {
+      if ( (data[51].missing != -1) && (data[51].fvalue < (float)0.17534758151)) {
+        result[0] += -0.08658733;
+      } else {
+        result[0] += -0.0064795497;
+      }
+    }
+  } else {
+    result[0] += -0.080506936;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.92445510626)) {
+            if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+              if ( (data[16].missing != -1) && (data[16].fvalue < (float)-0.04483281076)) {
+                result[1] += -0.056156904;
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              result[1] += 0.04784784;
+            }
+          } else {
+            result[1] += -0.093230836;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60428506136)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.08160048;
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59750467539)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.23670496047)) {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.0429239273)) {
+                    result[1] += 0.03615441;
+                  } else {
+                    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012094259)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += -0.009558918;
+                    }
+                  }
+                } else {
+                  result[1] += -0.0841547;
+                }
+              } else {
+                if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                  result[1] += -0.0075055175;
+                } else {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20964646339)) {
+                    result[1] += 0.06626077;
+                  } else {
+                    result[1] += -0;
+                  }
+                }
+              }
+            } else {
+              result[1] += -0.041431338;
+            }
+          }
+        }
+      } else {
+        if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.03810730949)) {
+          result[1] += 0.07960238;
+        } else {
+          result[1] += -0;
+        }
+      }
+    } else {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+        result[1] += -0.09582612;
+      } else {
+        if ( (data[12].missing != -1) && (data[12].fvalue < (float)0.74213886261)) {
+          result[1] += 0.026900707;
+        } else {
+          result[1] += -0;
+        }
+      }
+    }
+  } else {
+    result[1] += 0.09359435;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+      result[2] += -0.02609639;
+    } else {
+      result[2] += 0.03701176;
+    }
+  } else {
+    result[2] += -0.08111279;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.53914117813)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.5222806931)) {
+        result[3] += -0;
+      } else {
+        result[3] += 0.06805624;
+      }
+    } else {
+      result[3] += 0.09433725;
+    }
+  } else {
+    result[3] += -0.08891905;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62014520168)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.09028615;
+    }
+  } else {
+    result[4] += -0.08251363;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+        result[5] += -0.07345353;
+      } else {
+        result[5] += -0;
+      }
+    } else {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.57948327065)) {
+        result[5] += 0.08074874;
+      } else {
+        result[5] += -0;
+      }
+    }
+  } else {
+    result[5] += -0.08871815;
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59406167269)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007111311)) {
+        result[6] += 0.0439918;
+      } else {
+        result[6] += -0;
+      }
+    } else {
+      result[6] += -0.072719455;
+    }
+  } else {
+    result[6] += -0.08884159;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+      result[7] += -0.040150527;
+    } else {
+      result[7] += 0.02921716;
+    }
+  } else {
+    result[7] += -0.08988315;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.09029438;
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61931306124)) {
+      result[8] += -0.07281274;
+    } else {
+      result[8] += 0.13758902;
+    }
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61980682611)) {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43870261312)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.1340187043)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.76172238588)) {
+            result[9] += -0.034145333;
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+              result[9] += 0.018978152;
+            } else {
+              result[9] += 0.10218436;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+              if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.38475292921)) {
+                result[9] += -0.065545484;
+              } else {
+                result[9] += -0;
+              }
+            } else {
+              result[9] += 0.032967784;
+            }
+          }
+        }
+      } else {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+          result[9] += -0.08326163;
+        } else {
+          result[9] += 0.040265188;
+        }
+      }
+    } else {
+      result[9] += -0.06770798;
+    }
+  } else {
+    result[9] += -0.08848746;
+  }
+  if ( (data[23].missing != -1) && (data[23].fvalue < (float)10.179190636)) {
+    if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+      result[10] += -0;
+    } else {
+      result[10] += -0.08172997;
+    }
+  } else {
+    result[10] += 0.072907306;
+  }
+  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.60102975368)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+      if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.41261711717)) {
+        if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+          if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.072805792093)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.0278730392)) {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.6263246536)) {
+                  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62854719162)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.68586885929)) {
+                      result[11] += -0.028475977;
+                    } else {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4864132404)) {
+                        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                          result[11] += 0.044128653;
+                        } else {
+                          result[11] += -0;
+                        }
+                      } else {
+                        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+                          result[11] += -0.037416365;
+                        } else {
+                          result[11] += -0;
+                        }
+                      }
+                    }
+                  } else {
+                    result[11] += -0.05581496;
+                  }
+                } else {
+                  if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14091680944)) {
+                    result[11] += 0.03538638;
+                  } else {
+                    if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.43176159263)) {
+                      result[11] += -0.020505654;
+                    } else {
+                      result[11] += 0.019603498;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)8.1014785767)) {
+                  result[11] += -0.089696944;
+                } else {
+                  result[11] += 0.0043316823;
+                }
+              }
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.38749140501)) {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.1273295879)) {
+                  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62000399828)) {
+                    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.58880263567)) {
+                      result[11] += 0.014155795;
+                    } else {
+                      result[11] += 0.09989745;
+                    }
+                  } else {
+                    result[11] += -0;
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.3176026344)) {
+                    result[11] += -0.018902266;
+                  } else {
+                    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43720659614)) {
+                      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.89751946926)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += 0.05731368;
+                      }
+                    } else {
+                      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += -0.012792459;
+                      }
+                    }
+                  }
+                }
+              } else {
+                result[11] += -0.037746895;
+              }
+            }
+          } else {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16675952077)) {
+              result[11] += 0.09015875;
+            } else {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024169132113)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.038879853;
+              }
+            }
+          }
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+            result[11] += -0.100104116;
+          } else {
+            result[11] += -0.0014677491;
+          }
+        }
+      } else {
+        if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.72947192192)) {
+          result[11] += -0;
+        } else {
+          result[11] += 0.07635352;
+        }
+      }
+    } else {
+      result[11] += -0.0793532;
+    }
+  } else {
+    result[11] += -0.08604476;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.54036176205)) {
+        result[12] += -0.022038108;
+      } else {
+        result[12] += -0.08871851;
+      }
+    } else {
+      if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+        result[12] += 0.09263424;
+      } else {
+        result[12] += -0.0685483;
+      }
+    }
+  } else {
+    if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039009898901)) {
+      result[12] += 0.060731515;
+    } else {
+      if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.0963844061)) {
+        if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.54562628269)) {
+          result[12] += -0.06275259;
+        } else {
+          result[12] += -0;
+        }
+      } else {
+        result[12] += 0.052164838;
+      }
+    }
+  }
+  if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62011039257)) {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62884157896)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.25304949284)) {
+            result[0] += -0;
+          } else {
+            result[0] += 0.030845895;
+          }
+        } else {
+          result[0] += -0.009365395;
+        }
+      } else {
+        result[0] += 0.08833937;
+      }
+    } else {
+      if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.63763225079)) {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6017807126)) {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012988329)) {
+                if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.38108387589)) {
+                  result[0] += -0.017289681;
+                } else {
+                  if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.037270721048)) {
+                    result[0] += 0.022718698;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                result[0] += 0.031160679;
+              }
+            } else {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024322185665)) {
+                result[0] += -0;
+              } else {
+                result[0] += -0.042000882;
+              }
+            }
+          } else {
+            result[0] += 0.064166196;
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.28573852777)) {
+            result[0] += -0.050709095;
+          } else {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60422873497)) {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30989176035)) {
+                  result[0] += 0.014801121;
+                } else {
+                  result[0] += -0.0037125808;
+                }
+              } else {
+                result[0] += -0.08108421;
+              }
+            } else {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.56564307213)) {
+                result[0] += 0.061921462;
+              } else {
+                result[0] += -0;
+              }
+            }
+          }
+        }
+      } else {
+        result[0] += -0.057804897;
+      }
+    }
+  } else {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      result[0] += -0.075761415;
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025488177314)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025511831045)) {
+          result[0] += -0;
+        } else {
+          result[0] += 0.06303992;
+        }
+      } else {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.44744732976)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025115283206)) {
+            if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015812795609)) {
+              result[0] += -0;
+            } else {
+              result[0] += 0.045413498;
+            }
+          } else {
+            result[0] += -0.040252432;
+          }
+        } else {
+          result[0] += -0.06038894;
+        }
+      }
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.73670840263)) {
+      if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.018169729039)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+              result[1] += 0.024863122;
+            } else {
+              result[1] += -0.024652658;
+            }
+          } else {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31564411521)) {
+                result[1] += 0.13208392;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.8841226697)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += 0.0709155;
+                }
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.35428348184)) {
+                result[1] += 0.07105176;
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.7679245472)) {
+                  result[1] += -0.018613463;
+                } else {
+                  result[1] += -0;
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.42360827327)) {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77788865566)) {
+              result[1] += -0;
+            } else {
+              result[1] += -0.04788153;
+            }
+          } else {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.25171658397)) {
+              result[1] += 0.07669438;
+            } else {
+              result[1] += -0;
+            }
+          }
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+          result[1] += -0.09593511;
+        } else {
+          result[1] += 0.027681539;
+        }
+      }
+    } else {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.42648643255)) {
+        result[1] += -0.08376717;
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)3.9638373852)) {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.85705131292)) {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77468854189)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+                result[1] += -0;
+              } else {
+                result[1] += -0.046331793;
+              }
+            } else {
+              result[1] += 0.068908654;
+            }
+          } else {
+            result[1] += -0.061653018;
+          }
+        } else {
+          result[1] += 0.06058133;
+        }
+      }
+    }
+  } else {
+    result[1] += 0.0931699;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)0.6335311532)) {
+      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60429382324)) {
+        result[2] += -0.01607474;
+      } else {
+        result[2] += 0.0018234715;
+      }
+    } else {
+      result[2] += 0.03251182;
+    }
+  } else {
+    result[2] += -0.0785264;
+  }
+  if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+    result[3] += -0.090424486;
+  } else {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.48470166326)) {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)-0.22371928394)) {
+        result[3] += -0.0272377;
+      } else {
+        result[3] += 0.08413119;
+      }
+    } else {
+      result[3] += 0.09377292;
+    }
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62014520168)) {
+    if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+      result[4] += -0.041907467;
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.50672495365)) {
+        result[4] += 0.14937256;
+      } else {
+        result[4] += 0.026196545;
+      }
+    }
+  } else {
+    result[4] += -0.089479126;
+  }
+  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+    if ( (data[79].missing != -1) && (data[79].fvalue < (float)2.4900910854)) {
+      result[5] += -0.08913751;
+    } else {
+      result[5] += 0.0028562078;
+    }
+  } else {
+    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+      result[5] += -0.01557286;
+    } else {
+      result[5] += 0.05376987;
+    }
+  }
+  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243385196)) {
+    result[6] += -0;
+  } else {
+    result[6] += -0.09061185;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+      result[7] += -0.041553453;
+    } else {
+      result[7] += 0.028082406;
+    }
+  } else {
+    result[7] += -0.08886469;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.089377;
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.53523516655)) {
+      result[8] += 0.049296953;
+    } else {
+      result[8] += -0;
+    }
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78048282862)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.5295907259)) {
+            result[9] += -0.028352192;
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.88479340076)) {
+            result[9] += -0;
+          } else {
+            result[9] += 0.086391665;
+          }
+        }
+      } else {
+        result[9] += 0.07700523;
+      }
+    } else {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30989176035)) {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+          result[9] += -0.074976854;
+        } else {
+          result[9] += -0.009530783;
+        }
+      } else {
+        result[9] += -0;
+      }
+    }
+  } else {
+    result[9] += -0.07979135;
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61809414625)) {
+      result[10] += -0.024562908;
+    } else {
+      result[10] += 0.06639826;
+    }
+  } else {
+    result[10] += -0.08753657;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.48886889219)) {
+        if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.53573900461)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.76172238588)) {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.68544656038)) {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                    result[11] += -0.03127952;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.11714296788)) {
+                      if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                        result[11] += 0.065758735;
+                      } else {
+                        result[11] += -0;
+                      }
+                    } else {
+                      result[11] += -0.006052427;
+                    }
+                  }
+                } else {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.46552827954)) {
+                    result[11] += 0.087734714;
+                  } else {
+                    result[11] += -0;
+                  }
+                }
+              } else {
+                result[11] += -0.028598988;
+              }
+            } else {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.021839931607)) {
+                result[11] += 0.07390362;
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+                  result[11] += -0.0036524185;
+                } else {
+                  result[11] += 0.043142553;
+                }
+              }
+            }
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+              if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16680283844)) {
+                result[11] += -0.04570353;
+              } else {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.42648643255)) {
+                  result[11] += 0.020175185;
+                } else {
+                  result[11] += -0.004845807;
+                }
+              }
+            } else {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.60602760315)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.2248044759)) {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59750467539)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.037593618;
+                  }
+                } else {
+                  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.69918745756)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += -0.030548539;
+                  }
+                }
+              } else {
+                result[11] += 0.035275176;
+              }
+            }
+          }
+        } else {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+            result[11] += -0.079834744;
+          } else {
+            result[11] += -0;
+          }
+        }
+      } else {
+        if ( (data[40].missing != -1) && (data[40].fvalue < (float)2.3493771553)) {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.26939401031)) {
+            if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025401910767)) {
+              result[11] += -0;
+            } else {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62004214525)) {
+                result[11] += 0.07955477;
+              } else {
+                result[11] += 0.011447021;
+              }
+            }
+          } else {
+            result[11] += -0;
+          }
+        } else {
+          result[11] += -0.016162422;
+        }
+      }
+    } else {
+      result[11] += -0.07637498;
+    }
+  } else {
+    result[11] += -0.08401724;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61959242821)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.094554312527)) {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62005460262)) {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+              result[12] += -0.043997858;
+            } else {
+              result[12] += 0.024276774;
+            }
+          } else {
+            result[12] += 0.050324284;
+          }
+        } else {
+          result[12] += 0.093684025;
+        }
+      } else {
+        result[12] += -0.07280642;
+      }
+    } else {
+      result[12] += -0.07736917;
+    }
+  } else {
+    result[12] += -0.080098286;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.48470166326)) {
+    if ( (data[22].missing != -1) && (data[22].fvalue < (float)0.41180253029)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025418607518)) {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.4555876255)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+            result[0] += -0.08762326;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.7244440317)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.099427320063)) {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59750467539)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += -0.03224332;
+                }
+              } else {
+                result[0] += 0.0013383841;
+              }
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.67327171564)) {
+                if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+                  result[0] += -0.031936076;
+                } else {
+                  result[0] += 0.0139893545;
+                }
+              } else {
+                result[0] += 0.062006034;
+              }
+            }
+          }
+        } else {
+          result[0] += 0.06780589;
+        }
+      } else {
+        if ( (data[58].missing != -1) && (data[58].fvalue < (float)-0.44744732976)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.62101882696)) {
+            if ( (data[36].missing != -1) && (data[36].fvalue < (float)-0.61669498682)) {
+              if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024123216048)) {
+                if ( (data[10].missing != -1) && (data[10].fvalue < (float)0.050166197121)) {
+                  result[0] += -0;
+                } else {
+                  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.59494549036)) {
+                    result[0] += 0.07669985;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59805238247)) {
+                  if ( (data[46].missing != -1) && (data[46].fvalue < (float)-0.09725214541)) {
+                    result[0] += -0.06847871;
+                  } else {
+                    result[0] += -0;
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.669532299)) {
+                    if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                      result[0] += 0.03669711;
+                    } else {
+                      if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.89127284288)) {
+                        if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.13939358294)) {
+                          result[0] += -0;
+                        } else {
+                          result[0] += -0.020513099;
+                        }
+                      } else {
+                        if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0611419678)) {
+                          result[0] += 0.03317292;
+                        } else {
+                          result[0] += -0;
+                        }
+                      }
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.53978526592)) {
+                      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417711735)) {
+                        result[0] += -0;
+                      } else {
+                        result[0] += -0.052540373;
+                      }
+                    } else {
+                      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44117793441)) {
+                        result[0] += 0.031308025;
+                      } else {
+                        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0159345865)) {
+                          result[0] += -0.027331388;
+                        } else {
+                          result[0] += -0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              result[0] += -0.057116985;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.4838591814)) {
+              result[0] += 0.03836434;
+            } else {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                result[0] += -0.010927896;
+              } else {
+                result[0] += 0.020022571;
+              }
+            }
+          }
+        } else {
+          result[0] += -0.06317119;
+        }
+      }
+    } else {
+      result[0] += -0.06841758;
+    }
+  } else {
+    result[0] += -0.07510963;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.56495398283)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+          result[1] += -0.063696556;
+        } else {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54161769152)) {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.1452716887)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80237007141)) {
+                  result[1] += 0.02554741;
+                } else {
+                  result[1] += -0.12390266;
+                }
+              } else {
+                if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                  result[1] += -0;
+                } else {
+                  if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44316831231)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+                      result[1] += 0.09732564;
+                    } else {
+                      result[1] += 0.0011472948;
+                    }
+                  } else {
+                    result[1] += -0;
+                  }
+                }
+              }
+            } else {
+              result[1] += 0.07723734;
+            }
+          } else {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.025529455394)) {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.59494549036)) {
+                if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016171217)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += -0.09719899;
+                }
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.7070043087)) {
+                result[1] += 0.067499265;
+              } else {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+                  result[1] += 0.030880863;
+                } else {
+                  result[1] += -0.025188584;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[51].missing != -1) && (data[51].fvalue < (float)-0.083707496524)) {
+          if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.79142647982)) {
+              result[1] += 0.056892253;
+            } else {
+              result[1] += -0;
+            }
+          } else {
+            result[1] += 0.08530506;
+          }
+        } else {
+          result[1] += -0.030884812;
+        }
+      }
+    } else {
+      result[1] += -0.07881768;
+    }
+  } else {
+    result[1] += 0.09247429;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.0777432;
+  } else {
+    if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.11440932006)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.011978853;
+      } else {
+        result[2] += -0.05316583;
+      }
+    } else {
+      result[2] += 0.025902338;
+    }
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.08667797;
+  } else {
+    if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+      result[3] += 0.035938554;
+    } else {
+      result[3] += 0.09363116;
+    }
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[4] += -0.079518236;
+  } else {
+    if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.22814252973)) {
+      result[4] += -0;
+    } else {
+      result[4] += 0.122269854;
+    }
+  }
+  if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+    if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+      result[5] += -0.08825652;
+    } else {
+      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+        result[5] += 0.021903649;
+      } else {
+        result[5] += -0.001789278;
+      }
+    }
+  } else {
+    result[5] += 0.029748574;
+  }
+  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62008976936)) {
+      result[6] += -0;
+    } else {
+      result[6] += -0.039640587;
+    }
+  } else {
+    result[6] += -0.08534588;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+    result[7] += -0.09303043;
+  } else {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28237974644)) {
+      result[7] += 0.04762611;
+    } else {
+      result[7] += -0.075819045;
+    }
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.088284045;
+  } else {
+    result[8] += 0.011478361;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.49173647165)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61987346411)) {
+        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90621083975)) {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+              result[9] += -0;
+            } else {
+              result[9] += 0.07668255;
+            }
+          } else {
+            result[9] += -0.028255772;
+          }
+        } else {
+          result[9] += 0.09394826;
+        }
+      } else {
+        result[9] += -0.012010324;
+      }
+    } else {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31443795562)) {
+          result[9] += -0;
+        } else {
+          result[9] += 0.015306586;
+        }
+      } else {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30989176035)) {
+          result[9] += -0.049091138;
+        } else {
+          result[9] += -0;
+        }
+      }
+    }
+  } else {
+    result[9] += -0.07795076;
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+    if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+      result[10] += -0.02783731;
+    } else {
+      result[10] += 0.07679199;
+    }
+  } else {
+    result[10] += -0.086033285;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[65].missing != -1) && (data[65].fvalue < (float)-0.016915978864)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.60602760315)) {
+        if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16771234572)) {
+              if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016224861)) {
+                result[11] += 0.04550023;
+              } else {
+                result[11] += -0.025900764;
+              }
+            } else {
+              result[11] += 0.087443806;
+            }
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.9727897644)) {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007844448)) {
+                if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                    result[11] += -0;
+                  } else {
+                    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.41612991691)) {
+                      result[11] += 0.079585955;
+                    } else {
+                      result[11] += 0.022477282;
+                    }
+                  }
+                } else {
+                  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6194216013)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                      result[11] += -0;
+                    } else {
+                      result[11] += -0.04248933;
+                    }
+                  } else {
+                    if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0606098175)) {
+                      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016254663)) {
+                        result[11] += 0.046775322;
+                      } else {
+                        result[11] += -0;
+                      }
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62006938457)) {
+                  result[11] += -0.059574995;
+                } else {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16771234572)) {
+                    result[11] += 0.039700724;
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+                      result[11] += -0.053171895;
+                    } else {
+                      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.82802081108)) {
+                        if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.19651202857)) {
+                          result[11] += -0;
+                        } else {
+                          result[11] += -0.0356563;
+                        }
+                      } else {
+                        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+                          result[11] += 0.041029215;
+                        } else {
+                          if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.35726323724)) {
+                            result[11] += -0.03454536;
+                          } else {
+                            result[11] += -0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              result[11] += -0.030747179;
+            }
+          }
+        } else {
+          result[11] += -0.04068319;
+        }
+      } else {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025342080742)) {
+          result[11] += -0;
+        } else {
+          if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.036695543677)) {
+            result[11] += -0;
+          } else {
+            result[11] += 0.07069005;
+          }
+        }
+      }
+    } else {
+      result[11] += -0.066122696;
+    }
+  } else {
+    result[11] += -0.08191679;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.27142873406)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.54036176205)) {
+        if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61998814344)) {
+            result[12] += -0.054445863;
+          } else {
+            result[12] += 0.01974758;
+          }
+        } else {
+          result[12] += 0.045191005;
+        }
+      } else {
+        result[12] += -0.06253244;
+      }
+    } else {
+      result[12] += 0.10167925;
+    }
+  } else {
+    result[12] += -0.06762148;
+  }
+  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+    if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010553312488)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+        if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.35898321867)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0657052994)) {
+            if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.9513647556)) {
+              if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+                if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26547160745)) {
+                  result[0] += 0.026545718;
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.91121447086)) {
+                result[0] += 0.01671002;
+              } else {
+                if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012350559)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += -0.040523633;
+                }
+              }
+            }
+          } else {
+            result[0] += -0.056188297;
+          }
+        } else {
+          result[0] += 0.041322377;
+        }
+      } else {
+        if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62006664276)) {
+          result[0] += 0.004147512;
+        } else {
+          result[0] += 0.08974492;
+        }
+      }
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.6202095747)) {
+          result[0] += -0.0071871574;
+        } else {
+          result[0] += 0.013792943;
+        }
+      } else {
+        result[0] += -0.034354463;
+      }
+    }
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62006443739)) {
+      if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.92990243435)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)3.7286472321)) {
+          if ( (data[45].missing != -1) && (data[45].fvalue < (float)0.14456522465)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31448435783)) {
+              result[0] += -0.0034514898;
+            } else {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62008410692)) {
+                result[0] += -0.08055243;
+              } else {
+                result[0] += -0.0018694758;
+              }
+            }
+          } else {
+            if ( (data[17].missing != -1) && (data[17].fvalue < (float)2.4384834766)) {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.61824411154)) {
+                if ( (data[73].missing != -1) && (data[73].fvalue < (float)0.73030364513)) {
+                  result[0] += 0.007671098;
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                result[0] += -0.057488628;
+              }
+            } else {
+              result[0] += 0.03530669;
+            }
+          }
+        } else {
+          result[0] += 0.028805824;
+        }
+      } else {
+        if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59609615803)) {
+          result[0] += -0.003638494;
+        } else {
+          result[0] += 0.07186522;
+        }
+      }
+    } else {
+      if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20845749974)) {
+        result[0] += -0.077249326;
+      } else {
+        result[0] += -0.013323664;
+      }
+    }
+  }
+  if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.53552961349)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+      if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.54112535715)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+          result[1] += 0.024394333;
+        } else {
+          if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+            result[1] += -0.08421041;
+          } else {
+            result[1] += -0;
+          }
+        }
+      } else {
+        result[1] += -0.09097866;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.7146641016)) {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3179839849)) {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021207809)) {
+            result[1] += 0.0068171523;
+          } else {
+            result[1] += 0.07789421;
+          }
+        } else {
+          result[1] += -0.007012073;
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016052008)) {
+            result[1] += 0.068902604;
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.60498034954)) {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.048692736775)) {
+                result[1] += -0.057404727;
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012779713)) {
+                if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.88479340076)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += -0.022411942;
+                }
+              } else {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60252219439)) {
+                  result[1] += 0.05483495;
+                } else {
+                  result[1] += -0.0022047563;
+                }
+              }
+            }
+          }
+        } else {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61974221468)) {
+            result[1] += -0.06984724;
+          } else {
+            result[1] += -0;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.037152279168)) {
+      if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26396116614)) {
+        result[1] += 0.0095196245;
+      } else {
+        result[1] += 0.08689345;
+      }
+    } else {
+      result[1] += -0;
+    }
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[2] += -0.08729437;
+  } else {
+    if ( (data[49].missing != -1) && (data[49].fvalue < (float)-0.040051173419)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+        result[2] += 0.057428353;
+      } else {
+        result[2] += -0.012539819;
+      }
+    } else {
+      result[2] += -0.016241664;
+    }
+  }
+  if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+    result[3] += -0.088673495;
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.52890723944)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+        result[3] += 0.07326318;
+      } else {
+        result[3] += -0;
+      }
+    } else {
+      result[3] += 0.09293709;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-1.196121335)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+      result[4] += -0.017661387;
+    } else {
+      result[4] += 0.10906146;
+    }
+  } else {
+    result[4] += -0.08780644;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.57848584652)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025336515158)) {
+        result[5] += -0;
+      } else {
+        result[5] += 0.057378627;
+      }
+    } else {
+      result[5] += -0.02901783;
+    }
+  } else {
+    result[5] += -0.084421456;
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025208506733)) {
+      result[6] += -0.08667128;
+    } else {
+      result[6] += -0;
+    }
+  } else {
+    result[6] += 0.0025567191;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+    result[7] += -0.092091195;
+  } else {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28237974644)) {
+      result[7] += 0.04325518;
+    } else {
+      result[7] += -0.07310816;
+    }
+  }
+  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.56967777014)) {
+      result[8] += 0.044329945;
+    } else {
+      result[8] += -0;
+    }
+  } else {
+    result[8] += -0.08683975;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62013393641)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1328552961)) {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62383723259)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.5295907259)) {
+            result[9] += -0.0255727;
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          result[9] += 0.06410332;
+        }
+      } else {
+        result[9] += 0.1053025;
+      }
+    } else {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77628856897)) {
+        result[9] += -0.07458623;
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.86629867554)) {
+          result[9] += 0.036736257;
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.30346727371)) {
+            result[9] += -0;
+          } else {
+            result[9] += -0.0528773;
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[46].missing != -1) && (data[46].fvalue < (float)-0.063563399017)) {
+      result[9] += -0.08087674;
+    } else {
+      result[9] += -0;
+    }
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    result[10] += -0.07631209;
+  } else {
+    result[10] += 0.024800992;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.37612885237)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62884157896)) {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)6.0572323799)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31448435783)) {
+            if ( (data[32].missing != -1) && (data[32].fvalue < (float)1.9828362465)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.35428348184)) {
+                result[11] += 0.0033299606;
+              } else {
+                if ( (data[78].missing != -1) && (data[78].fvalue < (float)0.0078478725627)) {
+                  result[11] += -0.059435323;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              result[11] += 0.032495067;
+            }
+          } else {
+            if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6199991703)) {
+                result[11] += -0;
+              } else {
+                result[11] += -0.037335657;
+              }
+            } else {
+              result[11] += -0.070543356;
+            }
+          }
+        } else {
+          if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.10345199704)) {
+            result[11] += -0;
+          } else {
+            result[11] += 0.03736408;
+          }
+        }
+      } else {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7842888236)) {
+          result[11] += 0.085626066;
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0903491974)) {
+            if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62008619308)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.2248044759)) {
+                if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78048282862)) {
+                  result[11] += -0;
+                } else {
+                  result[11] += 0.062501565;
+                }
+              } else {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.38747811317)) {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.099427320063)) {
+                    if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14162181318)) {
+                      result[11] += 0.02152694;
+                    } else {
+                      result[11] += -0.007588143;
+                    }
+                  } else {
+                    result[11] += -0.05746098;
+                  }
+                } else {
+                  result[11] += 0.018860534;
+                }
+              }
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.42360827327)) {
+                if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+                  result[11] += 0.015439616;
+                } else {
+                  result[11] += -0.017427381;
+                }
+              } else {
+                result[11] += -0.054691385;
+              }
+            }
+          } else {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.76508826017)) {
+              result[11] += -0.012625872;
+            } else {
+              result[11] += 0.08286027;
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62009978294)) {
+        result[11] += -0;
+      } else {
+        result[11] += -0.06546261;
+      }
+    }
+  } else {
+    result[11] += -0.07942618;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+        result[12] += -0.013194073;
+      } else {
+        result[12] += -0.08527331;
+      }
+    } else {
+      result[12] += -0;
+    }
+  } else {
+    if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78673630953)) {
+      result[12] += -0.027509091;
+    } else {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.64524072409)) {
+        result[12] += 0.07744594;
+      } else {
+        result[12] += -0;
+      }
+    }
+  }
+  if ( (data[81].missing != -1) && (data[81].fvalue < (float)1)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.079797491431)) {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.17902167141)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62560343742)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+              if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.33236810565)) {
+                if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.25414448977)) {
+                  if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.0937361717)) {
+                    if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+                      if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                        result[0] += -0.0900178;
+                      } else {
+                        if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16766904294)) {
+                          if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.92555040121)) {
+                            result[0] += -0.012430561;
+                          } else {
+                            result[0] += 0.014867762;
+                          }
+                        } else {
+                          if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.12977306545)) {
+                            result[0] += -0.043540638;
+                          } else {
+                            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.77144163847)) {
+                              result[0] += 0.025673153;
+                            } else {
+                              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.91121447086)) {
+                                result[0] += -0;
+                              } else {
+                                result[0] += -0.05232783;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      result[0] += 0.022628104;
+                    }
+                  } else {
+                    result[0] += 0.02153594;
+                  }
+                } else {
+                  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.85705131292)) {
+                    result[0] += 0.04261787;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                result[0] += -0.020775585;
+              }
+            } else {
+              result[0] += -0.046905916;
+            }
+          } else {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16561180353)) {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62007719278)) {
+                if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.16745822132)) {
+                  result[0] += 0.039019354;
+                } else {
+                  if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0098451376)) {
+                    result[0] += -0.0051117428;
+                  } else {
+                    result[0] += 0.008648783;
+                  }
+                }
+              } else {
+                result[0] += -0.042032816;
+              }
+            } else {
+              result[0] += 0.054842986;
+            }
+          }
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.46908029914)) {
+            result[0] += -0.098727375;
+          } else {
+            result[0] += -0;
+          }
+        }
+      } else {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)4.345328331)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.44902396202)) {
+            result[0] += -0;
+          } else {
+            result[0] += 0.07513801;
+          }
+        } else {
+          result[0] += -0;
+        }
+      }
+    } else {
+      result[0] += -0.056861896;
+    }
+  } else {
+    result[0] += 0.08489125;
+  }
+  if ( (data[62].missing != -1) && (data[62].fvalue < (float)0.054874494672)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.73308742046)) {
+          if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010453126393)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.61720979214)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.34493669868)) {
+                result[1] += -0;
+              } else {
+                result[1] += -0.09040021;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.7146641016)) {
+                if ( (data[10].missing != -1) && (data[10].fvalue < (float)-1.2706193924)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += 0.078008056;
+                }
+              } else {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+                  result[1] += 0.059586726;
+                } else {
+                  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.016243726015)) {
+                    result[1] += -0.026079519;
+                  } else {
+                    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45299565792)) {
+                      result[1] += 0.033050187;
+                    } else {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.3104484081)) {
+                        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                          result[1] += -0.07281616;
+                        } else {
+                          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007111311)) {
+                            result[1] += 0.015622625;
+                          } else {
+                            result[1] += -0.0041912887;
+                          }
+                        }
+                      } else {
+                        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31361842155)) {
+                          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62003046274)) {
+                            result[1] += -0;
+                          } else {
+                            result[1] += 0.030395638;
+                          }
+                        } else {
+                          result[1] += -0.017851233;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.43788185716)) {
+              result[1] += -0;
+            } else {
+              result[1] += 0.075776376;
+            }
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+            result[1] += 0.0017974862;
+          } else {
+            result[1] += -0.07752608;
+          }
+        }
+      } else {
+        result[1] += 0.08793735;
+      }
+    } else {
+      result[1] += -0.077054806;
+    }
+  } else {
+    result[1] += 0.09228961;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+      result[2] += 0.027988123;
+    } else {
+      result[2] += -0.0022893636;
+    }
+  } else {
+    result[2] += -0.07381116;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.32027640939)) {
+      result[3] += 0.03627473;
+    } else {
+      result[3] += 0.09253362;
+    }
+  } else {
+    result[3] += -0.08479823;
+  }
+  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018883228)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.27389571071)) {
+      result[4] += -0.0012450826;
+    } else {
+      result[4] += 0.08361146;
+    }
+  } else {
+    result[4] += -0.08589915;
+  }
+  if ( (data[47].missing != -1) && (data[47].fvalue < (float)-0.015711553395)) {
+    if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.98161232471)) {
+      result[5] += -0.08525265;
+    } else {
+      if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26869207621)) {
+        result[5] += -0;
+      } else {
+        result[5] += -0.013499125;
+      }
+    }
+  } else {
+    result[5] += 0.03222232;
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62329429388)) {
+      result[6] += -0.08495513;
+    } else {
+      result[6] += -0;
+    }
+  } else {
+    result[6] += 0.001969073;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    result[7] += -0;
+  } else {
+    result[7] += -0.08475572;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[8] += -0.085902624;
+  } else {
+    result[8] += 0.02463703;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61992967129)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.9271209836)) {
+        if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43870261312)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.1340187043)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.13863782585)) {
+                result[9] += -0.013942777;
+              } else {
+                result[9] += 0.011478819;
+              }
+            } else {
+              result[9] += 0.06490508;
+            }
+          } else {
+            result[9] += -0.010807285;
+          }
+        } else {
+          result[9] += -0.07504497;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1643605232)) {
+          result[9] += 0.12981582;
+        } else {
+          result[9] += -0;
+        }
+      }
+    } else {
+      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.74951910973)) {
+        result[9] += -0.071657136;
+      } else {
+        result[9] += 0.0152319465;
+      }
+    }
+  } else {
+    result[9] += -0.08262955;
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.7241204381)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61809414625)) {
+      result[10] += -0.021383353;
+    } else {
+      result[10] += 0.05437077;
+    }
+  } else {
+    result[10] += -0.08088202;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.60121154785)) {
+    if ( (data[44].missing != -1) && (data[44].fvalue < (float)-0.019624406472)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+        if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+            result[11] += 0.03517458;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.85385841131)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+                result[11] += -0;
+              } else {
+                result[11] += -0.036700383;
+              }
+            } else {
+              result[11] += 0.033483315;
+            }
+          }
+        } else {
+          result[11] += -0.049343448;
+        }
+      } else {
+        if ( (data[49].missing != -1) && (data[49].fvalue < (float)-0.038154527545)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31361842155)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.49699115753)) {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                result[11] += -0;
+              } else {
+                result[11] += -0.04692226;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.3104484081)) {
+                  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6291359067)) {
+                    result[11] += 0.075317375;
+                  } else {
+                    result[11] += -0;
+                  }
+                } else {
+                  result[11] += -0;
+                }
+              } else {
+                if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.6201172471)) {
+                  result[11] += -0.04616085;
+                } else {
+                  if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.45539477468)) {
+                    result[11] += -0.0021026968;
+                  } else {
+                    result[11] += 0.036186635;
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.86948847771)) {
+              result[11] += 0.0633998;
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.5702626705)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0563672781)) {
+                  result[11] += -0.025276426;
+                } else {
+                  result[11] += 0.020481082;
+                }
+              } else {
+                result[11] += 0.040675145;
+              }
+            }
+          }
+        } else {
+          result[11] += 0.07596387;
+        }
+      }
+    } else {
+      if ( (data[12].missing != -1) && (data[12].fvalue < (float)0.74213886261)) {
+        if ( (data[76].missing != -1) && (data[76].fvalue < (float)1.0381529331)) {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            result[11] += -0.05418222;
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62021154165)) {
+              result[11] += -0.019317893;
+            } else {
+              result[11] += 0.0074155494;
+            }
+          }
+        } else {
+          result[11] += 0.043326247;
+        }
+      } else {
+        result[11] += -0.08035318;
+      }
+    }
+  } else {
+    result[11] += -0.076681346;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.27142873406)) {
+      if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59852188826)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.013868609443)) {
+          result[12] += -0.0040381146;
+        } else {
+          result[12] += 0.047756393;
+        }
+      } else {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31298440695)) {
+          result[12] += -0.08205653;
+        } else {
+          result[12] += -0;
+        }
+      }
+    } else {
+      result[12] += 0.09507614;
+    }
+  } else {
+    result[12] += -0.06198819;
+  }
+  if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.69846129417)) {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.54742503166)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0803849697)) {
+          if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.099427320063)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3460149765)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.34276419878)) {
+                  result[0] += -0.014079957;
+                } else {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.22646091878)) {
+                    if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.10154105723)) {
+                      result[0] += 0.053546164;
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.9442105293)) {
+                        result[0] += -0.03622667;
+                      } else {
+                        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62012463808)) {
+                          result[0] += -0.021668114;
+                        } else {
+                          result[0] += 0.043168236;
+                        }
+                      }
+                    } else {
+                      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+                        result[0] += 0.054221924;
+                      } else {
+                        result[0] += -0.0053476077;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if ( (data[37].missing != -1) && (data[37].fvalue < (float)2.9437801838)) {
+                  result[0] += -0.042562243;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.78268873692)) {
+                result[0] += -0;
+              } else {
+                result[0] += 0.05971974;
+              }
+            }
+          } else {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.13125431538)) {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6200016737)) {
+                if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13260184228)) {
+                  result[0] += 0.0054232376;
+                } else {
+                  result[0] += 0.07576504;
+                }
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              result[0] += -0;
+            }
+          }
+        } else {
+          if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018799782)) {
+            result[0] += -0.046289906;
+          } else {
+            if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62002694607)) {
+              result[0] += 0.021495774;
+            } else {
+              result[0] += -0.023834165;
+            }
+          }
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+          result[0] += -0.072711855;
+        } else {
+          if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.30080634356)) {
+            result[0] += -0.017344961;
+          } else {
+            result[0] += -0;
+          }
+        }
+      }
+    } else {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.64759612083)) {
+        result[0] += -0.09826524;
+      } else {
+        if ( (data[6].missing != -1) && (data[6].fvalue < (float)-0.090858235955)) {
+          if ( (data[31].missing != -1) && (data[31].fvalue < (float)0.52103292942)) {
+            if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02548956871)) {
+              result[0] += 0.010492026;
+            } else {
+              result[0] += -0.02780299;
+            }
+          } else {
+            result[0] += 0.05408331;
+          }
+        } else {
+          result[0] += -0.058972944;
+        }
+      }
+    }
+  } else {
+    result[0] += 0.061552916;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.55792814493)) {
+            result[1] += -0;
+          } else {
+            result[1] += -0.06925722;
+          }
+        } else {
+          result[1] += -0;
+        }
+      } else {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+          if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+            result[1] += 0.0736287;
+          } else {
+            if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+              result[1] += -0.06067763;
+            } else {
+              if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                result[1] += -0.0044287713;
+              } else {
+                result[1] += 0.059202474;
+              }
+            }
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.95877230167)) {
+            result[1] += -0.06738007;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.36735785007)) {
+              result[1] += 0.065171175;
+            } else {
+              if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.1452716887)) {
+                result[1] += -0.087722585;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.5393471718)) {
+                  result[1] += 0.064254016;
+                } else {
+                  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63001906872)) {
+                    result[1] += 0.024330717;
+                  } else {
+                    if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.03643072024)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += -0.047908038;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)3.9148039818)) {
+        if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.1285303086)) {
+          result[1] += -0.09107014;
+        } else {
+          result[1] += -0.024086071;
+        }
+      } else {
+        result[1] += 0.016708964;
+      }
+    }
+  } else {
+    result[1] += 0.090229906;
+  }
+  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.13603970408)) {
+      result[2] += -0.08410183;
+    } else {
+      result[2] += -0;
+    }
+  } else {
+    if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.57856816053)) {
+      result[2] += 0.045750033;
+    } else {
+      result[2] += -0.056554813;
+    }
+  }
+  if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+    result[3] += -0.086664416;
+  } else {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.48470166326)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.072406753898)) {
+        result[3] += 0.05404547;
+      } else {
+        result[3] += -0;
+      }
+    } else {
+      result[3] += 0.09175073;
+    }
+  }
+  if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.073681868613)) {
+    if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243385196)) {
+      result[4] += -0;
+    } else {
+      result[4] += -0.08364596;
+    }
+  } else {
+    result[4] += 0.033377178;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.48612654209)) {
+      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+        result[5] += 0.026717316;
+      } else {
+        result[5] += -0.062286604;
+      }
+    } else {
+      result[5] += 0.046013404;
+    }
+  } else {
+    result[5] += -0.080739886;
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59406167269)) {
+    result[6] += -0;
+  } else {
+    result[6] += -0.08155008;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+    result[7] += -0.09037317;
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      result[7] += -0.0217892;
+    } else {
+      result[7] += 0.013038677;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    result[8] += 0.020539923;
+  } else {
+    result[8] += -0.084040254;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62013393641)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016224861)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)2.691501379)) {
+            result[9] += -0.029902523;
+          } else {
+            result[9] += -0;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+            result[9] += 0.09896541;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1565849781)) {
+              result[9] += -0.06416026;
+            } else {
+              result[9] += 0.034565106;
+            }
+          }
+        }
+      } else {
+        result[9] += 0.074682504;
+      }
+    } else {
+      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90166765451)) {
+        result[9] += -0.07783372;
+      } else {
+        if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61998140812)) {
+          result[9] += -0;
+        } else {
+          result[9] += 0.033945967;
+        }
+      }
+    }
+  } else {
+    result[9] += -0.0804497;
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+    result[10] += 0.010048303;
+  } else {
+    result[10] += -0.0808061;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025336515158)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016272545)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.89647972584)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+          result[11] += -0;
+        } else {
+          result[11] += -0.030420031;
+        }
+      } else {
+        result[11] += 0.04795005;
+      }
+    } else {
+      if ( (data[59].missing != -1) && (data[59].fvalue < (float)-0.27478697896)) {
+        result[11] += -0.083118424;
+      } else {
+        result[11] += -0.0070349546;
+      }
+    }
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.51605558395)) {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62884157896)) {
+        result[11] += -0.039850213;
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.93103021383)) {
+          result[11] += 0.06531919;
+        } else {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.69918745756)) {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.13125431538)) {
+              result[11] += -0;
+            } else {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)4.7785139084)) {
+                result[11] += 0.048387017;
+              } else {
+                result[11] += -0;
+              }
+            }
+          } else {
+            result[11] += -0.041661657;
+          }
+        }
+      }
+    } else {
+      if ( (data[16].missing != -1) && (data[16].fvalue < (float)1.2824162245)) {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.8841226697)) {
+          result[11] += -0.026303694;
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+            result[11] += 0.05553158;
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+                  result[11] += 0.019662322;
+                } else {
+                  result[11] += -0;
+                }
+              } else {
+                result[11] += 0.05040443;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0903491974)) {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                  result[11] += -0.029285466;
+                } else {
+                  result[11] += -0;
+                }
+              } else {
+                if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16615319252)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.2424036264)) {
+                    result[11] += -0.0166806;
+                  } else {
+                    result[11] += 0.0027727678;
+                  }
+                } else {
+                  result[11] += 0.04097077;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        result[11] += 0.07333949;
+      }
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        if ( (data[59].missing != -1) && (data[59].fvalue < (float)-0.46938577294)) {
+          result[12] += 0.054521266;
+        } else {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.63551598787)) {
+            result[12] += -0.027831335;
+          } else {
+            result[12] += 0.021932395;
+          }
+        }
+      } else {
+        result[12] += -0.075434975;
+      }
+    } else {
+      result[12] += -0.08121833;
+    }
+  } else {
+    result[12] += 0.02238575;
+  }
+  if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.69846129417)) {
+    if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.5942275524)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.98913425207)) {
+        if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.39446181059)) {
+          if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31227308512)) {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.75868809223)) {
+              if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010553312488)) {
+                if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.052392564714)) {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)0.8841226697)) {
+                      if ( (data[82].missing != -1) && (data[82].fvalue < (float)1)) {
+                        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+                          result[0] += 0.019198867;
+                        } else {
+                          result[0] += -0;
+                        }
+                      } else {
+                        result[0] += -0.0029430971;
+                      }
+                    } else {
+                      result[0] += -0.021230018;
+                    }
+                  } else {
+                    if ( (data[32].missing != -1) && (data[32].fvalue < (float)3.9513647556)) {
+                      result[0] += 0.070284516;
+                    } else {
+                      result[0] += -0;
+                    }
+                  }
+                } else {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60424655676)) {
+                      result[0] += 0.021124637;
+                    } else {
+                      result[0] += -0;
+                    }
+                  } else {
+                    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62006723881)) {
+                      if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.25171658397)) {
+                        result[0] += 0.016650593;
+                      } else {
+                        result[0] += -0.0050407136;
+                      }
+                    } else {
+                      result[0] += -0.024824265;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.23322466016)) {
+                  result[0] += -0.069506705;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.43870261312)) {
+                if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+                  result[0] += -0.069235966;
+                } else {
+                  result[0] += -0;
+                }
+              } else {
+                result[0] += -0;
+              }
+            }
+          } else {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62017637491)) {
+              if ( (data[53].missing != -1) && (data[53].fvalue < (float)0.14160977304)) {
+                if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025413041934)) {
+                  result[0] += 0.003917887;
+                } else {
+                  result[0] += -0.017697424;
+                }
+              } else {
+                if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.061311610043)) {
+                  result[0] += 0.044241108;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61983430386)) {
+                result[0] += 0.06031893;
+              } else {
+                result[0] += 0.0020768319;
+              }
+            }
+          }
+        } else {
+          result[0] += -0.048349515;
+        }
+      } else {
+        result[0] += -0.04725381;
+      }
+    } else {
+      result[0] += -0.06787257;
+    }
+  } else {
+    result[0] += 0.05382514;
+  }
+  if ( (data[62].missing != -1) && (data[62].fvalue < (float)0.054874494672)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.66160225868)) {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+            result[1] += 0.016670277;
+          } else {
+            result[1] += -0.011283419;
+          }
+        } else {
+          result[1] += 0.06405223;
+        }
+      } else {
+        if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.7573646307)) {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.15081726015)) {
+            result[1] += -0.094674826;
+          } else {
+            result[1] += 0.020711815;
+          }
+        } else {
+          if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039194416255)) {
+            if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+              if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039240390062)) {
+                result[1] += 0.015523223;
+              } else {
+                result[1] += -0.014911079;
+              }
+            } else {
+              result[1] += -0.04547021;
+            }
+          } else {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26749920845)) {
+              result[1] += 0.05582809;
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+                if ( (data[52].missing != -1) && (data[52].fvalue < (float)0.23504699767)) {
+                  result[1] += -0.023012929;
+                } else {
+                  result[1] += -0;
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)5.9198932648)) {
+                  result[1] += 0.02747845;
+                } else {
+                  result[1] += -0;
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+        result[1] += -0;
+      } else {
+        result[1] += -0.09379308;
+      }
+    }
+  } else {
+    result[1] += 0.09095225;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31361842155)) {
+      result[2] += -0.0026977342;
+    } else {
+      result[2] += 0.016447738;
+    }
+  } else {
+    result[2] += -0.06774675;
+  }
+  if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+    result[3] += -0.08501685;
+  } else {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.53914117813)) {
+      result[3] += 0.028426291;
+    } else {
+      result[3] += 0.0915882;
+    }
+  }
+  if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+    result[4] += -0.083272286;
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.57992994785)) {
+      result[4] += 0.105736405;
+    } else {
+      result[4] += -0.0019928257;
+    }
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)0.11706339568)) {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025336515158)) {
+        result[5] += -0.07916588;
+      } else {
+        result[5] += -0;
+      }
+    } else {
+      result[5] += 0.06375607;
+    }
+  } else {
+    result[5] += -0.07483463;
+  }
+  if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.65628534555)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.48054349422)) {
+      result[6] += -0.014101797;
+    } else {
+      result[6] += 0.0015531366;
+    }
+  } else {
+    result[6] += -0.0772823;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.28877517581)) {
+    result[7] += -0.08909033;
+  } else {
+    result[7] += -0;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.99998575449)) {
+    result[8] += 0.0053820433;
+  } else {
+    result[8] += -0.08229167;
+  }
+  if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60428112745)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016224861)) {
+      if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+        if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.3740458488)) {
+            result[9] += -0.023105059;
+          } else {
+            result[9] += 0.008778964;
+          }
+        } else {
+          result[9] += 0.034797795;
+        }
+      } else {
+        result[9] += -0.0401968;
+      }
+    } else {
+      result[9] += 0.047019783;
+    }
+  } else {
+    if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.038827370852)) {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62777519226)) {
+        if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+          result[9] += -0.07478418;
+        } else {
+          result[9] += -0;
+        }
+      } else {
+        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+          result[9] += 0.0170922;
+        } else {
+          result[9] += -0;
+        }
+      }
+    } else {
+      result[9] += -0.07923518;
+    }
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62265974283)) {
+    result[10] += 0.009500532;
+  } else {
+    result[10] += -0.07835858;
+  }
+  if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.43852174282)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)1.1005766392)) {
+      if ( (data[73].missing != -1) && (data[73].fvalue < (float)1.0611419678)) {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63217777014)) {
+          result[11] += -0.022375112;
+        } else {
+          if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.78908890486)) {
+            result[11] += 0.04865594;
+          } else {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)1.1207917929)) {
+              if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20845749974)) {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31448435783)) {
+                    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.6201159358)) {
+                      if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.58880263567)) {
+                        if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31556677818)) {
+                          result[11] += -0;
+                        } else {
+                          if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+                            result[11] += -0.07778873;
+                          } else {
+                            result[11] += -0;
+                          }
+                        }
+                      } else {
+                        result[11] += 0.015370942;
+                      }
+                    } else {
+                      result[11] += 0.027226862;
+                    }
+                  } else {
+                    if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.098906427622)) {
+                      result[11] += -0.05829196;
+                    } else {
+                      result[11] += -0;
+                    }
+                  }
+                } else {
+                  if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.13024370372)) {
+                    result[11] += 0.04860859;
+                  } else {
+                    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62011218071)) {
+                      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016171217)) {
+                        result[11] += -0;
+                      } else {
+                        result[11] += 0.036141;
+                      }
+                    } else {
+                      result[11] += -0.012825811;
+                    }
+                  }
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)7.5221838951)) {
+                  result[11] += -0.04326232;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              result[11] += 0.045791805;
+            }
+          }
+        }
+      } else {
+        result[11] += 0.058781337;
+      }
+    } else {
+      result[11] += -0.046645083;
+    }
+  } else {
+    if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025237726048)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62015712261)) {
+        result[11] += -0;
+      } else {
+        result[11] += -0.08209385;
+      }
+    } else {
+      result[11] += 0.017284835;
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.13324643672)) {
+    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.41649469733)) {
+      if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+        if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.015415844508)) {
+            result[12] += -0.012633706;
+          } else {
+            result[12] += 0.056037232;
+          }
+        } else {
+          result[12] += 0.07288309;
+        }
+      } else {
+        result[12] += -0.034213547;
+      }
+    } else {
+      if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.5637139678)) {
+        result[12] += -0.07624587;
+      } else {
+        result[12] += -0;
+      }
+    }
+  } else {
+    result[12] += -0.068375126;
+  }
+  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0803849697)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2394132614)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.54725086689)) {
+        result[0] += 0.105488114;
+      } else {
+        result[0] += -0.0021068933;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.54537212849)) {
+          if ( (data[50].missing != -1) && (data[50].fvalue < (float)0.17703424394)) {
+            if ( (data[15].missing != -1) && (data[15].fvalue < (float)0.17268300056)) {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.89751946926)) {
+                result[0] += 0.04568355;
+              } else {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31392768025)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.34276419878)) {
+                    result[0] += -0.03283442;
+                  } else {
+                    if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.92445510626)) {
+                      result[0] += 0.023608351;
+                    } else {
+                      result[0] += -0.021521505;
+                    }
+                  }
+                } else {
+                  if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.39758071303)) {
+                    result[0] += 0.056813296;
+                  } else {
+                    if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.15737706423)) {
+                      result[0] += -0.031702843;
+                    } else {
+                      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.30989176035)) {
+                        result[0] += 0.01680328;
+                      } else {
+                        if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0098451376)) {
+                          result[0] += -0.01435661;
+                        } else {
+                          result[0] += -0;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+                result[0] += -0.10539377;
+              } else {
+                result[0] += -0;
+              }
+            }
+          } else {
+            result[0] += 0.044902373;
+          }
+        } else {
+          result[0] += -0.06568905;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.88496041298)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.81572955847)) {
+            if ( (data[59].missing != -1) && (data[59].fvalue < (float)-0.46938577294)) {
+              result[0] += 0.046260748;
+            } else {
+              if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59547013044)) {
+                if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += -0.051656995;
+                }
+              } else {
+                result[0] += 0.034605887;
+              }
+            }
+          } else {
+            result[0] += 0.07912319;
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.9531545639)) {
+            if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.44902396202)) {
+              result[0] += -0.08727403;
+            } else {
+              result[0] += -0;
+            }
+          } else {
+            if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+              result[0] += -0;
+            } else {
+              result[0] += 0.07519567;
+            }
+          }
+        }
+      }
+    }
+  } else {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.40200158954)) {
+      if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.097437560558)) {
+        result[0] += -0.03566968;
+      } else {
+        result[0] += 0.008621793;
+      }
+    } else {
+      result[0] += -0.08844138;
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010486016981)) {
+        if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+          if ( (data[80].missing != -1) && (data[80].fvalue < (float)0.33438891172)) {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.48307839036)) {
+              result[1] += -0.053923346;
+            } else {
+              result[1] += -0;
+            }
+          } else {
+            result[1] += -0;
+          }
+        } else {
+          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+            result[1] += 0.060231093;
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.60498034954)) {
+              result[1] += -0.03140001;
+            } else {
+              if ( (data[35].missing != -1) && (data[35].fvalue < (float)-0.23067225516)) {
+                result[1] += 0.048502456;
+              } else {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59773939848)) {
+                    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60412824154)) {
+                      result[1] += -0;
+                    } else {
+                      result[1] += -0.034498557;
+                    }
+                  } else {
+                    result[1] += 0.03470047;
+                  }
+                } else {
+                  if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+                    result[1] += -0.094448924;
+                  } else {
+                    result[1] += 0.0058676754;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } else {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.036982625723)) {
+          result[1] += 0.05983484;
+        } else {
+          result[1] += -0;
+        }
+      }
+    } else {
+      if ( (data[37].missing != -1) && (data[37].fvalue < (float)8.0734472275)) {
+        result[1] += -0.059196603;
+      } else {
+        result[1] += 0.011313516;
+      }
+    }
+  } else {
+    result[1] += 0.088132896;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[46].missing != -1) && (data[46].fvalue < (float)0.11440932006)) {
+      result[2] += -0.0009398402;
+    } else {
+      result[2] += 0.027956216;
+    }
+  } else {
+    result[2] += -0.06388449;
+  }
+  if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243191481)) {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60429447889)) {
+      result[3] += 0.026930183;
+    } else {
+      result[3] += 0.09082841;
+    }
+  } else {
+    result[3] += -0.08290632;
+  }
+  if ( (data[12].missing != -1) && (data[12].fvalue < (float)2.23818326)) {
+    result[4] += -0.0676656;
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+      result[4] += 0.09492448;
+    } else {
+      result[4] += -0;
+    }
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.48612654209)) {
+      if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039231427014)) {
+        result[5] += 0.024803793;
+      } else {
+        result[5] += -0.059959166;
+      }
+    } else {
+      result[5] += 0.041935775;
+    }
+  } else {
+    result[5] += -0.07589328;
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    result[6] += -0.07038044;
+  } else {
+    result[6] += 0.007860476;
+  }
+  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+    result[7] += -0.07742466;
+  } else {
+    result[7] += -0;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[8] += -0.0828586;
+  } else {
+    result[8] += 0.019703286;
+  }
+  if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1061306)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.72576403618)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.80862355232)) {
+            result[9] += -0.04924547;
+          } else {
+            if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62648659945)) {
+              result[9] += 0.03937847;
+            } else {
+              if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.64668506384)) {
+                result[9] += -0.031775407;
+              } else {
+                result[9] += -0;
+              }
+            }
+          }
+        } else {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+            result[9] += 0.095375046;
+          } else {
+            result[9] += -0;
+          }
+        }
+      } else {
+        result[9] += -0.052371956;
+      }
+    } else {
+      result[9] += 0.02637149;
+    }
+  } else {
+    if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.11643721908)) {
+      result[9] += -0.07001899;
+    } else {
+      result[9] += -0.002401147;
+    }
+  }
+  if ( (data[17].missing != -1) && (data[17].fvalue < (float)1.0286098719)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.20198245347)) {
+      result[10] += -0;
+    } else {
+      result[10] += -0.075272985;
+    }
+  } else {
+    result[10] += 0.03236328;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    result[11] += -0.045758635;
+  } else {
+    if ( (data[70].missing != -1) && (data[70].fvalue < (float)0.0066426661797)) {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025296164677)) {
+        if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.85385841131)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+              if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.66160225868)) {
+                result[11] += 0.01334303;
+              } else {
+                if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+                  result[11] += -0.011545598;
+                } else {
+                  result[11] += -0;
+                }
+              }
+            } else {
+              result[11] += -0.02436556;
+            }
+          } else {
+            result[11] += 0.058710866;
+          }
+        } else {
+          result[11] += -0.053608008;
+        }
+      } else {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.35111662745)) {
+          if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20994369686)) {
+            result[11] += -0;
+          } else {
+            if ( (data[43].missing != -1) && (data[43].fvalue < (float)-0.25986525416)) {
+              result[11] += 0.10126472;
+            } else {
+              result[11] += 0.016207963;
+            }
+          }
+        } else {
+          if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.024807412177)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.45742243528)) {
+              if ( (data[90].missing != -1) && (data[90].fvalue < (float)1)) {
+                result[11] += -0.069370426;
+              } else {
+                result[11] += -0;
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.83116543293)) {
+                result[11] += 0.03537642;
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0517596006)) {
+                  if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26269108057)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += -0.04554597;
+                  }
+                } else {
+                  if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16615319252)) {
+                    if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.6291359067)) {
+                      result[11] += -0;
+                    } else {
+                      result[11] += -0.010363045;
+                    }
+                  } else {
+                    result[11] += 0.025988366;
+                  }
+                }
+              }
+            }
+          } else {
+            result[11] += 0.032865632;
+          }
+        }
+      }
+    } else {
+      if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.66162455082)) {
+        result[11] += -0.06668243;
+      } else {
+        if ( (data[76].missing != -1) && (data[76].fvalue < (float)1.0381529331)) {
+          if ( (data[71].missing != -1) && (data[71].fvalue < (float)0.98850309849)) {
+            if ( (data[43].missing != -1) && (data[43].fvalue < (float)0.14162181318)) {
+              result[11] += -0;
+            } else {
+              result[11] += -0.03921043;
+            }
+          } else {
+            result[11] += 0.005422735;
+          }
+        } else {
+          result[11] += 0.048107825;
+        }
+      }
+    }
+  }
+  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.60239255428)) {
+    if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44441816211)) {
+      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.7954890728)) {
+        result[12] += 0.024741706;
+      } else {
+        result[12] += -0.036403283;
+      }
+    } else {
+      result[12] += -0.071086206;
+    }
+  } else {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.08081638813)) {
+      result[12] += -0.04781893;
+    } else {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62014520168)) {
+        result[12] += 0.06546178;
+      } else {
+        result[12] += -0;
+      }
+    }
+  }
+  if ( (data[70].missing != -1) && (data[70].fvalue < (float)0.55820518732)) {
+    if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+      if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.0078816348687)) {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.038891922683)) {
+          if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+            if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.039200074971)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.26939401031)) {
+                if ( (data[12].missing != -1) && (data[12].fvalue < (float)0.74213886261)) {
+                  if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+                    result[0] += 0.031246513;
+                  } else {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.31842756271)) {
+                      result[0] += -0.0076632937;
+                    } else {
+                      result[0] += 0.032073583;
+                    }
+                  }
+                } else {
+                  result[0] += -0.02028083;
+                }
+              } else {
+                if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+                  result[0] += -0.030869238;
+                } else {
+                  result[0] += 0.0043891394;
+                }
+              }
+            } else {
+              result[0] += 0.01857598;
+            }
+          } else {
+            if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20994369686)) {
+              result[0] += -0;
+            } else {
+              result[0] += 0.049170833;
+            }
+          }
+        } else {
+          result[0] += -0.03921298;
+        }
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.0963844061)) {
+          result[0] += -0.060314618;
+        } else {
+          result[0] += -0;
+        }
+      }
+    } else {
+      if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.025413041934)) {
+        if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.44946065545)) {
+          result[0] += 0.06398125;
+        } else {
+          result[0] += 0.0009316979;
+        }
+      } else {
+        if ( (data[79].missing != -1) && (data[79].fvalue < (float)-0.37811747193)) {
+          if ( (data[42].missing != -1) && (data[42].fvalue < (float)0.40617159009)) {
+            if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.15605132282)) {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60426217318)) {
+                if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62009418011)) {
+                  result[0] += 0.031791154;
+                } else {
+                  result[0] += -0.021491198;
+                }
+              } else {
+                result[0] += 0.053611577;
+              }
+            } else {
+              if ( (data[35].missing != -1) && (data[35].fvalue < (float)0.56659722328)) {
+                result[0] += -0.007035111;
+              } else {
+                result[0] += 0.011808181;
+              }
+            }
+          } else {
+            if ( (data[74].missing != -1) && (data[74].fvalue < (float)1.0098451376)) {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.6202095747)) {
+                result[0] += -0.017422674;
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              result[0] += 0.008794738;
+            }
+          }
+        } else {
+          result[0] += -0.04077446;
+        }
+      }
+    }
+  } else {
+    result[0] += -0.041883994;
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+      if ( (data[78].missing != -1) && (data[78].fvalue < (float)-0.22594192624)) {
+        if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+          if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+            if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16801552474)) {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)-2.2002477646)) {
+                result[1] += -0.0013438226;
+              } else {
+                if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.83832764626)) {
+                  result[1] += -0;
+                } else {
+                  result[1] += 0.07562115;
+                }
+              }
+            } else {
+              if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.03810730949)) {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.7146641016)) {
+                  result[1] += 0.041033037;
+                } else {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31457713246)) {
+                    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.20401591063)) {
+                      result[1] += -0.012057103;
+                    } else {
+                      result[1] += 0.036721125;
+                    }
+                  } else {
+                    if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59758293629)) {
+                      if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31372666359)) {
+                        result[1] += -0;
+                      } else {
+                        result[1] += 0.036279883;
+                      }
+                    } else {
+                      if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.7753996849)) {
+                        result[1] += -0.08977824;
+                      } else {
+                        result[1] += -0;
+                      }
+                    }
+                  }
+                }
+              } else {
+                result[1] += -0.06596766;
+              }
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+              result[1] += -0;
+            } else {
+              result[1] += -0.08348153;
+            }
+          }
+        } else {
+          result[1] += -0.076981455;
+        }
+      } else {
+        result[1] += 0.07927533;
+      }
+    } else {
+      result[1] += -0.075044245;
+    }
+  } else {
+    result[1] += 0.086878374;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016052008)) {
+      result[2] += 0.042095736;
+    } else {
+      if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.60602760315)) {
+        result[2] += -0.032452296;
+      } else {
+        result[2] += -0;
+      }
+    }
+  } else {
+    result[2] += -0.07645792;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17688424885)) {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.53914117813)) {
+      result[3] += 0.02500818;
+    } else {
+      result[3] += 0.09005536;
+    }
+  } else {
+    result[3] += -0.079235576;
+  }
+  if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+    result[4] += -0.079764254;
+  } else {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.57992994785)) {
+      result[4] += 0.08239617;
+    } else {
+      result[4] += -0.00020589182;
+    }
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.57848584652)) {
+      if ( (data[4].missing != -1) && (data[4].fvalue < (float)-0.51474040747)) {
+        result[5] += -0;
+      } else {
+        result[5] += 0.06476364;
+      }
+    } else {
+      result[5] += -0.023415884;
+    }
+  } else {
+    result[5] += -0.07301105;
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59406167269)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.5295907259)) {
+      result[6] += -0;
+    } else {
+      result[6] += 0.011191272;
+    }
+  } else {
+    result[6] += -0.07478459;
+  }
+  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.42764511704)) {
+    result[7] += -0.08413913;
+  } else {
+    result[7] += -0;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.61931306124)) {
+    result[8] += -0.08142435;
+  } else {
+    result[8] += 0.030631067;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61992967129)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.9271209836)) {
+        if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+          if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.02535321191)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62796533108)) {
+              if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+                result[9] += -0.05077263;
+              } else {
+                result[9] += -0;
+              }
+            } else {
+              result[9] += 0.022579407;
+            }
+          } else {
+            result[9] += 0.03549066;
+          }
+        } else {
+          result[9] += -0.029132033;
+        }
+      } else {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.1643605232)) {
+          result[9] += 0.10586033;
+        } else {
+          result[9] += -0.0011310964;
+        }
+      }
+    } else {
+      if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.74951910973)) {
+        result[9] += -0.072055645;
+      } else {
+        result[9] += 0.012870433;
+      }
+    }
+  } else {
+    result[9] += -0.07344458;
+  }
+  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.80720156431)) {
+    result[10] += 0.017256718;
+  } else {
+    result[10] += -0.06264181;
+  }
+  if ( (data[37].missing != -1) && (data[37].fvalue < (float)0.42099300027)) {
+    if ( (data[15].missing != -1) && (data[15].fvalue < (float)1.8430496454)) {
+      if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62016171217)) {
+        result[11] += -0;
+      } else {
+        result[11] += -0.070834465;
+      }
+    } else {
+      if ( (data[5].missing != -1) && (data[5].fvalue < (float)-0.52279245853)) {
+        result[11] += -0.0066614253;
+      } else {
+        result[11] += 0.059999082;
+      }
+    }
+  } else {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.78908890486)) {
+      if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59852188826)) {
+        if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.4555888176)) {
+          result[11] += 0.028860563;
+        } else {
+          result[11] += -0.007205029;
+        }
+      } else {
+        result[11] += 0.06177609;
+      }
+    } else {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)1.1005766392)) {
+        if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.33236810565)) {
+          if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.26178085804)) {
+            if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.85705131292)) {
+              if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60209196806)) {
+                if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60417157412)) {
+                  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62004828453)) {
+                    result[11] += -0.0044189803;
+                  } else {
+                    result[11] += 0.0062564984;
+                  }
+                } else {
+                  result[11] += -0.029669305;
+                }
+              } else {
+                result[11] += 0.0094127385;
+              }
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31466990709)) {
+                result[11] += 0.046855643;
+              } else {
+                if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31386581063)) {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31448435783)) {
+                    result[11] += 0.003400597;
+                  } else {
+                    result[11] += -0.045589514;
+                  }
+                } else {
+                  if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.5982936621)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.038573626;
+                  }
+                }
+              }
+            }
+          } else {
+            if ( (data[53].missing != -1) && (data[53].fvalue < (float)-0.25613036752)) {
+              result[11] += -0.042049397;
+            } else {
+              if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.64121770859)) {
+                result[11] += -0.0061918115;
+              } else {
+                result[11] += 0.01071775;
+              }
+            }
+          }
+        } else {
+          if ( (data[53].missing != -1) && (data[53].fvalue < (float)0.14160977304)) {
+            result[11] += 0.040198736;
+          } else {
+            if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.061311610043)) {
+              result[11] += -0.019004287;
+            } else {
+              result[11] += 0.028337928;
+            }
+          }
+        }
+      } else {
+        result[11] += -0.028326025;
+      }
+    }
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.62911725044)) {
+        result[12] += -0.079464465;
+      } else {
+        result[12] += -0.011344342;
+      }
+    } else {
+      result[12] += 0.006592275;
+    }
+  } else {
+    if ( (data[54].missing != -1) && (data[54].fvalue < (float)-0.039004057646)) {
+      result[12] += 0.056042;
+    } else {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+        result[12] += -0.056617737;
+      } else {
+        result[12] += 0.023092011;
+      }
+    }
+  }
+  if ( (data[0].missing != -1) && (data[0].fvalue < (float)1.0803849697)) {
+    if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.22036042809)) {
+      if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.16745822132)) {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)6.7439284325)) {
+          if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.61965614557)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.88496041298)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.56359541416)) {
+                if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+                  result[0] += -0.017932493;
+                } else {
+                  if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.38767385483)) {
+                    result[0] += 0.06262781;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                result[0] += 0.0694757;
+              }
+            } else {
+              result[0] += -0;
+            }
+          } else {
+            result[0] += -0;
+          }
+        } else {
+          result[0] += -0;
+        }
+      } else {
+        if ( (data[10].missing != -1) && (data[10].fvalue < (float)-0.19846561551)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.63977259398)) {
+            result[0] += -0.0032205582;
+          } else {
+            result[0] += 0.029603554;
+          }
+        } else {
+          result[0] += -0.04853963;
+        }
+      }
+    } else {
+      if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.6200453043)) {
+        if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.3814028502)) {
+          if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.69918745756)) {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.10234069079)) {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31227308512)) {
+                if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.17132686079)) {
+                  result[0] += 0.00046906612;
+                } else {
+                  if ( (data[27].missing != -1) && (data[27].fvalue < (float)0.92375618219)) {
+                    result[0] += -0.043860313;
+                  } else {
+                    result[0] += -0;
+                  }
+                }
+              } else {
+                if ( (data[54].missing != -1) && (data[54].fvalue < (float)0.079855747521)) {
+                  result[0] += 0.030597785;
+                } else {
+                  result[0] += -0;
+                }
+              }
+            } else {
+              result[0] += 0.022607064;
+            }
+          } else {
+            result[0] += -0.053677477;
+          }
+        } else {
+          result[0] += 0.026061706;
+        }
+      } else {
+        if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16623981297)) {
+          if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.12352977693)) {
+            result[0] += -0.014618293;
+          } else {
+            result[0] += -0.099749155;
+          }
+        } else {
+          result[0] += 0.012585733;
+        }
+      }
+    }
+  } else {
+    if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+      result[0] += -0.090154156;
+    } else {
+      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60416448116)) {
+        if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018799782)) {
+          result[0] += -0.0004305869;
+        } else {
+          result[0] += 0.023757815;
+        }
+      } else {
+        result[0] += -0.011035166;
+      }
+    }
+  }
+  if ( (data[38].missing != -1) && (data[38].fvalue < (float)1.3613381386)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.45149809122)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.030849346891)) {
+        if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.53552961349)) {
+          if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.90166765451)) {
+            if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.17023339868)) {
+              if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+                if ( (data[11].missing != -1) && (data[11].fvalue < (float)-0.5824829936)) {
+                  result[1] += 0.07664973;
+                } else {
+                  result[1] += 0.004247842;
+                }
+              } else {
+                if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71965879202)) {
+                  result[1] += 0.01950997;
+                } else {
+                  result[1] += -0;
+                }
+              }
+            } else {
+              if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62013393641)) {
+                if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+                  result[1] += -0.027239839;
+                } else {
+                  result[1] += -0;
+                }
+              } else {
+                result[1] += 0.009539009;
+              }
+            }
+          } else {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.54431396723)) {
+              result[1] += -0.077698626;
+            } else {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.85705131292)) {
+                if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16697607934)) {
+                  result[1] += 0.05085909;
+                } else {
+                  if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.35827046633)) {
+                    result[1] += -0.024083195;
+                  } else {
+                    result[1] += 0.016422957;
+                  }
+                }
+              } else {
+                result[1] += -0.041861136;
+              }
+            }
+          }
+        } else {
+          result[1] += 0.054119773;
+        }
+      } else {
+        result[1] += -0.048296507;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+        result[1] += -0;
+      } else {
+        result[1] += -0.0861592;
+      }
+    }
+  } else {
+    result[1] += 0.08518878;
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+    if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+      if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.47401487827)) {
+        result[2] += 0.045362495;
+      } else {
+        result[2] += -0;
+      }
+    } else {
+      result[2] += -0.038025875;
+    }
+  } else {
+    result[2] += -0.072859466;
+  }
+  if ( (data[18].missing != -1) && (data[18].fvalue < (float)0.3592517674)) {
+    result[3] += -0.08107194;
+  } else {
+    if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.53914117813)) {
+      result[3] += 0.024251794;
+    } else {
+      result[3] += 0.08912209;
+    }
+  }
+  if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.92178285122)) {
+    if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+      result[4] += -0.003214717;
+    } else {
+      result[4] += 0.08831684;
+    }
+  } else {
+    result[4] += -0.07725608;
+  }
+  if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+      result[5] += -0.031071536;
+    } else {
+      if ( (data[3].missing != -1) && (data[3].fvalue < (float)-0.53381425142)) {
+        result[5] += -0;
+      } else {
+        result[5] += 0.049512815;
+      }
+    }
+  } else {
+    result[5] += -0.070166394;
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59406167269)) {
+    result[6] += -0;
+  } else {
+    result[6] += -0.071396;
+  }
+  if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.52890723944)) {
+    result[7] += -0.07622992;
+  } else {
+    result[7] += -0;
+  }
+  if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+    result[8] += -0.07976924;
+  } else {
+    result[8] += 0.018911114;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.16032426059)) {
+      if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.46831515431)) {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          if ( (data[78].missing != -1) && (data[78].fvalue < (float)3.4584906101)) {
+            result[9] += -0.07783632;
+          } else {
+            result[9] += 0.025677959;
+          }
+        } else {
+          if ( (data[86].missing != -1) && (data[86].fvalue < (float)1)) {
+            result[9] += 0.044892907;
+          } else {
+            if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.73670840263)) {
+              result[9] += -0.033040226;
+            } else {
+              result[9] += 0.019618098;
+            }
+          }
+        }
+      } else {
+        result[9] += -0.043134693;
+      }
+    } else {
+      if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+        result[9] += -0;
+      } else {
+        result[9] += 0.0643134;
+      }
+    }
+  } else {
+    result[9] += -0.07033767;
+  }
+  if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+    result[10] += 0.012143413;
+  } else {
+    result[10] += -0.07051368;
+  }
+  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.29902103543)) {
+      if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.03723815456)) {
+        if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+          result[11] += -0;
+        } else {
+          if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59734815359)) {
+            result[11] += -0.07849137;
+          } else {
+            if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44316831231)) {
+              result[11] += -0;
+            } else {
+              result[11] += -0.026721153;
+            }
+          }
+        }
+      } else {
+        if ( (data[1].missing != -1) && (data[1].fvalue < (float)-0.15619270504)) {
+          result[11] += 0.056356173;
+        } else {
+          if ( (data[69].missing != -1) && (data[69].fvalue < (float)0.68158894777)) {
+            result[11] += -0.019675199;
+          } else {
+            if ( (data[2].missing != -1) && (data[2].fvalue < (float)0.026138374582)) {
+              result[11] += -0;
+            } else {
+              result[11] += 0.02863093;
+            }
+          }
+        }
+      }
+    } else {
+      result[11] += -0.079165146;
+    }
+  } else {
+    if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77948868275)) {
+      if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.5635496974)) {
+        if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.63207966089)) {
+          result[11] += -0;
+        } else {
+          result[11] += 0.063322075;
+        }
+      } else {
+        if ( (data[32].missing != -1) && (data[32].fvalue < (float)7.430624485)) {
+          result[11] += -0.0048017246;
+        } else {
+          result[11] += 0.019710679;
+        }
+      }
+    } else {
+      if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.12242311239)) {
+        if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+          result[11] += -0.037772536;
+        } else {
+          if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.6042920351)) {
+            result[11] += -0.010340291;
+          } else {
+            if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62007844448)) {
+              if ( (data[27].missing != -1) && (data[27].fvalue < (float)-0.15498234332)) {
+                result[11] += -0;
+              } else {
+                result[11] += 0.04852721;
+              }
+            } else {
+              if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62015879154)) {
+                result[11] += -0.027347846;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.5465011597)) {
+                  if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.64121770859)) {
+                    result[11] += 0.017846653;
+                  } else {
+                    result[11] += -0.03019075;
+                  }
+                } else {
+                  result[11] += 0.020523936;
+                }
+              }
+            }
+          }
+        }
+      } else {
+        result[11] += 0.047242988;
+      }
+    }
+  }
+  if ( (data[1].missing != -1) && (data[1].fvalue < (float)1.1286532879)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.78673630953)) {
+        if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039243385196)) {
+          result[12] += -0;
+        } else {
+          result[12] += -0.049772587;
+        }
+      } else {
+        if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62007403374)) {
+          result[12] += -0;
+        } else {
+          result[12] += 0.042981718;
+        }
+      }
+    } else {
+      result[12] += -0.072126776;
+    }
+  } else {
+    result[12] += 0.027535023;
+  }
+  if ( (data[81].missing != -1) && (data[81].fvalue < (float)1)) {
+    if ( (data[70].missing != -1) && (data[70].fvalue < (float)-0.14043554664)) {
+      if ( (data[32].missing != -1) && (data[32].fvalue < (float)2.4406335354)) {
+        if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.9311388731)) {
+          if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.9851242304)) {
+            if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59719163179)) {
+              result[0] += -0.03360588;
+            } else {
+              if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.1497981548)) {
+                result[0] += 0.021272253;
+              } else {
+                if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59171414375)) {
+                  result[0] += -0;
+                } else {
+                  result[0] += -0.022631912;
+                }
+              }
+            }
+          } else {
+            result[0] += 0.009858123;
+          }
+        } else {
+          result[0] += -0.07263619;
+        }
+      } else {
+        if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.75656324625)) {
+          if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.6838402748)) {
+            if ( (data[2].missing != -1) && (data[2].fvalue < (float)-0.039240390062)) {
+              result[0] += -0;
+            } else {
+              result[0] += 0.03740805;
+            }
+          } else {
+            if ( (data[41].missing != -1) && (data[41].fvalue < (float)-0.69806528091)) {
+              result[0] += -0.022855328;
+            } else {
+              if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31324729323)) {
+                result[0] += 0.02545783;
+              } else {
+                result[0] += -0.0017117552;
+              }
+            }
+          }
+        } else {
+          result[0] += -0.033681978;
+        }
+      }
+    } else {
+      if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.35921764374)) {
+        if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024123216048)) {
+          if ( (data[69].missing != -1) && (data[69].fvalue < (float)-0.2017621398)) {
+            result[0] += 0.06728904;
+          } else {
+            result[0] += -0;
+          }
+        } else {
+          if ( (data[37].missing != -1) && (data[37].fvalue < (float)1.1497981548)) {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.62018430233)) {
+              result[0] += 0.009307942;
+            } else {
+              if ( (data[71].missing != -1) && (data[71].fvalue < (float)-0.44573503733)) {
+                result[0] += -0;
+              } else {
+                result[0] += -0.031150043;
+              }
+            }
+          } else {
+            result[0] += 0.0367891;
+          }
+        }
+      } else {
+        if ( (data[45].missing != -1) && (data[45].fvalue < (float)-0.0085190376267)) {
+          if ( (data[35].missing != -1) && (data[35].fvalue < (float)1.177542448)) {
+            result[0] += -0.044484876;
+          } else {
+            result[0] += -0;
+          }
+        } else {
+          if ( (data[68].missing != -1) && (data[68].fvalue < (float)1.1005766392)) {
+            if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.6202095747)) {
+              if ( (data[76].missing != -1) && (data[76].fvalue < (float)1.0362232924)) {
+                result[0] += -0.026162222;
+              } else {
+                result[0] += -0;
+              }
+            } else {
+              if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.91121447086)) {
+                result[0] += 0.025414295;
+              } else {
+                result[0] += -0;
+              }
+            }
+          } else {
+            result[0] += 0.030325195;
+          }
+        }
+      }
+    }
+  } else {
+    result[0] += 0.05866064;
+  }
+  if ( (data[60].missing != -1) && (data[60].fvalue < (float)0.2248044312)) {
+    if ( (data[1].missing != -1) && (data[1].fvalue < (float)0.06673399359)) {
+      if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.030849346891)) {
+        if ( (data[79].missing != -1) && (data[79].fvalue < (float)-0.40983131528)) {
+          if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62015712261)) {
+            if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.79868918657)) {
+              if ( (data[13].missing != -1) && (data[13].fvalue < (float)1.0699566603)) {
+                result[1] += -0.022944145;
+              } else {
+                result[1] += -0;
+              }
+            } else {
+              result[1] += 0.05674277;
+            }
+          } else {
+            if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.7146641016)) {
+              result[1] += 0.027171638;
+            } else {
+              if ( (data[60].missing != -1) && (data[60].fvalue < (float)-0.62869435549)) {
+                if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45299565792)) {
+                  if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45484149456)) {
+                    result[1] += -0;
+                  } else {
+                    result[1] += 0.035112284;
+                  }
+                } else {
+                  if ( (data[34].missing != -1) && (data[34].fvalue < (float)-0.20915105939)) {
+                    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62012916803)) {
+                      result[1] += -0;
+                    } else {
+                      if ( (data[28].missing != -1) && (data[28].fvalue < (float)-0.77788865566)) {
+                        result[1] += -0;
+                      } else {
+                        result[1] += -0.04458877;
+                      }
+                    }
+                  } else {
+                    if ( (data[61].missing != -1) && (data[61].fvalue < (float)-0.16615319252)) {
+                      result[1] += 0.009549854;
+                    } else {
+                      result[1] += -0;
+                    }
+                  }
+                }
+              } else {
+                result[1] += -0.045408305;
+              }
+            }
+          }
+        } else {
+          result[1] += 0.061691426;
+        }
+      } else {
+        result[1] += -0.037376154;
+      }
+    } else {
+      if ( (data[0].missing != -1) && (data[0].fvalue < (float)-1.93369174)) {
+        result[1] += -0;
+      } else {
+        result[1] += -0.08653897;
+      }
+    }
+  } else {
+    result[1] += 0.086417705;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62010931969)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+      result[2] += 0.027971528;
+    } else {
+      result[2] += -0.00043178347;
+    }
+  } else {
+    result[2] += -0.0494585;
+  }
+  if ( (data[27].missing != -1) && (data[27].fvalue < (float)1.0054787397)) {
+    result[3] += -0.07593054;
+  } else {
+    if ( (data[19].missing != -1) && (data[19].fvalue < (float)0.5904673934)) {
+      result[3] += 0.022231517;
+    } else {
+      result[3] += 0.08815138;
+    }
+  }
+  if ( (data[56].missing != -1) && (data[56].fvalue < (float)-0.073681868613)) {
+    if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31586059928)) {
+      result[4] += -0;
+    } else {
+      result[4] += -0.0744752;
+    }
+  } else {
+    result[4] += 0.041285574;
+  }
+  if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.44117793441)) {
+    if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.082774102688)) {
+      result[5] += -0;
+    } else {
+      result[5] += -0.07385762;
+    }
+  } else {
+    if ( (data[33].missing != -1) && (data[33].fvalue < (float)-0.62329429388)) {
+      result[5] += 0.050263442;
+    } else {
+      result[5] += -0.030898554;
+    }
+  }
+  if ( (data[22].missing != -1) && (data[22].fvalue < (float)-0.55805647373)) {
+    result[6] += -0.007967407;
+  } else {
+    result[6] += -0.076931834;
+  }
+  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.51698690653)) {
+    result[7] += -0.071127705;
+  } else {
+    result[7] += -0;
+  }
+  if ( (data[7].missing != -1) && (data[7].fvalue < (float)-0.61899483204)) {
+    result[8] += -0.07833744;
+  } else {
+    result[8] += 0.034778364;
+  }
+  if ( (data[8].missing != -1) && (data[8].fvalue < (float)-0.62008410692)) {
+    if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.25832360983)) {
+      if ( (data[20].missing != -1) && (data[20].fvalue < (float)-0.51567870378)) {
+        if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.73670840263)) {
+          if ( (data[84].missing != -1) && (data[84].fvalue < (float)1)) {
+            result[9] += -0.0032000188;
+          } else {
+            if ( (data[83].missing != -1) && (data[83].fvalue < (float)1)) {
+              result[9] += -0;
+            } else {
+              result[9] += 0.076201685;
+            }
+          }
+        } else {
+          result[9] += 0.07454798;
+        }
+      } else {
+        result[9] += -0.008643341;
+      }
+    } else {
+      result[9] += -0.013636146;
+    }
+  } else {
+    if ( (data[50].missing != -1) && (data[50].fvalue < (float)-0.05301155895)) {
+      result[9] += -0.05580682;
+    } else {
+      result[9] += -0;
+    }
+  }
+  if ( (data[29].missing != -1) && (data[29].fvalue < (float)-0.59609615803)) {
+    result[10] += 0.0032944537;
+  } else {
+    result[10] += -0.039241526;
+  }
+  if ( (data[76].missing != -1) && (data[76].fvalue < (float)1.0381529331)) {
+    if ( (data[75].missing != -1) && (data[75].fvalue < (float)0.061268497258)) {
+      if ( (data[42].missing != -1) && (data[42].fvalue < (float)-0.010497917421)) {
+        if ( (data[14].missing != -1) && (data[14].fvalue < (float)-0.44659695029)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.71015536785)) {
+            if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.67777997255)) {
+              result[11] += -0.03438072;
+            } else {
+              if ( (data[68].missing != -1) && (data[68].fvalue < (float)-0.45538172126)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.099427320063)) {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31460806727)) {
+                    result[11] += -0;
+                  } else {
+                    result[11] += 0.051540945;
+                  }
+                } else {
+                  result[11] += -0.008910549;
+                }
+              } else {
+                if ( (data[90].missing != -1) && (data[90].fvalue < (float)1)) {
+                  if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.58649593592)) {
+                    result[11] += -0.0485282;
+                  } else {
+                    result[11] += -0;
+                  }
+                } else {
+                  result[11] += -0;
+                }
+              }
+            }
+          } else {
+            if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60421293974)) {
+              if ( (data[55].missing != -1) && (data[55].fvalue < (float)-0.035617761314)) {
+                if ( (data[40].missing != -1) && (data[40].fvalue < (float)-0.58880263567)) {
+                  result[11] += 0.006739917;
+                } else {
+                  result[11] += 0.068766005;
+                }
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)6.0572323799)) {
+                  result[11] += -0.013278125;
+                } else {
+                  result[11] += 0.018715478;
+                }
+              }
+            } else {
+              if ( (data[0].missing != -1) && (data[0].fvalue < (float)0.88922256231)) {
+                result[11] += 0.020651562;
+              } else {
+                if ( (data[32].missing != -1) && (data[32].fvalue < (float)4.4091620445)) {
+                  result[11] += -0.039469592;
+                } else {
+                  if ( (data[39].missing != -1) && (data[39].fvalue < (float)-0.31341737509)) {
+                    result[11] += 0.016861053;
+                  } else {
+                    result[11] += -0.0014469028;
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          result[11] += -0.057231225;
+        }
+      } else {
+        if ( (data[57].missing != -1) && (data[57].fvalue < (float)-0.60427713394)) {
+          if ( (data[0].missing != -1) && (data[0].fvalue < (float)-0.35428348184)) {
+            result[11] += 0.023230612;
+          } else {
+            result[11] += -0.025738496;
+          }
+        } else {
+          if ( (data[30].missing != -1) && (data[30].fvalue < (float)-0.92178285122)) {
+            result[11] += 0.083116814;
+          } else {
+            result[11] += -0;
+          }
+        }
+      }
+    } else {
+      result[11] += -0.048913103;
+    }
+  } else {
+    result[11] += 0.03987784;
+  }
+  if ( (data[52].missing != -1) && (data[52].fvalue < (float)-0.024974752218)) {
+    if ( (data[80].missing != -1) && (data[80].fvalue < (float)-0.10689549893)) {
+      result[12] += -0.05618349;
+    } else {
+      result[12] += 0.0066800476;
+    }
+  } else {
+    if ( (data[9].missing != -1) && (data[9].fvalue < (float)-0.62005460262)) {
+      if ( (data[38].missing != -1) && (data[38].fvalue < (float)-0.68042695522)) {
+        result[12] += -0.02770361;
+      } else {
+        result[12] += 0.0180776;
+      }
+    } else {
+      result[12] += 0.043203127;
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+{
+    "target": "xgb",
+    "sources": [{
+            "name": "main",
+            "length": 53
+        }, {
+            "name": "tu0",
+            "length": 4585
+        }, {
+            "name": "tu1",
+            "length": 2853
+        }, {
+            "name": "tu2",
+            "length": 1637
+        }, {
+            "name": "tu3",
+            "length": 1225
+        }]
+}
