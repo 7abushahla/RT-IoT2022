@@ -2,8 +2,8 @@ Friedman omnibus tests across models (per metric)
 =================================================
            metric  n_folds  n_models       chi2      p_value
          Accuracy       30         8 206.611111 4.562835e-41
-Balanced Accuracy       30         8 181.322222 1.024150e-35
-         Macro F1       30         8 181.888889 7.774345e-36
-Precision (Macro)       30         8 163.566667 5.693115e-32
-          ROC AUC       30         8 173.122222 5.511828e-34
-   Recall (Macro)       30         8 181.322222 1.024150e-35
+Balanced Accuracy       30         8 186.077778 1.012765e-36
+         Macro F1       30         8 182.655556 5.354275e-36
+Precision (Macro)       30         8 157.055556 1.335579e-30
+          ROC AUC       30         8 173.333333 4.974636e-34
+   Recall (Macro)       30         8 186.077778 1.012765e-36
