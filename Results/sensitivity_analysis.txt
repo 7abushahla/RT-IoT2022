@@ -1,0 +1,18 @@
+Significance Level Sensitivity Analysis
+========================================
+
+Tested α levels: [0.1, 0.05, 0.01]
+
+ alpha  friedman_sig  friedman_total  posthoc_sig  posthoc_total  quant_sig  quant_total
+  0.10             6               6          145            168          7           12
+  0.05             6               6          142            168          7           12
+  0.01             6               6          135            168          4           12
+
+Interpretation:
+Results show strong robustness - significant even at conservative α = 0.01.
+Low risk of Type I errors.
+
+Type I vs Type II error trade-off:
+- Conservative (α=0.01): 6 significant (lower Type I risk)
+- Standard (α=0.05): 6 significant (balanced)
+- Liberal (α=0.10): 6 significant (lower Type II risk)

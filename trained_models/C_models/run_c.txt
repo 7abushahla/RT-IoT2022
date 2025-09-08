@@ -1,0 +1,7 @@
+python build_and_run.py --model rf --src rf_src --bench bench_rf.c
+
+python build_and_run.py --model svm --src svm_src --bench bench_svm.cpp --opt="-O2"
+
+python build_and_run.py --model lgbm --src lgbm_src --wrapper treelite_wrap --bench bench_lgbm.c
+
+python build_and_run.py --model xgb --src xgb_src --wrapper xgb_wrap --bench bench_xgb.c

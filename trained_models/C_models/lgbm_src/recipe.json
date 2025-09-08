@@ -1,0 +1,19 @@
+{
+    "target": "lgbm",
+    "sources": [{
+            "name": "main",
+            "length": 53
+        }, {
+            "name": "tu0",
+            "length": 2483
+        }, {
+            "name": "tu1",
+            "length": 2525
+        }, {
+            "name": "tu2",
+            "length": 2203
+        }, {
+            "name": "tu3",
+            "length": 1356
+        }]
+}
