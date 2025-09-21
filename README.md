@@ -1,6 +1,6 @@
 # From Sensor to Server: Deployable Lightweight ML for IoT Intrusion Detection Across Network Layers
 
-_Ariel J. N. Panopio, Hamza A. Abushahla, Youssef Elmadany, Abdulaziz Alqasimi, Ali Reza Sajun, Sameer Alawnah, Fadi Aloul, and Imran A. Zualkernan_
+_Ariel J. N. Panopio, Hamza A. Abushahla, Ali Reza Sajun, Sameer Alawnah, Imran Zualkernan, and Fadi Aloul_
 
 This repository contains code and resources for the paper: "[From Sensor to Server: Deployable Lightweight ML for IoT Intrusion Detection Across Network Layers](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4234)".
 
