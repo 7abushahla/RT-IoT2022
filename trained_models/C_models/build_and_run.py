@@ -80,6 +80,11 @@ def main():
 
     cpu_flags = args.cflags.strip() or guess_cpu_flags(args.device)
     base = f"{args.opt} {cpu_flags}".strip()
+    
+    # Add memory-saving flags for Coral devices
+    if "coral" in args.device.lower():
+        base += " -fno-common -fno-stack-protector"
+    
     print(f"Using flags: {base or '(none)'}")
 
     # Clean old artifacts
@@ -103,10 +108,26 @@ def main():
         for s in gen_srcs:
             ext = s.suffix
             o = s.with_suffix(".o")
-            if is_cxx(ext):
-                run(f"{args.cxx} {base} -I {shlex.quote(str(srcdir))} {args.std} -fPIC -c {shlex.quote(str(s))} -o {shlex.quote(str(o))}")
+            
+            # Use lighter optimization for large tree unit files to avoid memory issues
+            if s.name.startswith("tu") and s.suffix in (".c", ".cc", ".cpp", ".cxx", ".C", ".CPP"):
+                # For large tree unit files, use minimal optimization to avoid compiler memory issues
+                if on_macos:
+                    # Clang (macOS) – use only flags Clang supports
+                    compile_flags = "-O0 -fno-inline"
+                elif "coral" in args.device.lower():
+                    # Google Coral - very memory constrained, use absolute minimal flags
+                    compile_flags = "-O0 -fno-inline -fno-tree-slp-vectorize -fno-ipa-sra -fno-tree-vectorize -fno-tree-loop-vectorize"
+                else:
+                    # GCC (Linux/RPi) – disable heavy optimization passes
+                    compile_flags = "-O0 -fno-inline -fno-tree-slp-vectorize -fno-ipa-sra"
             else:
-                run(f"{args.cc}  {base} -I {shlex.quote(str(srcdir))}        -fPIC -c {shlex.quote(str(s))} -o {shlex.quote(str(o))}")
+                compile_flags = base
+            
+            if is_cxx(ext):
+                run(f"{args.cxx} {compile_flags} -I {shlex.quote(str(srcdir))} {args.std} -fPIC -c {shlex.quote(str(s))} -o {shlex.quote(str(o))}")
+            else:
+                run(f"{args.cc}  {compile_flags} -I {shlex.quote(str(srcdir))}        -fPIC -c {shlex.quote(str(s))} -o {shlex.quote(str(o))}")
             gen_objs.append(o)
 
         # 2) archive static lib
@@ -167,6 +188,9 @@ def main():
             if on_macos:
                 # Clang (macOS) – use only flags Clang supports
                 compile_flags_for_tu = "-O0 -fno-inline"
+            elif "coral" in args.device.lower() or "a53" in args.device.lower():
+                # Google Coral / Pi Zero 2 - very memory constrained, use absolute minimal flags
+                compile_flags_for_tu = "-O0 -fno-inline -fno-tree-slp-vectorize -fno-ipa-sra -fno-tree-vectorize -fno-tree-loop-vectorize -fno-common -fno-stack-protector"
             else:
                 # GCC (Linux/RPi) – disable a couple of heavy passes too
                 compile_flags_for_tu = "-O0 -fno-inline -fno-tree-slp-vectorize -fno-ipa-sra"

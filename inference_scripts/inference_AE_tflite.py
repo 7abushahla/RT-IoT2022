@@ -1,4 +1,9 @@
-# %%
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
 import os
 import time
 import numpy as np
@@ -11,7 +16,10 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import f1_score, precision_score, recall_score
 
-# %%
+
+# In[2]:
+
+
 # ---------------------------
 # 1. Load the Exported Test Set
 # ---------------------------
@@ -32,7 +40,10 @@ X_test = X_test_export.drop(columns=["target"])
 print(f"Test set loaded from {TEST_CSV}")
 print(f"X_test shape: {X_test.shape}")
 
-# %%
+
+# In[3]:
+
+
 # ---------------------------
 # 2. Define the Preprocessor
 # ---------------------------
@@ -60,7 +71,10 @@ preprocessor = ColumnTransformer(
 X_test_transformed = preprocessor.fit_transform(X_test)
 print(f"X_test_transformed shape: {X_test_transformed.shape}")
 
-# %%
+
+# In[4]:
+
+
 # ---------------------------
 # 2. Load TFLite Float32 Model and Prepare for Inference
 # ---------------------------
@@ -97,7 +111,9 @@ for idx, output_detail in enumerate(output_details):
     print(f"  Quantization Zero Points: {output_detail['quantization_parameters']['zero_points']}\n")
 
 
-# %%
+# In[5]:
+
+
 # ---------------------------
 # 3. Single Sample Inference and Metrics (Float32)
 # ---------------------------
@@ -143,7 +159,9 @@ print(f"Precision (single sample): {precision:.4f}")
 print(f"Recall (single sample): {recall:.4f}")
 
 
-# %%
+# In[7]:
+
+
 # ---------------------------
 # 4. Benchmark Inference Time and Compute FPS (Float32)
 # ---------------------------
@@ -173,7 +191,9 @@ print(f"Average FPS over {n_runs} runs: {mean_fps:.4f} FPS (std: {std_fps:.4f} F
 
 gc.collect()
 
-# %%
+
+# In[ ]:
+
 
 
 
