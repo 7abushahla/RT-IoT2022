@@ -47,3 +47,4 @@ If you use our work for your own research, please cite us with the below:
 
 You can also reach out through email to: 
 - Hamza Abushahla - b00090279@alumni.aus.edu
+- Ariel J. N. Panopio - b00088568@alumni.aus.edu
